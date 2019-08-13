@@ -1,0 +1,8 @@
+main:
+
+  - title: "People"
+    url: /people/
+  - title: "Research"
+    url: /tags/
+  - title: "News"
+    url: /posts/
