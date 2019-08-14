@@ -10,7 +10,7 @@ tags:
 # Midwest Phylogenetics Workshop 2019
 ## Likehood and Evidential stats
 Using data from a heterospecific alarm calls example
-* [R code](https://roszenil.github.io/teaching/midwestphylo/LikelihoodEvidence/likelihoodbirdalarms.html)
+* [R code](midwestphylo/LikelihoodEvidence/likelihoodbirdalarms.html)
 * [Data](https://roszenil.github.io/teaching/midwestphylo/LikelihoodEvidence/birdalarms.csv)
 
 ## Discrete trait models in macroevolution
