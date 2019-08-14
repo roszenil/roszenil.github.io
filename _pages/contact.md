@@ -7,7 +7,7 @@ comments: false
 tags:
 - people
 ---
-
+![waikiki](waikiki.jpg){: .align-center}
 **Email**  roszenil@hawaii.edu
 
 **Phone** (808) 956-8241
