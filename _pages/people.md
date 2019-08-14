@@ -26,6 +26,7 @@ Honolulu, HI 96822
 ### Join the lab!
 I'm looking for graduate students for the Fall 2020. Consider joining the lab and writing a grant to come to Hawai'i!
 [GRFP overview ](https://www.alexhunterlang.com/nsf-fellowship)
+
 [More GRFP advice ](http://cdmuir.netlify.com/post/2019-07-11-grfp/)
 
 
