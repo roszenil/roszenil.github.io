@@ -8,7 +8,7 @@ tags:
 - people
 ---
 ### PI Rosana Zenil-Ferguson
-{% include figure image_path="/pages/mypicsmall.png" %}
+![](/pages/mypicsmall.png)
 I joined the Department of Biology as an assistant professor on January 2019. I earned my PhD in evolutionary biology from University of Florida after completing a MSc in probability and statistics at CIMAT Mexico. My research aims to understand how often species traits evolve and how these traits change the speciation and extinction process across the tree of life. Using a combination of mathematics, statistics, and botany, I am currently studying the evolution of polyploidy and breeding systems, and whether these traits create opportunities for innovation and speciation in flowering plants.
 
 
@@ -21,6 +21,11 @@ I joined the Department of Biology as an assistant professor on January 2019. I 
 Edmonson Hall 309
 2538 McCarthy Mall
 Honolulu, HI 96822
+
+### Join the lab!
+I'm looking for graduate students for the Fall 2020. Consider joining the lab and writing a grant to come to Hawai'i!
+[GRFP overview ](https://www.alexhunterlang.com/nsf-fellowship)
+[More GRFP advice ](http://cdmuir.netlify.com/post/2019-07-11-grfp/)
 
 
 ### Commitment to Diversity and Inclusion
