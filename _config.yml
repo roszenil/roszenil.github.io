@@ -87,7 +87,22 @@ defaults:
       layout: single
       author_profile: false
 
- 
+   # _teaching
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:teaching/
+
+defaults:
+  # _teaching
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true
+
 category_archive:
   type: liquid
   path: /categories/
@@ -95,6 +110,6 @@ tag_archive:
   type: liquid
   path: /tags/
 
-imagefolder: "/assets/images/"
+
 
 
