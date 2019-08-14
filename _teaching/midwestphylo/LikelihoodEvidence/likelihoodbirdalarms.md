@@ -1,5 +1,12 @@
-The evidence in the Likelihood
-================
+---
+title: "The evidence in likelihood"
+layout: archive
+permalink: /birdalarms/
+author_profile: false
+comments: false
+tags:
+- teaching
+---
 
 
 ## Background
