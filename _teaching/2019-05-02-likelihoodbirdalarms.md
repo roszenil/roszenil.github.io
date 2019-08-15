@@ -28,7 +28,7 @@ foraging.
 This is his sample and you will be using it to understand evidence in
 likelihood.
 
-[Download data](https://roszenil.github.io/MidwestPhylo2019/teaching/LikelihoodEvidence/birdalarms.csv)
+[Download data](birdalarms.csv)
 ``` r
 #Set your workind directory
 #setwd(~/Dropbox/MidwestPhylo/)
