@@ -79,8 +79,7 @@ footer:
 collections:
   teaching:
     output: true
-    permalink: /:collection/:title/
-    
+    permalink: /:categories/:title/
     
 # Defaults
 defaults:
@@ -106,7 +105,7 @@ defaults:
       sitemap: true
       noindex: true
 
-imagefolder: "/assets/images/"      
+
 
 category_archive:
   type: liquid
