@@ -1,12 +1,20 @@
 ---
 title: "The evidence in likelihood"
+
 author: Rosana Zenil-Ferguson
+
 date: 2019-05-02
+
 categories: teaching
+
 header:
+
 teaser: "likelihoodbirdalarms_files/figure-markdown_github/likelihoodintervals-1.png"
+
 header: "Lecture for midwest phylogenetics workshop 2019 about likelihood function and Evidence"
+
 og_image:"likelihoodbirdalarms_files/figure-markdown_github/likelihoodintervals-1.png"
+
 ---
 
 ## Background
