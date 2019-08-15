@@ -3,9 +3,7 @@ layout: archive
 title: Teaching
 permalink: /teaching/
 author_profile: false
-comments: false
-tags:
-- teaching
+
 ---
 In this page you will find some examples of my recent workshops and ideas for classes. I currently teach BIOL171 at University of Hawai'i Mānoa that is the largest enrollment class in the department.
 
