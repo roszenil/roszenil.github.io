@@ -1,13 +1,13 @@
 ---
 title: "The evidence in likelihood"
-layout: archive
-permalink: /birdalarms/
-author_profile: false
-comments: false
-tags:
-- teaching
+author: Rosana Zenil-Ferguson
+date: 2019-05-02
+categories: teaching
+header:
+teaser: "likelihoodbirdalarms_files/figure-markdown_github/likelihoodintervals-1.png"
+header: "Lecture for midwest phylogenetics workshop 2019 about likelihood function and Evidence"
+og_image:"likelihoodbirdalarms_files/figure-markdown_github/likelihoodintervals-1.png"
 ---
-
 
 ## Background
 
@@ -28,6 +28,7 @@ foraging.
 This is his sample and you will be using it to understand evidence in
 likelihood.
 
+[Download data](https://roszenil.github.io/MidwestPhylo2019/teaching/LikelihoodEvidence/birdalarms.csv)
 ``` r
 #Set your workind directory
 #setwd(~/Dropbox/MidwestPhylo/)
