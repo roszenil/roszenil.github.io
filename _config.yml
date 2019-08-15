@@ -105,8 +105,6 @@ defaults:
       sitemap: true
       noindex: true
 
-
-
 category_archive:
   type: liquid
   path: /categories/
