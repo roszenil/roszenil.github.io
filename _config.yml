@@ -76,10 +76,6 @@ footer:
       icon: "fab fa-fw fa-github"
       url: https://github.com/roszenil
       
-collections:
-  teaching:
-    output: true
-    permalink: /:categories/:title/
     
 # Defaults
 defaults:
@@ -93,18 +89,7 @@ defaults:
       sitemap: false
       noindex: true 
       #To hide from robots and crawlers
-      
- # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: false
-      comments: false
-      share: true
-      sitemap: true
-      noindex: true
+
 
 category_archive:
   type: liquid
@@ -114,7 +99,6 @@ tag_archive:
   path: /tags/
 
 imagefolder: "/assets/images/"
-
 
 
 
