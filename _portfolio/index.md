@@ -1,8 +1,11 @@
 ---
-classes:wide
+classes: wide
+header:
+overlay_image:/assets/images/waikiki.jpg
 title: Teaching
 permalink: /portfolio/teaching/
 author_profile: false
+
 feature_row:
 - image_path: assets/images/qmatrix.png
 alt: "CTMC"
