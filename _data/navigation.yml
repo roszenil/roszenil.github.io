@@ -1,13 +1,13 @@
 # the masthead
 main:
-  - title: "Home"
-    url: /
   - title: "Research"
     url: /about/
   - title: "Teaching"
     url: /portfolio/
   - title: "Contact"
-    url: /assets/docs/resume.pdf
+    url: /contact/
+  
+    #url: /assets/docs/resume.pdf
   # - title: "Blog"
   #   url: /blog/
 
