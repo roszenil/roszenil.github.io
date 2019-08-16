@@ -1,5 +1,5 @@
 ---
-title: "Contact"
+title: ""
 header:
  overlay_image: /assets/images/waikiki.jpg
  caption: "Waikiki Beach"
@@ -7,7 +7,7 @@ permalink: /contact/
 tags:
 - people
 ---
-![waikiki](waikiki.jpg){: .align-center}
+## Contact
 **Email**  roszenil@hawaii.edu
 
 **Phone** (808) 956-8241
