@@ -92,18 +92,7 @@ defaults:
       noindex: true 
       #To hide from robots and crawlers
 
-# _teaching
-- scope:
-    path: ""
-    type: teaching
-    values:
-    author profile: false
 
-        
-# collections
-    collections:
-    teaching:
-    output: true
     
 category_archive:
   type: liquid
