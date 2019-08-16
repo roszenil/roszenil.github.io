@@ -1,10 +1,9 @@
 ---
 header:
-  overlay_image: /assets/images/code.jpg
-  caption: "Photo credit: [**Marcus Spiske**](https://unsplash.com)"
-permalink: /portfolio/genre_cls/
-category: machine_learning
-date: 2018-01-05
+  overlay_image: /assets/images/ctmc_files/bichromqmat.png
+permalink: /portfolio/ctmc/
+category: teaching
+date: 2019-05-05
 toc: true
 toc_label: "Contents"
 ---
@@ -26,21 +25,21 @@ In mathematics, the Q-matrix is the derivative of the probability matrix ($$P'(t
 ### Flower color evolution example
 We are interested in following the evolution of flower color in a clade with only three taxa.  We propose a CTMC model to follow along how color has evolve in a clade of interest. We define our Q-matrix as follows
 
-![](/assets/images/qmatrix.png)
+![](/assets/images/ctmc_files/qmatrix.png)
 
 
 From blue to red evolution can happen with a rate $$\alpha$$ and from red to blue evolution happens with a rate $$\beta$$ What does this even mean? How do I interpret these rates?
 
-![](/assets/images/sojourntimes.png)
+![](/assets/images/ctmc_files/sojourntimes.png)
 
 To evolve from blue to red a lineage is expected to wait $$1/ \alpha$$ units of time so if $$\alpha$$ is large that means that the expected waiting time to evolve is fast. Time units come handy here, if they are millions of years we can start thinking about the average number of changes we expect to see in the tree and translate this into rates of the Q-matrix (useful for prior distribution elicitation).
 
-### Based on these rates what is the probability that  a plant evolves from blue to red?
+** Based on these rates what is the probability that  a plant evolves from blue to red?**
 
 The rates in the Q-matrix is the derivative of the probability, so in general $$P(t)=e^{Qt}$$ (think about the exponential of a matrix for a second).
 
 The general solution for the probabilities of the Q-matrix we proposed are
-![](/assets/images/pmatrix.png)
+![](/assets/images/ctmc_files/pmatrix.png)
 
 ``` r
 prob.mat<-function(alpha,beta,t){
@@ -55,7 +54,7 @@ return(probabilities)
 It looks ugly but what the matrix is saying is that in a time $$t$$ a flower will evolve from blue to red with probability $$P(X(t)=Red\|X(0)=Blue)=\frac{1}{\alpha+\beta}(\beta-\alpha e^{-(\alpha+\beta)t})$$.
 
 Q-matrices can get really crazy!  Chromosome number matrices for example
-![](/assets/images/bichromqmat.png)
+![](/assets/images/ctmc_filesbichromqmat.png)
 
 So calculating the probabilities from algebra for large matrices is impossible so we use numerical approximations
 ``` r
@@ -68,19 +67,19 @@ library("expm")
 
 We will be calculating the likelihood using the probability matrix above in this three-tip tree. The likelihood is not a straightforward calculation because our sample is not independent, the shared ancestry needs to be considered.
 
-![](/assets/images/phylo1.png)
+![](/assets/images/ctmc_files/phylo1.png)
 
 We are going to assume that our parameters are $$\alpha=0.2$$ and $$\beta=0.3$$. Calculating the likelihood of a non-independent sample is numerical intensive and you will get taste of this.
 
 Let's start with the smallest clade
 
-![](/assets/images/phylo2.png)
+![](/assets/images/ctmc_files/phylo2.png)
 
 The internal node can be either Red or Blue but we really don't know.
 
 Let's assume it is blue
 
-![](/assets/images/pruning1.png)
+![](/assets/images/ctmc_files/pruning1.png)
 
 The probablity of evolving from blue to blue is the (1,1) entry of the probablity matrix P(t). In mathematical terms $$P(X(t_2)=Blue \|X(t_1)=Blue)=P_{Blue \to Blue}(1)$$. This happens not only for one lineage but for both descendants of
 the node so in reality we have to multiply that probability twice. So we can build a little table of both cases.
@@ -97,7 +96,7 @@ What is the probability that it actually happened to be blue?
 
 Think about the possible pathways
 
-![](/assets/images/pruning2.png)
+![](/assets/images/ctmc_files/pruning2.png)
 
 
 + Internal node is  $$X(t_1)=Blue$$  and root is  $$X(t_0)=Blue$$
@@ -125,23 +124,23 @@ Interestingly, this is still an open question for discrete character evolution. 
 
 Finally, the likelihood is the result of considering the probabilities all across the possible histories in the nodes of the tree.
 
-![](/assets/images/phylo3.png)
+![](/assets/images/ctmc_files/phylo3.png)
 
 ###  Real examples
 1. Ng, J. and Smith, S.D., 2016. Widespread flower color convergence in Solanaceae via alternate biochemical pathways. New Phytologist, 209(1), pp.407-417.
 
 Figure 1. of Ng and Smith (2016)
 
-![](/assets/images/NgSmith.png)
+![](/assets/images/ctmc_files/NgSmith.png)
 
 2. Implementation in RevBayes for selfing and non-selfing taxa in Polimoneaceae
 * [Data](https://github.com/phylosdd/MidwestPhylo2019/tree/master/docs/class/Discretetraitrevbayes/data)
 * [RevCode](https://github.com/phylosdd/MidwestPhylo2019/blob/master/docs/class/Discretetraitrevbayes/mk2.Rev)
 
-![](/assets/images/posteriorflower.png)
+![](/assets/images/ctmc_files/posteriorflower.png)
 
 3. Chromploid package- Large Q-matrices
-![](/assets/images/polyploidyprofilerho.png)
+![](/assets/images/ctmc_files/polyploidyprofilerho.png)
 
 ### References
 + Felsenstein, J., 1981. Evolutionary trees from DNA sequences: a maximum likelihood approach. Journal of molecular evolution, 17(6), pp.368-376.
