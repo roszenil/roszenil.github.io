@@ -1,12 +1,11 @@
 ---
-title: "CTMC"
-author: Rosana Zenil-Ferguson
-date: 2019-05-05 09:00:00 +0530
-collection: teaching
 header:
-teaser: "/assets/images/qmatrix.png"
-excerpt: "Lecture on continuous-time Markov Chain models for the Midwest Phylogenetics Workshop 2019"
-og_image: "/assets/images/qmatrix.png"
+overlay_image: /assets/images/qmatrix.png
+caption: "Q-matrix"
+permalink: /portfolio/ctmc/
+date: 2019-06-05
+toc: true
+toc_label: "Contents"
 ----
 
 

@@ -78,7 +78,8 @@ footer:
       icon: "fab fa-fw fa-github"
       url: https://github.com/roszenil
       
-    
+      collections:
+      - teaching
 # Defaults
 defaults:
   # _pages
@@ -91,8 +92,22 @@ defaults:
       sitemap: false
       noindex: true 
       #To hide from robots and crawlers
+      defaults:
+      
+# portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      author_profile: false
+      excerpt: ""
+      sidebar: false
+        nav: "portfolio"
 
-
+# collections
+collections:
+  portfolio:
+    output: true
     
 category_archive:
   type: liquid
