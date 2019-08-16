@@ -26,10 +26,26 @@ author:
   name   : "Rosana Zenil-Ferguson"
   avatar : "/assets/images/mypicsmall.png"
   bio    : "Assistant Professor. University of Hawai'i"
-  location: "Honolulu, HI"
-  github : rozenil
   email  : roszenil@hawaii.edu
+  links:
+    - label: roszenil.github.io
+      icon: "fas fa-fw fa-link"
+      url: https://roszenil.github.io
+    - label: roszenil
+      icon: "fab fa-fw fa-twitter-square"
+      url: https://twitter.com/roszenil
+    - label: roszenil
+      icon: "fab fa-fw fa-github"
+      url: https://github.com/roszenil
 
+footer:
+  links:
+    - label: roszenil
+      icon: "fab fa-fw fa-twitter-square"
+      url: https://twitter.com/roszenil
+    - label: roszenil
+      icon: "fab fa-fw fa-github"
+      url: https://github.com/roszenil
 
 # pagination for blog page
 #paginate: 2 # number of posts to show
@@ -43,7 +59,7 @@ defaults:
     values:
       layout: single
       mathjax: true
-      author_profile: true
+      author_profile: false
       class: wide
       title: " "
       title_separator: "|"
