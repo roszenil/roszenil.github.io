@@ -97,10 +97,8 @@ defaults:
     path: ""
     type: teaching
     values:
-    author profile: true
-    excerpt: ""
-    sidebar:
-        nav: "teaching"
+    author profile: false
+
         
 # collections
     collections:
@@ -114,7 +112,7 @@ tag_archive:
   type: liquid
   path: /tags/
 
-imagefolder: "/assets/images/"
+
 
 
 
