@@ -9,232 +9,145 @@ toc: true
 toc_label: "Contents"
 ---
 
-# Algorithmic Musical Genre Classification
+#  Continuous-Time Markov Chains (CTMC)
 
-*(A detailed write-up of this project can be found [here][1], and the code is
- publicly available [on GitHub][7].)*
+Continuous-time Markov chains (CTMC) are stochastic processes that allow us to follow the evolution of a trait(s) of interest. For example,
+one might be interested in how flower color has evolved in a clade (blue to red) or how quickly a species  moved from region A to B.
 
-## Summary
-
-In this project, I construct a data pipeline which intakes raw `.wav` files, and
-then uses machine learning to predict the genre of the track. We first do a
-frequency-space transformation (similar to the Fourier transform), and then do
-randomized dimension reduction on the resulting array. Finally, we put the
-dimension-reduced signal through a naive Bayes classifier, which we train on
-about 500 sample tracks.
-
-Below is the confusion matrix for the resulting classifier. As one might expect,
-classical is pretty easy; jazz is hard. A more thorough discussion of the
-algorithm and results, including additional (less successful) approaches, can be
-found below.
-
-![Confusion Matrix](/assets/images/rand_confusion.png)
+CTMCs are usually denoted in mathematical notation as $$\{X(t), t\geq 0 \}$$; the stochastic process $$X(t)$$ follows flower color throughout time $$t$$. Time is continuous and it is measured using branch lengths. For discrete traits the process $$X(t)$$ takes values  in the natural numbers $$0,1,2,...$$.  CTMCs have many (cool) mathematical properties, but one of the most important  property is the Markovian property that states that  the probability distribution of future states of the process conditional on both past and present states) depends only upon the present state.
 
 
-## Introduction
-
-A few years ago I designed a machine learning algorithm which performs automatic
-genre classification of musical signals. The basic idea is that if the genre of
-a piece of music has certain acoustic signatures, then a computer should be able
-to pick up on those. However, teasing out those signatures requires some signal
-processing know-how, along with some knowledge of data preprocessing and
-classification methodologies from the machine learning domain. 
-
-We consider five genres: classical, jazz/blues, electronic, metal/punk, and
-rock/pop. This taxonomy is far from exhaustive, but is a good starting point,
-with genres that are for the most part quite acoustically distinct. Our most
-efficient model classifies with 80% accuracy. Those interested can read
-[the full write-up][1] of the project; here I'll go through the big ideas and
-leave out the details.
-
-## Preprocessing
-
-We begin with a raw `.wav` file, which is an uncompressed format for storing
-audio signals.[^fnote1] We then remove the beginning and end of the track, as
-songs often start and end with indiosyncratic structures that are not indicative
-of the genre.
-
-Next, we perform a spectral decomposition. This means we decompose the signal
-into its frequency components. When you look at the display on an equalizer and
-see the signal bars at different frequencies, you are looking at a spectral
-decomposition.
-
-The most common spectral decomposition in mathematics and physics is the Fourier
-Transform. However, the Fourier Transform does not efficiently represent how the
-human ear hears sound; we hear frequencies on a **logarithmic** scale, meaning
-that if notes are one octave apart, then the frequency of the second is twice
-the frequency of the first.[^fnote2] To mitigate this issue, we use the
-[mel-frequency cepstrum][2], which is naturally logarithmically scaled. We now
-have a frequency decomposition, which we expect to be useful in analyzing sound;
-for example, we expect classical music to have lower signal at the bass
-frequencies compared to electronic music.
-
-After obtaining the time-varying mel-frequency cepstrum components (MFCCs), we
-have a time series of about 1000 points, with each point having 30
-coefficients. Said another way, our musical track now lives in a 30,000
-dimensional space. We are thus up against the ubiquitous problem of machine
-learning, the [curse of dimensionality][3].
-
-## Dimensionality Reduction
-
-The mathematics surrounding the analysis of high-dimensional data is rich and
-fascinating. One remarkable result is that you can perform entirely random (!)
-projections, reducing the dimensionality by orders of magnitude, and still
-retain most of the information present in the data. This result is known to
-mathematicians as the [Johnson-Lindenstrauss Lemma][4].
-
-The beauty of this result is twofold. The geometry and analysis behind it are
-surprising, yet intuitive once grasped; also, it immediately provides us with a
-dimensionality-reduction algorithm which is computationally efficient and
-trivial to implement.[^fnote4]
-
-There are, of course, other more sophisticated approaches to the problem of
-dimensionality reduction. The ubiquitous principal component analysis (PCA) is a
-projection method, but it selects the projections based on their explanatory
-power. The Johnson Lindenstrauss lemma is telling us, essentially, that when our
-data is high dimensional we don't need to worry about which direction we choose;
-all directions, with high probability, will contain most of the signal
-present in the data.[^fnote3]
-
-## Graph Representations
-
-As a more high-falutin alternative to random projections, we explore
-dimensionality methods based on graph embeddings. A **graph** (also called a
-**network**) is a collection of objects and their connections. The details of
-this approach become quite technical, so this presentation will be qualitative
-rather than quantitative.
-
-Recall that, for each track, we now have a time series of points in
-30-dimensional space, or equivalent 30 time series in one dimensional
-space). Each dimension represents a frequency band. We build a graph by
-considering interactions between these bands;[^fnote5] does the intensity of the
-low frequencies tend to move with the intensity of high frequencies? Or, are
-their intensity profiles independent? 
-
-So, for each possible pair of our 30 frequency bands (435 possible pairs in
-total), we have a pairwise term indicating the interaction strength. We then
-perform a final embedding which reduces our graph into a vector in 30
-dimensions. This embedding is based on the eigenvalues of the matrix
-represntation of the graph, and a description of it is beyond the scope of this
-article; suffice to say, it is the same technique that lies at the heart of
-Google's PageRank algorithm, and is a well-tested method for graph embedding.
-
-## Classification
-
-We now have two competing models, both of which result in data of a reasonable
-dimension (30 dimensions vs 30,000). But we still face the task of classifying
-these data points into groups. In our case, since we will train our model on
-labelled training data, we are looking at a **supervised learning** scenario.
-
-We compare the efficacy of two approaches: a naive Bayes classifier, and a
-support-vector classifier. The first is a linear model, so it does not consider
-pairwise interation terms between data features (i.e. the dimensions of our data
-points). This simplicity makes the model computationally efficient and highly
-interpretable, but for some data the interaction terms are very important, and a
-model such as naive Bayes will not have optimal performance.
-
-The support-vector machine approach is more computationally intensive than that
-of naive Bayes. However, it is able to model arbitrary interactions between data
-features, depending on the kernel chosen. We use a radial basis function (RBF)
-kernel, which models nonlinear interactions in a localised way, and is known to
-be effective in a variety of settings.[^fnote6]
-
-## Results
-
-Below are accuracy plots and confusion matrices for both the random projection
-and graph embedding techniques. 
-
-<img src="{{ "/assets/images/rand_confusion.png" | absolute_url }}"
-width="50%" hspace="20" align="left">
-
-<img src="{{ "/assets/images/rand_accuracy.png" | absolute_url }}"
-width="50%" hspace="20" align="left"> 
-
-The first pair of charts are for the randomized projection model. Based on what
-we see, we recommend using a Naive Bayes classifier with $$\approx 10^3$$
-dimensions. This is the optimal balance of performance and computational
-efficiency, obtaining 98% performance relative to the problem without any
-dimensionality reduction. Interestingly, the support vector classifier
-underperforms Naive Bayes, indicating that the interaction terms between
-features contain more noise than signal.
-
-Things are quite different when we use graph embedding as our dimensionality
-reduction method. In this case, there is in fact an optimal number of
-dimensions, and increasing beyond this optimal dimensionality has a significant
-detrimental effect on performance. This is to be expected, as our spectral
-embedding method naturally chooses the more informative dimensions first, and
-later features have a lower signal to noise ratio.
-
-<img src="{{ "/assets/images/graph_confusion.png" | absolute_url }}"
-width="50%" hspace="20" align="right">
-
-<img src="{{ "/assets/images/graph_accuracy.png" | absolute_url }}"
-width="50%" hspace="20" align="right"> 
-
-When using graph embedding, the support vector classifier outperforms the naive
-Bayes classifier, indicating that interaction terms in our spectral embedding
-are much more informative than they are in our random projection. Again, this
-implies that the structural information in the spectral embedding is both
-front-loaded and has complicated interdependence structure, whereas the random
-projection method generates mostly independent features which are, on average,
-of equal importance.
-
-In both scenarios, we see that the easiest genre to classify is classical, and
-the hardest is jazz/blues. This is what we would expect, since classical has a
-distinct acoustic signature (i.e. instrumentation), while jazz/blues is highly
-variable, and such a wide variety of training data will not produce an accurate
-classifier.
-
-## Conclusion
-
-The key takeaway from this project is that **simple methods often work very
-well**. The optimal approach relied on the simpler dimensionality reduction
-technique (random projections) and the simpler classifier (naive Bayes). This
-simplicity gives the added benefit of computational efficiency and model
-interpretability.
+Mathematically, CTMC can be defined via stochastic equations (which will be super important when you are studying diversification methods) or via an infinitesimal probability matrix, better known as the Q-matrix.
 
 
-<!------------------------------- FOOTER ------------------------------------->
+## What is a Q-matrix?
+In mathematics, the Q-matrix is the derivative of the probability matrix ($$P'(t)=P(t)Q$$). The  elements off the diagonal of the $$Q$$ matrix are transition rates and in the diagonal we have the negative sum of all the elemets of the row. The row adds to zero this is because probability matrices rows add to 1 so the derivative of the constant 1 is zero.
 
-[1]: /assets/docs/genre_classification.pdf
+### Flower color evolution example
+We are interested in following the evolution of flower color in a clade with only three taxa.  We propose a CTMC model to follow along how color has evolve in a clade of interest. We define our Q-matrix as follows
 
-[2]: https://en.wikipedia.org/wiki/Mel-frequency_cepstrum
+![](/assets/images/qmatrix.png)
 
-[3]: https://en.wikipedia.org/wiki/Curse_of_dimensionality
 
-[4]: https://en.wikipedia.org/wiki/Johnson-Lindenstrauss_lemma
+From blue to red evolution can happen with a rate $$\alpha$$ and from red to blue evolution happens with a rate $$\beta$$ What does this even mean? How do I interpret these rates?
 
-[5]: https://terrytao.wordpress.com/2010/01/03/254a-notes-1-concentration-of-measure/
+![](/assets/images/sojourntimes.png)
 
-[6]: https://en.wikipedia.org/wiki/Radial_basis_function_kernel
+To evolve from blue to red a lineage is expected to wait $$1/ \alpha$$ units of time so if $$\alpha$$ is large that means that the expected waiting time to evolve is fast. Time units come handy here, if they are millions of years we can start thinking about the average number of changes we expect to see in the tree and translate this into rates of the Q-matrix (useful for prior distribution elicitation).
 
-[7]: https://github.com/peterewills/genre-classification
+### Based on these rates what is the probability that  a plant evolves from blue to red?
 
-[^fnote1]: Most common compression methods, such as `.mp3` and `.aac`, rely on
-	decomposing the signal into its frequency components, and removing the high
-	frequency components, which are primarily noise and/or inaudible to the
-	human ear. We'll end up doing a frequency decomposition of our own later on,
-	as described below.
+The rates in the Q-matrix is the derivative of the probability, so in general $$P(t)=e^{Qt}$$ (think about the exponential of a matrix for a second).
 
-[^fnote2]: In contrast, if we heard sound on a linear scale, then the frequency
-    of the second note would be some fixed amount above the first.
-	
-[^fnote3]: The seemingly paradoxical nature of this statement is apparent; how
-    can *any direction* contain *most of the information*? The geometry of high
-    dimensions is very strange, and not something human minds are well-designed
-    to consider intuitively. For the curious, a good place to begin puzzling is
-    the phenomenon of [concentration of measure][5], which says that most of the
-    material in a ball gets closer to the edge of the ball as the dimension that
-    the ball lives in gets higher.
-	
-[^fnote4]: We simple generate a large, orthogonal matrix $$\mathbf{Q}$$ which,
-	when multiplied by our data matrix, projects the data points into a
-	lower-dimensional space. Thus, the cost of the projection is the cost of
-	generating this matrix (random number draws) and the cost of a matrix-matrix
-	multiply (which can be performed efficiently when the involved matrices are
-	sparse).
+The general solution for the probabilities of the Q-matrix we proposed are
+![](/assets/images/pmatrix.png)
 
-[^fnote5]:We use Perason correlation to measure the interaction between the time
-	series, but this is far from the only choice.
-	
-[^fnote6]: See [the Wikipedia entry for the RBF kernel][6] for more information.
+``` r
+prob.mat<-function(alpha,beta,t){
+exp.val<-exp(-(alpha+beta)*t)
+probabilities<-1/(alpha+beta)*matrix(c(beta+alpha*exp.val, beta-beta*exp.val, alpha-alpha*exp.val, alpha+beta*exp.val),nrow=2)
+return(probabilities)
+}
+
+(P.mat<- prob.mat(alpha=0.2, beta=0.3, t=1))
+```
+
+It looks ugly but what the matrix is saying is that in a time $$t$$ a flower will evolve from blue to red with probability $$P(X(t)=Red\|X(0)=Blue)=\frac{1}{\alpha+\beta}(\beta-\alpha e^{-(\alpha+\beta)t})$$.
+
+Q-matrices can get really crazy!  Chromosome number matrices for example
+![](/assets/images/bichromqmat.png)
+
+So calculating the probabilities from algebra for large matrices is impossible so we use numerical approximations
+``` r
+#install.package("expm")
+library("expm")
+(Q.mat<-matrix(c(-0.2,0.3,0.2,-0.3), nrow=2))
+(P.mat<-expm(Q.mat*1))
+```
+## Calculating the likelihood of a CTMC for discrete traits
+
+We will be calculating the likelihood using the probability matrix above in this three-tip tree. The likelihood is not a straightforward calculation because our sample is not independent, the shared ancestry needs to be considered.
+
+![](/assets/images/phylo1.png)
+
+We are going to assume that our parameters are $$\alpha=0.2$$ and $$\beta=0.3$$. Calculating the likelihood of a non-independent sample is numerical intensive and you will get taste of this.
+
+Let's start with the smallest clade
+
+![](/assets/images/phylo2.png)
+
+The internal node can be either Red or Blue but we really don't know.
+
+Let's assume it is blue
+
+![](/assets/images/pruning1.png)
+
+The probablity of evolving from blue to blue is the (1,1) entry of the probablity matrix P(t). In mathematical terms $$P(X(t_2)=Blue \|X(t_1)=Blue)=P_{Blue \to Blue}(1)$$. This happens not only for one lineage but for both descendants of
+the node so in reality we have to multiply that probability twice. So we can build a little table of both cases.
+
+
+| If internal node is  $$X(t_1)=Blue$$                          | If internal node is $$X(t_ 1)=Red$$                            |
+|:------------------------------------------:| :----------------------------------------:|
+| $$[P(X(t_2)=Blue \|X(t_1)=Blue)]^2$$   | $$[P(X(t_2)=Blue \|X(t_1)=Red)]^2$$  |
+| $$[P_{Blue \to Blue}(1)]^2=[e^{Q}]_{11}$$ |      $$[P_{Red \to Blue}(1)]^2=[e^Q]_{21}$$   |
+
+
+The probabilities above are called conditional likelihoods (we are conditioning at each possible value of the internal node)  and we are going to store them for later use. Let's continue to assume that at the node the trait is blue, that is $$X(t_1)=Blue$$.
+What is the probability that it actually happened to be blue?
+
+Think about the possible pathways
+
+![](/assets/images/pruning2.png)
+
+
++ Internal node is  $$X(t_1)=Blue$$  and root is  $$X(t_0)=Blue$$
++ Internal node is  $$X(t_1)=Blue$$  and root is  $$X(t_0)=Red$$
+
+
+### Probabilities at the root
+Finally, we need to think about the probability of the root being  Blue or Red
+
+| Blue | Red |
+|:----------------:| :---------------------:|
+|$$\pi(Blue)$$ | $$\pi(Red)$$ |
+
+
+So what are these probabilities? What would you write?
+
+
+
+Interestingly, this is still an open question for discrete character evolution. In general people have done
++ Uniform probabilities $$\pi(Blue)=\pi(Red)=1/2$$
++ Weighted averages of likelihood. For example we fix our root to be Blue, calculate likelihood $$L_{Blueroot}$$, then we fix it to be Red calculate $$L_{Redroot}$$ and then the root is given probabilities $$(\pi(Blue),\pi(Red))=\Large(\frac{L_{Blueroot}}{L_{Blueroot}+L_{Redroot}},\frac{L_{Redroot}}{L_{Blueroot}+L_{Redroot}}\Large)$$
++ Stationary distribution
++ My new favorite the root probabilities are unknown and random varialbles and getting the posterior probabilities of the vector $$(\pi(Blue),\pi(Red))$$
+
+
+Finally, the likelihood is the result of considering the probabilities all across the possible histories in the nodes of the tree.
+
+![](/assets/images/phylo3.png)
+
+###  Real examples
+1. Ng, J. and Smith, S.D., 2016. Widespread flower color convergence in Solanaceae via alternate biochemical pathways. New Phytologist, 209(1), pp.407-417.
+
+Figure 1. of Ng and Smith (2016)
+
+![](/assets/images/NgSmith.png)
+
+2. Implementation in RevBayes for selfing and non-selfing taxa in Polimoneaceae
+* [Data](https://github.com/phylosdd/MidwestPhylo2019/tree/master/docs/class/Discretetraitrevbayes/data)
+* [RevCode](https://github.com/phylosdd/MidwestPhylo2019/blob/master/docs/class/Discretetraitrevbayes/mk2.Rev)
+
+![](/assets/images/posteriorflower.png)
+
+3. Chromploid package- Large Q-matrices
+![](/assets/images/polyploidyprofilerho.png)
+
+### References
++ Felsenstein, J., 1981. Evolutionary trees from DNA sequences: a maximum likelihood approach. Journal of molecular evolution, 17(6), pp.368-376.
++ Ng, J. and Smith, S.D., 2016. Widespread flower color convergence in Solanaceae via alternate biochemical pathways. New Phytologist, 209(1), pp.407-417.
++ Zenil‐Ferguson, R., Burleigh, J.G. and Ponciano, J.M., 2018. chromploid: An R package for chromosome number evolution across the plant tree of life. Applications in plant sciences, 6(3), p.e1037.
+[chromploid R package](https://github.com/roszenil/chromploid)
++ Blackmon, H., Justison, J., Mayrose, I. and Goldberg, E.E., 2019. Meiotic drive shapes rates of karyotype evolution in mammals. Evolution, 73(3), pp.511-523.
+[chromePlus R package](https://github.com/coleoguy/chromePlus)
+
