@@ -30,6 +30,8 @@ remote_theme: mmistakes/minimal-mistakes
 
 include:
   - _pages
+  - assets
+  - _teaching
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -90,7 +92,21 @@ defaults:
       noindex: true 
       #To hide from robots and crawlers
 
-
+# _teaching
+- scope:
+    path: ""
+    type: teaching
+    values:
+    author profile: true
+    excerpt: ""
+    sidebar:
+        nav:"teaching"
+        
+# collections
+    collections:
+    teaching:
+    output: true
+    
 category_archive:
   type: liquid
   path: /categories/
