@@ -1,24 +1,54 @@
 ---
 classes: wide
 header:
-overlay_image:/assets/images/waikiki.jpg
-title: Teaching
-permalink: /portfolio/teaching/
-author_profile: false
+  overlay_image: /assets/images/tools.jpg
+  caption: "Photo credit: [**Ricky Kharawala**](https://unsplash.com)"
+permalink: /portfolio/index.html
+date: 2018-01-07
 
 feature_row:
-- image_path: assets/images/qmatrix.png
-alt: "CTMC"
-title: "Continuous Time Markov Models"
-excerpt: "Midwest Phylogenetics Workshop 2019 Lecture"
-url: "/portfolio/ctmc/"
-btn_label: "Read More"
-btn_class: "btn--primary"
+  - image_path: assets/images/ai_head.jpg
+    alt: "DeskAI"
+    title: "DeskAI: Smarter Online User Targeting"
+    excerpt: "Automated optimization of online advertising campaigns."
+    url: "/portfolio/deskai/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"	
+  - image_path: /assets/images/miles.jpg
+    alt: "Music"
+    title: "Algorithmic Musical Genre Classification"
+    excerpt: "Detection of musical genre directly from the audio file."
+    url: "/portfolio/genre_cls/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"	
+  - image_path: /assets/images/social_network.jpg
+    alt: "Social Network"
+    title: "Anomaly Detection in Social Networks"
+    excerpt: "Anomaly detection in social network data, using the graph resistance."
+    url: "/portfolio/social-networks/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
 ---
-In this page you will find some examples of my recent workshops and ideas for classes. I currently teach BIOL171 at University of Hawai'i Mānoa that is the largest enrollment class in the department.
+
+# Portfolio
+
+Here you'll find summaries of the major projects I've done over the years, which
+are representative of my skills and interests. These projects span everything
+from mathematical physics to machine learning, from finance to advertising, from
+the theoretical to the practical.
+
+The discussion here is generally non-technical; for the research projects,
+related publications can be found in [my resume][1]. There are also links to
+documents at the top of each page, which offer more depth. If you're curious
+about technical details I've glossed over, feel free to [contact me][2].
 
 
-## Lectures
 <div style="margin-bottom:1cm" align="center"><font size="55">Selected Projects</font></div>
 
 {% include feature_row %}
+
+<!------------------------------- FOOTER --------------------------------->
+
+[1]: /assets/docs/resume.pdf
+
+[2]: mailto:peter@pwills.com
