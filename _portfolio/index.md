@@ -2,19 +2,11 @@
 classes: wide
 header:
   overlay_image: /assets/images/tools.jpg
-  caption: "Photo credit: [**Ricky Kharawala**](https://unsplash.com)"
 permalink: /portfolio/index.html
 date: 2018-01-07
 
 feature_row:
-  - image_path: assets/images/ai_head.jpg
-    alt: "DeskAI"
-    title: "DeskAI: Smarter Online User Targeting"
-    excerpt: "Automated optimization of online advertising campaigns."
-    url: "/portfolio/deskai/"
-    btn_label: "Read More"
-    btn_class: "btn--primary"	
-  - image_path: /assets/images/ctmc_files/bichromqmat.png
+  - image_path: /assets/images/ctmc_files/qmatrix.png
     alt: "Teaching"
     title: "Continuous-Time Markov Models"
     excerpt: "Midwest Phylogenetics Workshop Lecture 2019"
