@@ -102,7 +102,6 @@ defaults:
       author_profile: false
       excerpt: ""
       sidebar: false
-        nav: "portfolio"
 
 # collections
 collections:
