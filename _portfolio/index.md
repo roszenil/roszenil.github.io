@@ -14,11 +14,11 @@ feature_row:
     url: "/portfolio/deskai/"
     btn_label: "Read More"
     btn_class: "btn--primary"	
-  - image_path: /assets/images/miles.jpg
-    alt: "Music"
-    title: "Algorithmic Musical Genre Classification"
-    excerpt: "Detection of musical genre directly from the audio file."
-    url: "/portfolio/genre_cls/"
+  - image_path: /assets/images/ctmc_files/bichromqmat.png
+    alt: "Teaching"
+    title: "Continuous-Time Markov Models"
+    excerpt: "Midwest Phylogenetics Workshop Lecture 2019"
+    url: "/portfolio/ctmc/"
     btn_label: "Read More"
     btn_class: "btn--primary"	
   - image_path: /assets/images/social_network.jpg
