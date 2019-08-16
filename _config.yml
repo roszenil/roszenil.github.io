@@ -100,7 +100,7 @@ defaults:
     author profile: true
     excerpt: ""
     sidebar:
-        nav:"teaching"
+        nav: "teaching"
         
 # collections
     collections:
