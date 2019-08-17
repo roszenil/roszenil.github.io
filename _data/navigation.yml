@@ -15,7 +15,7 @@ main:
 
 # sidebar for portfolio
 portfolio:
-  - title: "Teaching"
+  - title: "Workshops"
     children:
 #      - title: "Machine Learning on AWS"
 #        url: /portfolio/coming/
