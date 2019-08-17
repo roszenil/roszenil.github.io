@@ -7,7 +7,6 @@ permalink: /contact/
 tags:
 - people
 ---
-## Contact
 **Email**  roszenil@hawaii.edu
 
 **Phone** (808) 956-8241
