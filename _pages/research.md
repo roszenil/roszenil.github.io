@@ -1,10 +1,11 @@
 ---
 title:
 header:
-  overlay_image: /assets/images/ladyslipper2.jpg
+overlay_image: /assets/images/laydslipper2.jpg
 permalink: /research/
+tags:
+- research
 ---
-## Recent publications
 
 [**Google Scholar**](https://scholar.google.com/citations?hl=en&user=fddibuQAAAAJ&view_op=list_works&sortby=pubdate)
 
