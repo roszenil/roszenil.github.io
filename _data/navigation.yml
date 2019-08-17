@@ -1,5 +1,7 @@
 # the masthead
 main:
+  - title: "People"
+    url: /people/
   - title: "Research"
     url: /research/
   - title: "Teaching"
@@ -13,12 +15,12 @@ main:
 
 # sidebar for portfolio
 portfolio:
-  - title: "Projects"
+  - title: "Teaching"
     children:
 #      - title: "Machine Learning on AWS"
 #        url: /portfolio/coming/
-      - title: "Anomaly Detection in Social Networks"
-        url: /portfolio/social-networks/
+      - title: "Continuous- Time Markov Chains"
+        url: /portfolio/ctmc/
       - title: "NetComp: Python Network Comparison"
         url: /portfolio/netcomp/
       - title: "Automatic Genre Classification"
