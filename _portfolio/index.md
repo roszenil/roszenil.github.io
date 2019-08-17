@@ -3,8 +3,7 @@ classes: wide
 header:
   overlay_image: /assets/images/beachsolanum2.png
 permalink: /portfolio/index.html
-date: 2018-01-07
-author_profile: true
+date: 2019-09-16
 feature_row:
   - image_path: /assets/images/ctmc_files/qmatrix.png
     alt: "Teaching"
