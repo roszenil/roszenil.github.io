@@ -24,7 +24,7 @@ feature_row:
 Here you'll find examples of some of of my lessons representative of my skills and interests. These lectures span from theoretical to applications
 
 
-<div style="margin-bottom:1cm" align="center"><font size="32">Workshop Lectures</font></div>
+<div style="margin-bottom:1cm" align="center"><font size="18">Workshop Lectures</font></div>
 
 {% include feature_row %}
 
