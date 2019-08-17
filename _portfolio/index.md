@@ -13,11 +13,11 @@ feature_row:
     url: "/portfolio/ctmc/"
     btn_label: "Read More"
     btn_class: "btn--primary"	
-  - image_path: /assets/images/social_network.jpg
-    alt: "Social Network"
-    title: "Anomaly Detection in Social Networks"
-    excerpt: "Anomaly detection in social network data, using the graph resistance."
-    url: "/portfolio/social-networks/"
+  - image_path: /assets/images/likelihoodbirdalarms_files/likelihoodintervals-1.png
+    alt: "Teaching"
+    title: "Evidential Statistics Application"
+    excerpt: "An example of evidential statistics paradigm using an example of heterospecif bird alam calls"
+    url: "/portfolio/evidence/"
     btn_label: "Read More"
     btn_class: "btn--primary"
 ---
