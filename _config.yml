@@ -19,7 +19,7 @@ plugins:
 # Build settings
 markdown: kramdown
 remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: contrast
+minimal_mistakes_skin: "contrast"
   
 # settings for author profile
 author:
