@@ -1,7 +1,7 @@
 ---
 title:
 header:
-overlay_image: /assets/images/laydslipper2.jpeg
+    overlay_image: /assets/images/ls1.jpg
 permalink: /research/
 tags:
 - research
