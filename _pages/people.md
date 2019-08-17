@@ -1,7 +1,7 @@
 ---
 title:
 header:
-overlay_image: /assets/images/plumeria.jpg
+    overlay_image: /assets/images/plumeria.jpg
 permalink: /people/
 ---
 **Rosana Zenil-Ferguson**
