@@ -11,7 +11,7 @@ I joined the Department of Biology as an assistant professor on January 2019. I 
 
 Some publications about me:
 * [New faculty profile](http://manoa.hawaii.edu/biology/faculty_spotlight/2019/08/09/prof-rosana-zenil-ferguson)
-* [The female scientist]https://thefemalescientist.com/portrait/rosana-zenil-ferguson/1276/meet-dr-rosana-zenil-ferguson-a-statistician-that-fell-in-love-with-plants-and-evolution/)
+* [The female scientist](https://thefemalescientist.com/portrait/rosana-zenil-ferguson/1276/meet-dr-rosana-zenil-ferguson-a-statistician-that-fell-in-love-with-plants-and-evolution/)
 
 
 ## Join the lab!
