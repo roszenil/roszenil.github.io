@@ -1,7 +1,7 @@
 ---
 title:
 header:
-  overlay_image: /assets/images/ladyslipper.jpg
+  overlay_image: /assets/images/ladyslipper2.png
 permalink: /research/
 ---
 ## Recent publications
