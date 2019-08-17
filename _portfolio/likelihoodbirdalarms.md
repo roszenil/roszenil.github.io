@@ -1,9 +1,9 @@
 ---
 header:
     overlay_image: /assets/images/likelihoodbirdalarms_files/likelihoodintervals-1.png
-    permalink: /portfolio/evidence/
-date: 2019-06-02
+permalink: /portfolio/evidence/
 category: teaching
+date: 2019-06-02
 toc: true
 toc_label: "Contents"
 ---
