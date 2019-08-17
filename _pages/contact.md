@@ -2,7 +2,6 @@
 title:
 header:
  overlay_image: /assets/images/waikiki.jpg
- caption: "Waikiki Beach"
 permalink: /contact/
 tags:
 - people
