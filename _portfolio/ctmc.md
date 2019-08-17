@@ -55,7 +55,7 @@ return(probabilities)
 It looks ugly but what the matrix is saying is that in a time $$t$$ a flower will evolve from blue to red with probability $$P(X(t)=Red\|X(0)=Blue)=\frac{1}{\alpha+\beta}(\beta-\alpha e^{-(\alpha+\beta)t})$$.
 
 Q-matrices can get really crazy!  Chromosome number matrices for example
-![](/assets/images/ctmc_filesbichromqmat.png)
+![](/assets/images/ctmc_files/bichromqmat.png)
 
 So calculating the probabilities from algebra for large matrices is impossible so we use numerical approximations
 ``` r
@@ -97,7 +97,7 @@ What is the probability that it actually happened to be blue?
 
 Think about the possible pathways
 
-![](/assets/images/ctmc_files/pruning2.png)
+![](/assets/images/ctmc_files/pruning1.png)
 
 
 + Internal node is  $$X(t_1)=Blue$$  and root is  $$X(t_0)=Blue$$
