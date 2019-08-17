@@ -2,6 +2,7 @@
 header:
   overlay_image: /assets/images/ctmc_files/bichromqmat.png
 permalink: /portfolio/ctmc/
+author_profile: true
 category: teaching
 date: 2019-06-05
 toc: true
