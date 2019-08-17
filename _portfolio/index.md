@@ -8,14 +8,14 @@ feature_row:
   - image_path: /assets/images/ctmc_files/qmatrix.png
     alt: "Teaching"
     title: "Continuous-Time Markov Models"
-    excerpt: "Midwest Phylogenetics Workshop Lecture 2019"
+    excerpt: "Models for discrete trait evolution. Midwest Phylogenetics Workshop Lecture 2019"
     url: "/portfolio/ctmc/"
     btn_label: "Read More"
     btn_class: "btn--primary"	
   - image_path: /assets/images/likelihoodbirdalarms_files/likelihoodintervals-1.png
     alt: "Teaching"
     title: "Evidential Statistics Application"
-    excerpt: "An example of evidential statistics paradigm using an example of heterospecif bird alam calls"
+    excerpt: "Evidential statistics paradigm using an example of heterospecific bird alam calls"
     url: "/portfolio/evidence/"
     btn_label: "Read More"
     btn_class: "btn--primary"
