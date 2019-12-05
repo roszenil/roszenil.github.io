@@ -23,6 +23,9 @@ portfolio:
         url: /portfolio/ctmc/
       - title: "Evidential Stats"
         url: /portfolio/evidence/
+      - title: "Evidential Stats"
+        url: /portfolio/SDD/
+    
 
  # - title: "Research"
   #  children:
