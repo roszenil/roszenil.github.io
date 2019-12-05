@@ -1,0 +1,164 @@
+#########################################################################################################
+#
+# BiSSE selfing Polimoneceae
+#
+# authors: Rosana Zenil-Ferguson modified from the BiSSE tutorial @RevBayes
+# last modified: 10/30/2018
+#########################################################################################################
+#######################
+# Reading in the Data #
+#######################
+
+setOption("useScaling","true")
+NUM_STATES = 2
+### Read in the data
+observed_phylogeny <- readTrees("data/poleult.tre")[1]
+data <- readCharacterDataDelimited("data/pole_datadis.csv",
+stateLabels=2,
+type="NaturalNumbers",
+delimiter=",",
+headers=TRUE)
+
+# Get some useful variables from the data. We need these later on.
+taxa <- observed_phylogeny.taxa()
+
+# set my move index
+mvi = 0
+mni = 0
+
+
+H = 0.587405
+
+####################
+# Create the rates #
+####################
+
+### Specify a prior on the diversification and turnover rate
+
+### Create the constant prior parameters of the diversification rates
+## Number of surviving lineages is 165
+rate_mean <- ln( ln(165/2.0) / observed_phylogeny.rootAge() )
+rate_sd <- 2*H
+
+for (i in 1:NUM_STATES) {
+
+### Create a lognormal distributed variable for the diversification rate
+log_speciation[i] ~ dnNormal(mean=rate_mean,sd=rate_sd)
+log_speciation[i].setValue( rate_mean )
+speciation[i] := exp( log_speciation[i] )
+moves[++mvi] = mvSlide(log_speciation[i],delta=0.20,tune=true,weight=3.0)
+
+### Create a lognormal distributed variable for the turnover rate
+log_extinction[i] ~ dnNormal(mean=rate_mean,sd=rate_sd)
+log_extinction[i].setValue( rate_mean )
+extinction[i] := exp( log_extinction[i] )
+moves[++mvi] = mvSlide(log_extinction[i],delta=0.20,tune=true,weight=3)
+
+}
+
+
+#########################################################
+# Set up the transition rate matrix for observed states #
+#########################################################
+## I defined very loosely my gamma priors for rates in the Q-mat
+shape_pr := 0.5
+rate_pr := 1
+############### Alternative definition or rate parameter
+# Each transition rate between observed states are drawn
+# from an exponential distribution with a mean of 10
+# character state transitions over the tree.
+# rate_pr := observed_phylogeny.treeLength() / 10
+
+rate_12 ~ dnGamma(shape=shape_pr, rate=rate_pr)
+rate_21 ~ dnGamma(shape=shape_pr, rate=rate_pr)
+
+moves[++mvi] = mvScale( rate_12, weight=2 )
+moves[++mvi] = mvScale( rate_21, weight=2 )
+
+
+
+######################################################################
+# Create the rate matrix for the combined observed and hidden states #
+######################################################################
+rate_matrix := fnFreeBinary( [rate_12, rate_21 ], rescaled=false)
+
+
+#####################################
+# Set up the root state frequencies #
+# We're going to estimate them and not set them up#
+#####################################
+
+### Create a constant variable with the prior probabilities of each rate category at the root.
+rate_category_prior ~ dnDirichlet( rep(1,NUM_STATES) )
+moves[++mvi] = mvDirichletSimplex(rate_category_prior,tune=true,weight=2)
+
+
+### Create the fix parameter for the age of the root set to the observed age
+root <- observed_phylogeny.rootAge()
+
+### I did not add any sampling of species but it is posible by setting this rho parameter
+### rho is the probability of sampling species at the present
+### fix this to 165/450
+rho <- observed_phylogeny.ntips()/450
+
+
+####################################################################
+# Building the BiSSE Model as discrete character model+ BD process#
+###################################################################
+
+### Here is where I tie speciation, extinction, and Q using a Birth-Death with categories
+timetree ~ dnCDBDP( rootAge           = root,
+speciationRates   = speciation,
+extinctionRates   = extinction,
+Q                 = rate_matrix,
+pi                = rate_category_prior,
+rho               = rho,
+delta             = 1.0,
+condition         = "time" )
+
+### clamp the model with the "observed" tree
+timetree.clamp( observed_phylogeny )
+timetree.clampCharData( data )
+
+
+
+#############
+# The Model #
+#############
+
+
+### workspace model wrapper ###
+mymodel = model(rate_matrix)
+
+### set up the monitors that will output parameter values to file and screen
+monitors[++mni] = mnFile(filename="ouput/BiSSE_pole.trees", printgen=1, timetree)
+monitors[++mni] = mnModel(filename="ouput/BiSSE_pole.log", printgen=1)
+##This monitor was the one giving me trouble type has to be the same that data, however I'm not hundred percent sure whether tree should be the stochastic tree assigned by the clamp or the observed_phylogeny. Will and Sebastian have different inputs
+
+monitors[++mni] = mnJointConditionalAncestralState(tree=timetree, cdbdp=timetree, type="NaturalNumbers", printgen=1, withTips=true, withStartStates=false, filename="output/anc_states_BiSSE_pole.log")
+monitors[++mni] = mnScreen(printgen=10, rate_12, rate_21, speciation, extinction)
+
+
+################
+# The Analysis #
+################
+
+### workspace mcmc
+mymcmc = mcmc(mymodel, monitors, moves, nruns=1, moveschedule="random")
+
+### pre-burnin to tune the proposals 20% of the sample
+mymcmc.burnin(generations=200,tuningInterval=50)
+
+### run the MCMC
+mymcmc.run(generations=10000)
+
+##############################
+# Summarize ancestral states #
+##############################
+
+
+#anc_states = readAncestralStateTrace("output/anc_states_BiSSE_pole.log")
+#anc_tree = ancestralStateTree(tree=observed_phylogeny, ancestral_state_trace_vector=anc_states, include_start_states=false, file="output/anc_states_summarypole.tree", burnin=0, summary_statistic="MAP", site=0)
+
+q()
+

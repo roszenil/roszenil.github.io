@@ -17,5 +17,6 @@ Note: This workshop is slowly evolving so materials will be changing over time.
 
 
 ### Introduction to Continuous Time Markov Chains (CTMC)
-Slides [here](/assets/docs/introCTMC.pdf)
-
+1. Slides [here](/assets/docs/introCTMC.pdf)
+2. Trait data [.csv](/assets/docs/pole_datadis.csv), and phylogeny[.tre](/assets/docs/poleult.tre)
+3. Revbayescode[mk2.Rev](/assets/docs/mk2.Rev)
