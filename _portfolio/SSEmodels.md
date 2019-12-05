@@ -17,5 +17,5 @@ Note: This workshop is slowly evolving so materials will be changing over time.
 
 
 ### Introduction to Continuous Time Markov Chains (CTMC)
-Slides [here](introCTMC.pdf)
+Slides [here](/assets/docs/introCTMC.pdf)
 
