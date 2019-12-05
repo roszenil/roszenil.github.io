@@ -19,7 +19,7 @@ feature_row:
     url: "/portfolio/evidence/"
     btn_label: "Read More"
     feature_row:
-    - image_path: /assets/images/ctmc_files/qmatrix.png
+    - image_path: /assets/images/sdd_files/kf1.png
     alt: "Teaching"
     title: "SSE Models"
     excerpt: "Diversification models using RevBayes"

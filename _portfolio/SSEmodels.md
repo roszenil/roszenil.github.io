@@ -1,6 +1,6 @@
 ---
 header:
-overlay_image: /assets/images/likelihoodbirdalarms_files/likelihoodintervals-1.png
+overlay_image: /assets/images/sdd_files/kf1.png
 permalink: /portfolio/SDD/
 category: teaching
 author_profile: true
@@ -11,8 +11,11 @@ toc_label: "Contents"
 
 # State dependent diversification models
 ## Background
-The goal of this workshop is to get you familiarized with state dependent diversification models. In the literature they are called state dependent speciation and extinction, because the goal is to link traits to the process of speciation and extinction in a macroevolutionary level.
+The goal of this workshop is to get you familiarized with state dependent diversification models. In the literature they are called state dependent speciation and extinction, because the models link the value of the states to the rates of speciation and extinction. This idea will be clearer as we work through the workshop excercises.
 
-The workshop is slowly evolving but here are the parts that  will be discussed today
-### 
+Note: This workshop is slowly evolving so materials will be changing over time.
+
+
+### Introduction to Continuous Time Markov Chains (CTMC)
+Slides [here](assets/images/sdd_files/introCTMC.pdf)
 
