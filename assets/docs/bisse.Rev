@@ -12,8 +12,8 @@
 setOption("useScaling","true")
 NUM_STATES = 2
 ### Read in the data
-observed_phylogeny <- readTrees("data/poleult.tre")[1]
-data <- readCharacterDataDelimited("data/pole_datadis.csv",
+observed_phylogeny <- readTrees("basicdata/poleult.tre")[1]
+data <- readCharacterDataDelimited("basicdata/pole_datadis.csv",
 stateLabels=2,
 type="NaturalNumbers",
 delimiter=",",
