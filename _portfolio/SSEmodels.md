@@ -40,6 +40,13 @@ Here you will find all the materials that we are using to discuss state speciati
 #### Trait data utilized for the workshop
 Trait data [.csv](/assets/docs/pole_datadis.csv), and phylogenetic [.tre](/assets/docs/poleult.tre)
 
+#### Binary state speciation and extinction model (BiSSE) using RevBayes
+
+BiSSE is a stochastic process that is the composition of two different birth-death stochastic processes connected by a transition rate.  The key assumption of a BiSSE model is that the trait can be categorize in two states, each state with its own birth rate $$\lambda$$ and death rate $$\mu$$ representing the splitting of a lineage or the extinction of a lineage respectively. This is a big assumption because the implication is that the accumulation (or the lack of) of lineages is link to the value of the state (0 or 1) but nothing else.
+
+Often in the literature, including the original BiSSE article, the model is represented graphically by circles and arrows connected as the figure shown below. T
+![](/assets/images/sse_files/bisse.png)
+*BiSSE graphical representation in most published papers. Trait is assumed be be binary, parameters $$(\lambda_0, \lambda_1)$$ are speciation rates link to each of the states, and parameters $$(mu_0,\mu_1)$$ are extinction rates. The transition rates $$(q_{01},q_{10})$$ indicate how often the value of the trait changes.*
 
 
 1. SSE slides [here](/assets/docs/introSSE.pdf)
