@@ -46,7 +46,7 @@ BiSSE is a stochastic process that is the composition of two different birth-dea
 
 Often in the literature, including the original BiSSE article, the model is represented graphically by circles and arrows connected as the figure shown below.
 
-![](/assets/images/sse_files/bisse.png=50x)
+![](/assets/images/sse_files/bisse.png)
 *BiSSE graphical representation in most published papers. Trait is assumed be be binary, parameters $$(\lambda_0, \lambda_1)$$ are speciation rates link to each of the states, and parameters $$(mu_0,\mu_1)$$ are extinction rates. The transition rates $$(q_{01},q_{10})$$ indicate how often the value of the trait changes.*
 
 
