@@ -22,12 +22,9 @@ headers=TRUE)
 phylogeny <- readTrees("basicdata/poleult.tre")[1]
 
 
-
-## Definition of hiper-priors
-#Hyperpriors, how many changes of each tipe do we expect on the tree?
-
-rate_pr1 := phylogeny.treeLength()/10
-rate_pr2 := phylogeny.treeLength()/10
+#### Rates for the Q-matrix
+rate_pr1 = phylogeny.treeLength()/5
+rate_pr2 = phylogeny.treeLength()/10
 
 # Transition rates of the matrix via the hyperpriors
 rate_12~ dnExponential(rate_pr1)
@@ -57,7 +54,7 @@ moves[3] = mvBetaSimplex(root_frequencies, alpha=0.5, weight=3)
 moves[4] = mvElementSwapSimplex(root_frequencies, weight=3)
 
 # Define the continuous time markov model
-ctmc ~ dnPhyloCTMC(Q= rate_matrix, tree=phylogeny, nSites=1, rootFreq=root_frequencies, type="Binary")
+ctmc ~ dnPhyloCTMC(Q= rate_matrix, tree=phylogeny, nSites=1, rootFreq=root_frequencies, type="NaturalNumbers")
 #Fix our observations of selfing to the tips
 ctmc.clamp(selfing_data)
 
@@ -70,11 +67,10 @@ mymodel = model(rate_matrix)
 
 
 # Output what we are going to see
-monitors[1] = mnScreen(printgen=10)
+monitors[1] = mnScreen(printgen=10, rate_12, rate_21)
 monitors[2] = mnJointConditionalAncestralState(filename="output/anc_statespoledis.log",printgen=10,tree=phylogeny,ctmc=ctmc,type="NaturalNumbers")
 monitors[3] = mnStochasticCharacterMap(ctmc=ctmc,printgen=10,filename="output/stoch_mapspoledis.log", include_simmap=true)
 monitors[4] = mnModel(filename="output/modelpoledis.log", printgen=10)
-monitors[5] = mnScreen(printgen=10, rate_12, rate_21)
 
 
 

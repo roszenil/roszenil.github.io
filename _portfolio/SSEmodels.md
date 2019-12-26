@@ -16,17 +16,32 @@ The goal of this workshop is to get you familiarized with state dependent divers
 Note: This workshop is slowly evolving so materials will be changing over time.
 
 ### Introduction to Bayesian Statistics and inference
+For background infromation about some basic Bayesian statistics  and MCMC algorithm to obtain posterior distribution samples plese reafer to the the slides below. This slides are from a short intro workshop I taught in Botany 2018 (Rochester, MN).
 1. Bayesian stats slides [here](/assets/docs/bayesianstatsintro.pdf)
 2. Markov chain Monte Carlo (MCMC) slides [here](/assets/docs/introMCMC.pdf)
 
+Really good lecture from Paul Lewis  is available in this [video](https://www.youtube.com/watch?v=4PWlnNsfz90).
+
 
 ### Introduction to Continuous Time Markov Chains (CTMC)
+Continuous time Markov chains are our power tools when we are trying to model any discrete trait evolution in a phylogeny.  CTMCs are stochastic processes, that is a random variable that we follow throughout time that is measuring the outcome of  interest.
+
+The slides below are from the Botany workshop in 2018
 1. Continuous Time Markov Chains slides [here](/assets/docs/introCTMC.pdf)
-2. MCMC slides [here](/assets/docs/introCTMC.pd)
-2. Trait data [.csv](/assets/docs/pole_datadis.csv), and phylogenetic [.tre](/assets/docs/poleult.tre)
+
+but more background information can be found in this long lecture that I taught in the Midwest Phylogenetic comparative methods workshop in 2019
+2. [CTMC lecture](https://roszenil.github.io/portfolio/ctmc/).
 3. RevBayes code [mk2.Rev](/assets/docs/mk2.Rev)
 
+
 ### State Speciation and Extinction Models
+Here you will find all the materials that we are using to discuss state speciation and extinction models (SSE). All the materials here are the joint work of Dr. Daniel Caetano and Carrie Tribble.
+
+#### Trait data utilized for the workshop
+Trait data [.csv](/assets/docs/pole_datadis.csv), and phylogenetic [.tre](/assets/docs/poleult.tre)
+
+
+
 1. SSE slides [here](/assets/docs/introSSE.pdf)
 2. RevBayes code  for BiSSE [bisse.Rev](/assets/docs/bisse.Rev)
 3. RevBayes code for HiSSE [hisse.Rev](/assets/docs/hisse.Rev)
