@@ -230,7 +230,6 @@ Again, this is another detail of great difference in comparative methods softwar
 ### fix this to 165/450
 rho <- observed_phylogeny.ntips()/450
 ```
-[](/assets/images/sse_files/gm4.png)
 
 *Figure 7. Graphical modeling of the sampling bias for BiSSE model. This is simply a fixed node measuring the percentage of lineages not sampled.*
 
