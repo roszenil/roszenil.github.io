@@ -219,7 +219,7 @@ moves[++mvi] = mvDirichletSimplex(rate_category_prior,tune=true,weight=2)
 
 ![](/assets/images/sse_files/gm3.png)
 
-*Figure 6. Graphical modeling of the root for BiSSE model. Root has a Dirichlet distribution that is a function of the number of states of the trait.
+*Figure 6. Graphical modeling of the root for BiSSE model. Root has a Dirichlet distribution that is a function of the number of states of the trait.*
 
 
 **Sampling bias**
@@ -232,7 +232,7 @@ rho <- observed_phylogeny.ntips()/450
 ```
 [](/assets/images/sse_files/gm4.png)
 
-*Figure 7. Graphical modeling of the sampling bias for BiSSE model. This is simply a fixed node measuring the percentage of lineages not sampled.
+*Figure 7. Graphical modeling of the sampling bias for BiSSE model. This is simply a fixed node measuring the percentage of lineages not sampled.*
 
 **Full graphical BiSSE model**
 As of now you have a series of fixed, stochastic, and deterministic nodes free floating as small pieces of construction blocks.
@@ -260,7 +260,8 @@ condition         = "time" )
 In graphical representation the BiSSE model then looks like Figure 7.
 
 [](/assets/images/sse_files/gm6.png)
-*Figure 7. BiSSE in graphical modeling. We connect all our modeling blocks using a phylogenetic probability distribution where diversification, transition rates, and root frequencies can be estimated.
+
+*Figure 7. BiSSE in graphical modeling. We connect all our modeling blocks using a phylogenetic probability distribution where diversification, transition rates, and root frequencies can be estimated.*
 
 
 1. SSE slides [here](/assets/docs/introSSE.pdf)
