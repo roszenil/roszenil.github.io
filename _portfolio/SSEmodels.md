@@ -69,6 +69,7 @@ We will discuss some of the caveats as well at the end, but one very important k
 **Rev Language**
 Just a brief reminder that we will be using Rev language and every assignation we use has a meaning in the graphical model world. For more details please refer to (Hoehna et al. 2013 )
 ![](/assets/images/sse_files/revlanguage.png)
+*Figure 3. From Hoehna et al. 2013. Rev language and its graphical model representation*
 
 **Trait data utilized for the workshop**
 Polimoneaceae data from Landis, J. et al. 2018. This is a phylogenetic tree of Phlox with selfing and outcrossing data as breeding system binary trait. We will use this dataset as an example of binary trait that could be interesting for diversification.
@@ -140,7 +141,7 @@ moves[++mvi] = mvSlide(log_extinction[i],delta=0.20,tune=true,weight=3)
 ```
 In graphical modeling what we are doing is connecting deterministic with stochastic nodes
 ![](/assets/images/sse_files/gm1.png)
-*Figure 4. Graphical modeling of diversification rates of Bisse. Squares represent deterministic nodes, circles represent stochastic nodes*
+*Figure 4. Graphical modeling of diversification rates of BiSSE. Squares represent deterministic nodes, circles represent stochastic nodes*
 
 
 **Why going through so much trouble defining the log-normal as a prior distribution instead of the normal or something else?**
