@@ -26,9 +26,6 @@ taxa <- observed_phylogeny.taxa()
 mvi = 0
 mni = 0
 
-
-H = 0.587405
-
 ####################
 # Create the rates #
 ####################
@@ -37,6 +34,7 @@ H = 0.587405
 
 ### Create the constant prior parameters of the diversification rates
 ## Number of surviving lineages is 165
+H = 0.587405
 rate_mean <- ln( ln(165/2.0) / observed_phylogeny.rootAge() )
 rate_sd <- 2*H
 
