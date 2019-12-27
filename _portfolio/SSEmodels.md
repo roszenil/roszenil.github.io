@@ -70,10 +70,32 @@ Just a brief reminder that we will be using Rev language and every assignation w
 ![](/assets/images/sse_files/revlanguage.png)
 
 **Trait data utilized for the workshop**
-Polimoneaceae data from Landis, J. et al. 2018. This is a phylogenetic tree of Phlox with selfing and outcrossing data as breeding system binary trait.
+Polimoneaceae data from Landis, J. et al. 2018. This is a phylogenetic tree of Phlox with selfing and outcrossing data as breeding system binary trait. We will use this dataset as an example of binary trait that could be interesting for diversification.
 
 Trait data [.csv](/assets/docs/pole_datadis.csv), and phylogenetic [.tre](/assets/docs/poleult.tre)
 
+**Reading data and basics**
+
+Default for Revbayes options
+```
+setOption("useScaling","true")
+```
+
+For BiSSE the number of states is 2 (binary) and then we read the data. I have a folder called basicdata right where the ./rb executable is. You can specify any directory but I like to keep it there for tests. Running in the cluster I have very specific files.
+
+```
+NUM_STATES = 2
+### Read in the data
+observed_phylogeny <- readTrees("basicdata/poleult.tre")[1]
+data <- readCharacterDataDelimited("basicdata/pole_datadis.csv",
+stateLabels=2,
+type="NaturalNumbers",
+delimiter=",",
+headers=TRUE)
+
+# Get some useful variables from the data. For example taxa names in the phylogeny
+taxa <- observed_phylogeny.taxa()
+```
 
 
 
