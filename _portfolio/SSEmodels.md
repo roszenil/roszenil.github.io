@@ -217,6 +217,11 @@ rate_category_prior ~ dnDirichlet( rep(1,NUM_STATES) )
 moves[++mvi] = mvDirichletSimplex(rate_category_prior,tune=true,weight=2)
 ```
 
+![](/assets/images/sse_files/gm3.png)
+
+*Figure 6. Graphical modeling of the root for BiSSE model. Root has a Dirichlet distribution that is a function of the number of states of the trait.
+
+
 **Sampling bias**
 
 Again, this is another detail of great difference in comparative methods software. At the moment, in RevBayes the only correction that can be done is to input the proportion of total observed lineages compared to the number that we should expect in the phylogeny. Other software can actually correct by sampling bias by state (see Goldberg and Igic, 2012). What approach is better?- We don't know.
@@ -225,6 +230,37 @@ Again, this is another detail of great difference in comparative methods softwar
 ### fix this to 165/450
 rho <- observed_phylogeny.ntips()/450
 ```
+[](/assets/images/sse_files/gm4.png)
+
+*Figure 7. Graphical modeling of the sampling bias for BiSSE model. This is simply a fixed node measuring the percentage of lineages not sampled.
+
+**Full graphical BiSSE model**
+As of now you have a series of fixed, stochastic, and deterministic nodes free floating as small pieces of construction blocks.
+
+[](/assets/images/sse_files/gm5.png)
+
+The connector is a phylogenetic distribution function ```dnCDBDP``` **the character dependent birth and death process**. It is in this function that we connect diversification rates, transition rates, root frequencies, and sampling to create the full BiSSE or any SSE model as we will study.
+
+```
+####################################################################
+# Building the BiSSE Model as discrete character model+ BD process#
+###################################################################
+
+### Here is where I tie speciation, extinction, and Q using a Birth-Death with categories
+bissemodel ~ dnCDBDP( rootAge= root,
+speciationRates   = speciation,
+extinctionRates   = extinction,
+Q                 = rate_matrix,
+pi                = rate_category_prior,
+rho               = rho,
+delta             = 1.0,
+condition         = "time" )
+```
+
+In graphical representation the BiSSE model then looks like Figure 7.
+
+[](/assets/images/sse_files/gm6.png)
+*Figure 7. BiSSE in graphical modeling. We connect all our modeling blocks using a phylogenetic probability distribution where diversification, transition rates, and root frequencies can be estimated.
 
 
 1. SSE slides [here](/assets/docs/introSSE.pdf)
