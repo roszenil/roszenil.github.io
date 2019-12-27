@@ -96,6 +96,8 @@ headers=TRUE)
 
 # Get some useful variables from the data. For example taxa names in the phylogeny
 taxa <- observed_phylogeny.taxa()
+### Create the fix parameter for the age of the root set to the observed age
+root <- observed_phylogeny.rootAge()
 ```
 
 Indices that are going to be very useful for the proposals of the MCMC and for the monitors (statistics) that we are going to obtain from the inferential process (MCMC). This is not immediatly evident but it will be once we print the full model.
@@ -185,6 +187,27 @@ I consider selecting moves one of the hardest parts of doing inference. The move
 
 
 **Treatment of the root**
+This is a point of great difference amongst computational packages. ```diversitree``` packagefor example allows for a weighted likelihood calculation for the frequencies of the root. ```hisse``` package has a lot more options, from using the same approach of the weyn the future I will expand more about these differences but for now I will only focus on what RevBayes is doing.
+
+In RevBayes, we assume that the probabilities of the potential values of the root $$(\pi_0,\pi_1)$$ are unknown and they form a random vector. This means that we also **need** to estimate those probabilities. So what will do is create a prior distribution for the root that is [Dirichlet](https://en.wikipedia.org/wiki/Dirichlet_distribution) because it has two important properties: 1) the values of the vector are between (0,1), and (2) the entries of the vector add to 1.
+
+For example, values of the Dirchlet distribution can be  (0.487,0.513), meaning that the root could have a value of 0 with probability 0.487 and a value of 1 with probability 0.513. Notice, that this is the only distribution so far that is multivariate.
+Again, we finish by defining a ```move``` in this case a multivariate one to make a proposal for the whole vector```mvDirichletSimplex```.
+
+
+```
+### Create a constant variable with the prior probabilities of each rate category at the root.
+rate_category_prior ~ dnDirichlet( rep(1,NUM_STATES) )
+moves[++mvi] = mvDirichletSimplex(rate_category_prior,tune=true,weight=2)
+```
+
+**Sampling bias**
+Again, this is another detail of great difference in comparative methods software. At the moment, in RevBayes the only correction that can be done is to input the proportion of total observed lineages compared to the number that we should expect in the phylogeny. Other software can actually correct by sampling bias by state (see Goldberg and Igic, 2012). What approach is better?- We don't know.
+```
+### Rho is the probability of sampling species at the present
+### fix this to 165/450
+rho <- observed_phylogeny.ntips()/450
+```
 
 
 1. SSE slides [here](/assets/docs/introSSE.pdf)
