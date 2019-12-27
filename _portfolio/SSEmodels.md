@@ -67,7 +67,7 @@ We will discuss some of the caveats as well at the end, but one very important k
 
 **Rev Language**
 Just a brief reminder that we will be using Rev language and every assignation we use has a meaning in the graphical model world. For more details please refer to (Hoehna et al. 2013 )
-![](/assets/images/sse_files/Bisseequations.png)
+![](/assets/images/sse_files/revlanguage.png)
 
 **Trait data utilized for the workshop**
 Polimoneaceae data from Landis, J. et al. 2018. This is a phylogenetic tree of Phlox with selfing and outcrossing data as breeding system binary trait.
