@@ -54,11 +54,12 @@ The reason why this model is often represented as "circles and arrows" is becaus
 *Figure 2. Stochastic differential equations that define speciation in BiSSE*
 
 **Why is it important to know about these equations?**
-Let's just dig the interpretation of the first equation in Figure 2. The first equation for example, defines what needs to happen for a clade $$N$$ to be descendent from a lineage with state 0. The possibilities are before time $$t$$ nothing happened, the lineage was 0 and there hasn't been any speciation or extinction, nor a transition from 0 to 1, that is the very first part $$(\lambda_0+\mu_0+q_01)D_{N_0}(t)$$. But it could happen that there was a transition from 1 to 1 with instantaneous probability $$q_01D_{N_1}(t)$$; or the third possibility is that there wasn't a transition of state but a speciation event $$\lambda_0$$ with one lineage going extinct $$E_0(t)$$ whereas the other lineage gave rise to the clade $$N$$ with instantaneous probability $$D_{N_0}(t)$$.
 
-These equations are solved numerically to obtain full probabilities (not the "instantaneous" part) in any computational software building SSE models. As you can imagine with more states these equations get complex quickly (see ChromoSSE for example), so models are hard to fit.
+Let's just dig deeper into the interpretation of the equations shown in Figure 2. For example, the first equation defines what needs to happen for a clade $$N$$ to be descendent from a lineage with state 0. The three possibilities are: 1) before time $$t$$ nothing happened, the lineage was 0 and there wasn't any speciation, nor extinction, nor a transition from 0 to 1. So the very first part of the equation $$(\lambda_0+\mu_0+q_01)D_{N_0}(t)$$ represents the instantaneous probability of nothing happening. (2) There was a transition from 1 to 1 with instantaneous probability $$q_01D_{N_1}(t)$$. (3)There wasn't a transition of state but a speciation event $$\lambda_0$$ with one lineage going extinct $$E_0(t)$$ whereas the other lineage gave rise to the clade $$N$$ with instantaneous probability $$D_{N_0}(t)$$. Notice tha only one thing can happen at a time, either a state change or a diversification but not both simultaneously. This is one of the requirements to correctly define the model mathematically,  since we are looking an infinitesimal small time interval $$(t, t+\Delta t)$$ the probability of two things happening exactly at the same time is zero.
 
-But another key point here is that in the definition of these equations you can see the interplay between speciation and extinction. It is difficult to discuss the speciation resulting in a clade $$N$$ without talking about the extinction of a lineage. This is going to become really really important when we are estimating and interpreting diversification parameters.
+These equations jointly with the equations of extinction (not shown here) are solved numerically to obtain full probabilities (not the "instantaneous" part) in any computational software building SSE models (i.e. diversitree, hisse, Revbayes). As you can imagine with more states these equations get complex quickly (see ChromoSSE for example), so bigger models are harder and harder to fit.
+
+Another key point here is that in the definition of these equations you can see the interplay between speciation and extinction. It is difficult to discuss the speciation resulting in a clade $$N$$ without talking about the extinction of a lineage. This is going to become really really important when we are estimating and interpreting diversification parameters.
 
 #### BiSSE using RevBayes
 Another way to think about SSE models that is not only the circle and arrow diagrams, or the stochastic differential equations themselves is the graphical model representation. The goal of this introductory workshop is to get you thinking about graphical representations because you can create custom and more complex models without having to build complex equations every time.
@@ -105,14 +106,17 @@ mvi = 0
 mni = 0
 ```
 
-Now we are going to define our speciation and extinction rates. This is the part where the graphical model thinking starts helping with. We need to create four parameters $$(\lamda_0, \lambda_1, \mu_0,\mu_1)$$ to define speciation and extinction rates under BiSSE. Because our inferential approach is based on Bayesian statistics, what we want is to define four randon variables (r.v.s) that have a probability density function. The paradigm in Bayesian statistics states that parameters are unknown and random meaning that they have a probability distribution, since speciation and extinction rates can take continuous values, we call those probability **densities**, and one can choose from any [density](https://en.wikipedia.org/wiki/Probability_density_function) where values are positive (no negative rates allow). There are plenty of options (see here). In this example we will choose a [log-Normal distribution](https://en.wikipedia.org/wiki/Log-normal_distribution) for all four of them, but you can and should explore other possibilities.
+Now we are going to define our speciation and extinction rates. This is the part where the graphical model thinking starts helping with. We need to create four parameters $$(\lamda_0, \lambda_1, \mu_0,\mu_1)$$ to define speciation and extinction rates under BiSSE. Because our inferential approach is based on Bayesian statistics, what we want is to define four randon variables (r.v.s) that have a probability density function. The paradigm in Bayesian statistics states that parameters are unknown and random meaning that they have a probability distribution, since speciation and extinction rates can take continuous values, we call those probability **densities**, and one can choose from any [density](https://en.wikipedia.org/wiki/Probability_density_function) where the parameter values are positive (no negative rates allow). There are plenty of options ([see here](https://en.wikipedia.org/wiki/List_of_probability_distributions#Continuous_distributions). In this example we will choose a [log-Normal distribution](https://en.wikipedia.org/wiki/Log-normal_distribution) for all four parameters of speciation and extinction, but you can and should explore other possibilities.
+
 
 ```
 ## Create the constant prior parameters of the diversification rates
 ## Number of surviving lineages is 165
-H = 0.587405
-rate_mean <- ln( ln(165/2.0) / observed_phylogeny.rootAge() )
-rate_sd <- 2*H
+
+mx=ln(165/(2*observed_phylogeny.rootAge()))
+sx= 0.01
+rate_mean <- exp(mx+sx^2)
+rate_sd <- exp(2*mx+sx^2)*exp(sx^2-1)
 
 for (i in 1:NUM_STATES) {
 
@@ -130,7 +134,14 @@ moves[++mvi] = mvSlide(log_extinction[i],delta=0.20,tune=true,weight=3)
 
 }
 ```
+**Why going through so much trouble defining the log-normal as a prior distribution instead of the normal or something else?**
 
+Here is my reasoning to define this priors for speciation and extinction, yours might differ.
+From Nee et al. 1994 the expected number of lineages $$n$$ under a simple birth-death process at time $$t$$ is $$n=e^{(\lambda-\mu)t}$$. That means that an expected net diversification rate $$(\lambda-\mu)=\frac{ln(n)}{t}$$. Now,
+somewhat the expected speciation is "half" the net diversification $$m_x=\frac{ln(n)}{2t}$$ with some standard deviation $$s_x$$ we would like.
+
+We could move forward and simply define $$speciation~N(m_x, s_x^2)$$ but one caveat of doing that is that this normal could end up with negative values (what is a negative speciation rate?). So the better way to define it is via the log-speciation as a Normal distribution. One thing that comes handy here is that if we want speciation alone to have $$m_x$$ as expected value, the parameters of the logNormal $$(m_y, s_y^2)$$ can be defined as follows
+$$m_y=e^{(m_x+1/2s_x^2)}$$ and $$s_y=e^{(2m_x+s_x^2)}e^{(s_x^2-1)}$$. Those two parameters is what you see defined in the code for all speciation and extinctions.
 
 
 
