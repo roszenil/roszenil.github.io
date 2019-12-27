@@ -40,16 +40,32 @@ Here you will find all the materials that we are using to discuss state speciati
 #### Trait data utilized for the workshop
 Trait data [.csv](/assets/docs/pole_datadis.csv), and phylogenetic [.tre](/assets/docs/poleult.tre)
 
-#### Binary state speciation and extinction model (BiSSE) using RevBayes
+#### Binary state speciation and extinction model (BiSSE). A brief introduction
 
 BiSSE is a stochastic process that is the composition of two different birth-death stochastic processes connected by a transition rate.  The key assumption of a BiSSE model is that the trait can be categorize in two states, each state with its own birth rate $$\lambda$$ and death rate $$\mu$$ representing the splitting of a lineage or the extinction of a lineage respectively. This is a big assumption because the implication is that the accumulation (or the lack of) of lineages is link to the value of the state (0 or 1) but nothing else.
 
 Often in the literature, including the original BiSSE article, the model is represented graphically by circles and arrows connected as the figure shown below.
 
 ![](/assets/images/sse_files/bisse.png)
-*BiSSE graphical representation in most published papers. Trait is assumed be be binary, parameters $$(\lambda_0, \lambda_1)$$ are speciation rates link to each of the states, and parameters $$(\mu_0,\mu_1)$$ are extinction rates. The transition rates $$(q_{01},q_{10})$$ indicate how often the value of the trait changes.*
+*Figure 1. BiSSE graphical representation in most published papers. Trait is assumed be be binary, parameters $$(\lambda_0, \lambda_1)$$ are speciation rates link to each of the states, and parameters $$(\mu_0,\mu_1)$$ are extinction rates. The transition rates $$(q_{01},q_{10})$$ indicate how often the value of the trait changes.*
 
-The reason why this model is often represented as the circle and arrow figure is because it is much easier to understand than the mathematical representation. The mathematics behind BiSSE model are a series of stochastic differential equations (known also as Kolmogorov forward equations). The
+The reason why this model is often represented as "circles and arrows" is because it is much easier to communicate than the mathematical representation. The mathematical representation behind BiSSE model is based on stochastic differential equations (known also as Kolmogorov forward equations). The goal of the equations is to define in "instantaneous time" (like a derivative) exactly what precedes the origination of a clade that is either in state value 0 or state value 1 in a very very short time frame.
+
+
+![](/assets/images/sse_files/birthdeath.png)
+*Figure 2. Stochastic differential equations that define speciation in BiSSE*
+
+**Why is it important to know about these equations**
+Let's just dig the interpretation of the first equation in Figure 2. The first equation for example, defines what needs to happen for a clade $$N$$ to be descendent from a lineage with state 0. The possibilities are before time $$t$$ nothing happened, the lineage was 0 and there hasn't been any speciation or extinction, nor a transition from 0 to 1, that is the very first part $$(\lambda_0+\mu_0+q_01)D_{N_0}(t)$$. But it could happen that there was a transition from 1 to 1 with instantaneous probability $$q_01D_{N_1}(t)$$; or the third possibility is that there wasn't a transition of state but a speciation event $$\lambda_0$$ with one lineage going extinct $$E_0(t)$$ whereas the other lineage gave rise to the clade $$N$$ with instantaneous probability $$D_{N_0}(t)$$.
+
+These equations are solved numerically to obtain full probabilities (not the "instantaneous" part) in any computational software building SSE models. As you can imagine with more states these equations get complex quickly (see ChromoSSE for example), so models are hard to fit.
+
+But another key point here is that in the definition of these equations you can see the interplay between speciation and extinction. It is difficult to discuss the speciation resulting in a clade $$N$$ without talking about the extinction of a lineage. This is going to become really really important when we are estimating and interpreting diversification parameters.
+
+
+
+
+
 
 
 1. SSE slides [here](/assets/docs/introSSE.pdf)
