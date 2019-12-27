@@ -47,6 +47,7 @@ BiSSE is a stochastic process that is the composition of two different birth-dea
 Often in the literature, including the original BiSSE article, the model is represented graphically by circles and arrows connected as the figure shown below.
 
 ![](/assets/images/sse_files/bisse.png)
+
 *Figure 1. BiSSE graphical representation in most published papers. Trait is assumed be be binary, parameters $$(\lambda_0, \lambda_1)$$ are speciation rates link to each of the states, and parameters $$(\mu_0,\mu_1)$$ are extinction rates. The transition rates $$(q_{01},q_{10})$$ indicate how often the value of the trait changes.*
 
 The reason why this model is often represented as "circles and arrows" is because it is much easier to communicate than the mathematical representation. The mathematical representation behind BiSSE model is based on stochastic differential equations (known also as Kolmogorov forward equations). The goal of the equations is to define in "instantaneous time" (like a derivative) exactly what precedes the origination of a clade that is either in state value 0 or state value 1 in a very very short time frame.
