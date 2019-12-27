@@ -97,6 +97,40 @@ headers=TRUE)
 taxa <- observed_phylogeny.taxa()
 ```
 
+Indices that are going to be very useful for the proposals of the MCMC and for the monitors (statistics) that we are going to obtain from the inferential process (MCMC). This is not immediatly evident but it will be once we print the full model.
+
+```
+# Setting up indices
+mvi = 0
+mni = 0
+```
+
+Now we are going to define our speciation and extinction rates. This is the part where the graphical model thinking starts helping with. We need to create four parameters $$(\lamda_0, \lambda_1, \mu_0,\mu_1)$$ to define speciation and extinction rates under BiSSE. Because our inferential approach is based on Bayesian statistics, what we want is to define four randon variables (r.v.s) that have a probability density function. The paradigm in Bayesian statistics states that parameters are unknown and random meaning that they have a probability distribution, since speciation and extinction rates can take continuous values, we call those probability **densities**, and one can choose from any [density](https://en.wikipedia.org/wiki/Probability_density_function) where values are positive (no negative rates allow). There are plenty of options (see here). In this example we will choose a [log-Normal distribution](https://en.wikipedia.org/wiki/Log-normal_distribution) for all four of them, but you can and should explore other possibilities.
+
+```
+## Create the constant prior parameters of the diversification rates
+## Number of surviving lineages is 165
+H = 0.587405
+rate_mean <- ln( ln(165/2.0) / observed_phylogeny.rootAge() )
+rate_sd <- 2*H
+
+for (i in 1:NUM_STATES) {
+
+### Create a lognormal distributed variable for the diversification rate
+log_speciation[i] ~ dnNormal(mean=rate_mean,sd=rate_sd)
+log_speciation[i].setValue( rate_mean )
+speciation[i] := exp( log_speciation[i] )
+moves[++mvi] = mvSlide(log_speciation[i],delta=0.20,tune=true,weight=3.0)
+
+### Create a lognormal distributed variable for the turnover rate
+log_extinction[i] ~ dnNormal(mean=rate_mean,sd=rate_sd)
+log_extinction[i].setValue( rate_mean )
+extinction[i] := exp( log_extinction[i] )
+moves[++mvi] = mvSlide(log_extinction[i],delta=0.20,tune=true,weight=3)
+
+}
+```
+
 
 
 
