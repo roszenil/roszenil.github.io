@@ -217,7 +217,7 @@ rate_category_prior ~ dnDirichlet( rep(1,NUM_STATES) )
 moves[++mvi] = mvDirichletSimplex(rate_category_prior,tune=true,weight=2)
 ```
 
-![](/assets/images/sse_files/gm3.png)
+![](/assets/images/sse_files/gm6.png)
 
 *Figure 6. Graphical modeling of the root for BiSSE model. Root has a Dirichlet distribution that is a function of the number of states of the trait.*
 
