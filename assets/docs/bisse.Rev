@@ -37,9 +37,11 @@ mni = 0
 
 ### Create the constant prior parameters of the diversification rates
 ## Number of surviving lineages is 165
-H = 0.587405
-rate_mean <- ln( ln(165/2.0) / observed_phylogeny.rootAge() )
-rate_sd <- 2*H
+
+mx=ln(165/(2*observed_phylogeny.rootAge()))
+sx= 0.01
+rate_mean <- exp(mx+sx^2)
+rate_sd <- sqrt(exp(2*mx+sx^2)*exp(sx^2-1))
 
 for (i in 1:NUM_STATES) {
 
@@ -70,18 +72,18 @@ rate_pr := 1
 # character state transitions over the tree.
 # rate_pr := observed_phylogeny.treeLength() / 10
 
-rate_12 ~ dnGamma(shape=shape_pr, rate=rate_pr)
-rate_21 ~ dnGamma(shape=shape_pr, rate=rate_pr)
+q_01 ~ dnGamma(shape=shape_pr, rate=rate_pr)
+q_10 ~ dnGamma(shape=shape_pr, rate=rate_pr)
 
-moves[++mvi] = mvScale( rate_12, weight=2 )
-moves[++mvi] = mvScale( rate_21, weight=2 )
+moves[++mvi] = mvScale( q_01, weight=2 )
+moves[++mvi] = mvScale( q_10, weight=2 )
 
 
 
 ######################################################################
 # Create the rate matrix for the combined observed and hidden states #
 ######################################################################
-rate_matrix := fnFreeBinary( [rate_12, rate_21 ], rescaled=false)
+rate_matrix := fnFreeBinary( [q_01, q_10 ], rescaled=false)
 
 
 #####################################

@@ -138,6 +138,11 @@ moves[++mvi] = mvSlide(log_extinction[i],delta=0.20,tune=true,weight=3)
 
 }
 ```
+In graphical modeling what we are doing is connecting deterministic with stochastic nodes
+![](/assets/images/sse_files/gm1.png)
+*Figure 4. Graphical modeling of diversification rates of Bisse. Squares represent deterministic nodes, circles represent stochastic nodes*
+
+
 **Why going through so much trouble defining the log-normal as a prior distribution instead of the normal or something else?**
 
 Here is my reasoning to define these priors for speciation and extinction, yours might differ.
@@ -187,6 +192,7 @@ I consider selecting moves one of the hardest parts of doing inference. The move
 
 
 **Treatment of the root**
+
 This is a point of great difference amongst computational packages. ```diversitree``` packagefor example allows for a weighted likelihood calculation for the frequencies of the root. ```hisse``` package has a lot more options, from using the same approach of the weyn the future I will expand more about these differences but for now I will only focus on what RevBayes is doing.
 
 In RevBayes, we assume that the probabilities of the potential values of the root $$(\pi_0,\pi_1)$$ are unknown and they form a random vector. This means that we also **need** to estimate those probabilities. So what will do is create a prior distribution for the root that is [Dirichlet](https://en.wikipedia.org/wiki/Dirichlet_distribution) because it has two important properties: 1) the values of the vector are between (0,1), and (2) the entries of the vector add to 1.
@@ -202,6 +208,7 @@ moves[++mvi] = mvDirichletSimplex(rate_category_prior,tune=true,weight=2)
 ```
 
 **Sampling bias**
+
 Again, this is another detail of great difference in comparative methods software. At the moment, in RevBayes the only correction that can be done is to input the proportion of total observed lineages compared to the number that we should expect in the phylogeny. Other software can actually correct by sampling bias by state (see Goldberg and Igic, 2012). What approach is better?- We don't know.
 ```
 ### Rho is the probability of sampling species at the present
