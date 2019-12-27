@@ -217,7 +217,7 @@ rate_category_prior ~ dnDirichlet( rep(1,NUM_STATES) )
 moves[++mvi] = mvDirichletSimplex(rate_category_prior,tune=true,weight=2)
 ```
 
-![](/assets/images/sse_files/gm6.png)
+![](/assets/images/sse_files/gm3.png)
 
 *Figure 6. Graphical modeling of the root for BiSSE model. Root has a Dirichlet distribution that is a function of the number of states of the trait.*
 
@@ -230,7 +230,7 @@ Again, this is another detail of great difference in comparative methods softwar
 ### fix this to 165/450
 rho <- observed_phylogeny.ntips()/450
 ```
-![](/assets/images/sse_files/gm3.png)
+![](/assets/images/sse_files/gm4.png)
 *Figure 7. Graphical modeling of the sampling bias for BiSSE model. This is simply a fixed node measuring the percentage of lineages not sampled.*
 
 **Full graphical BiSSE model**
