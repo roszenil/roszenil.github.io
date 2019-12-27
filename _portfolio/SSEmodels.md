@@ -71,6 +71,7 @@ Just a brief reminder that we will be using Rev language and every assignation w
 
 **Trait data utilized for the workshop**
 Polimoneaceae data from Landis, J. et al. 2018. This is a phylogenetic tree of Phlox with selfing and outcrossing data as breeding system binary trait.
+
 Trait data [.csv](/assets/docs/pole_datadis.csv), and phylogenetic [.tre](/assets/docs/poleult.tre)
 
 
