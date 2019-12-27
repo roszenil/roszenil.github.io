@@ -52,7 +52,7 @@ Often in the literature, including the original BiSSE article, the model is repr
 The reason why this model is often represented as "circles and arrows" is because it is much easier to communicate than the mathematical representation. The mathematical representation behind BiSSE model is based on stochastic differential equations (known also as Kolmogorov forward equations). The goal of the equations is to define in "instantaneous time" (like a derivative) exactly what precedes the origination of a clade that is either in state value 0 or state value 1 in a very very short time frame.
 
 
-![](/assets/images/sse_files/birthdeath.png)
+![](/assets/images/sse_files/Bisseequations.png)
 *Figure 2. Stochastic differential equations that define speciation in BiSSE*
 
 **Why is it important to know about these equations**
