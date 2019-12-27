@@ -22,6 +22,9 @@ headers=TRUE)
 # Get some useful variables from the data. We need these later on.
 taxa <- observed_phylogeny.taxa()
 
+### Create the fix parameter for the age of the root set to the observed age
+root <- observed_phylogeny.rootAge()
+
 # Setting up indices
 mvi = 0
 mni = 0
@@ -91,11 +94,7 @@ rate_category_prior ~ dnDirichlet( rep(1,NUM_STATES) )
 moves[++mvi] = mvDirichletSimplex(rate_category_prior,tune=true,weight=2)
 
 
-### Create the fix parameter for the age of the root set to the observed age
-root <- observed_phylogeny.rootAge()
-
-### I did not add any sampling of species but it is posible by setting this rho parameter
-### rho is the probability of sampling species at the present
+### Rho is the probability of sampling species at the present
 ### fix this to 165/450
 rho <- observed_phylogeny.ntips()/450
 
