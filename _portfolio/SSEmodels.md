@@ -139,8 +139,10 @@ moves[++mvi] = mvSlide(log_extinction[i],delta=0.20,tune=true,weight=3)
 
 }
 ```
-In graphical modeling what we are doing is connecting deterministic with stochastic nodes
+In graphical modeling what we are doing is connecting fixed with stochastic nodes that have a log-Normal distribution.
+
 ![](/assets/images/sse_files/gm1.png)
+
 *Figure 4. Graphical modeling of diversification rates of BiSSE. Squares represent deterministic nodes, circles represent stochastic nodes*
 
 
@@ -172,18 +174,25 @@ rate_pr := 1
 # character state transitions over the tree.
 # rate_pr := observed_phylogeny.treeLength() / 10
 
-rate_12 ~ dnGamma(shape=shape_pr, rate=rate_pr)
-rate_21 ~ dnGamma(shape=shape_pr, rate=rate_pr)
+q_01 ~ dnGamma(shape=shape_pr, rate=rate_pr)
+q_10 ~ dnGamma(shape=shape_pr, rate=rate_pr)
 
-moves[++mvi] = mvScale( rate_12, weight=2 )
-moves[++mvi] = mvScale( rate_21, weight=2 )
+moves[++mvi] = mvScale( q_01, weight=2 )
+moves[++mvi] = mvScale( q_10, weight=2 )
 
 ######################################################################
 # Create the rate matrix for the combined observed and hidden states #
 ######################################################################
-rate_matrix := fnFreeBinary( [rate_12, rate_21 ], rescaled=false)
+rate_matrix := fnFreeBinary( [q_01, q_10 ], rescaled=false)
 
 ```
+Again, in graphical modeling we connect fixed with stochastic nodes that have a gamma distribution, and later construct ```rate_matrix``` node that is a deterministic node, that is a function of stochastic nodes (dotted circle).
+
+![](/assets/images/sse_files/gm2.png)
+
+*Figure 5. Graphical modeling of transition rates for BiSSE. Squares represent deterministic nodes, circles represent stochastic nodes*
+
+
 **What are the moves?**
 By now you would have noticed that every time I define a prior distribution I add a line of code called ```moves```. Moves are the proposals for  the Markov chain Monte Carlo (MCMC) algorithm that we are going to use to explore the posterior distribution of the BiSSE model parameters.
 
