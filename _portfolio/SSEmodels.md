@@ -106,7 +106,9 @@ mvi = 0
 mni = 0
 ```
 
-Now we are going to define our speciation and extinction rates. This is the part where the graphical model thinking starts helping with. We need to create four parameters $$(\lamda_0, \lambda_1, \mu_0,\mu_1)$$ to define speciation and extinction rates under BiSSE. Because our inferential approach is based on Bayesian statistics, what we want is to define four randon variables (r.v.s) that have a probability density function. The paradigm in Bayesian statistics states that parameters are unknown and random meaning that they have a probability distribution, since speciation and extinction rates can take continuous values, we call those probability **densities**, and one can choose from any [density](https://en.wikipedia.org/wiki/Probability_density_function) where the parameter values are positive (no negative rates allow). There are plenty of options ([see here](https://en.wikipedia.org/wiki/List_of_probability_distributions#Continuous_distributions). In this example we will choose a [log-Normal distribution](https://en.wikipedia.org/wiki/Log-normal_distribution) for all four parameters of speciation and extinction, but you can and should explore other possibilities.
+**Speciation and extinction rates**
+
+Now we are going to define our speciation and extinction rates. This is the part where the graphical model thinking starts helping with. We need to create four parameters $$(\lambda_0, \lambda_1, \mu_0,\mu_1)$$ to define speciation and extinction rates under BiSSE. Because our inferential approach is based on Bayesian statistics, what we want is to define four randon variables (r.v.s) that have a probability density function. The paradigm in Bayesian statistics states that parameters are unknown and random meaning that they have a probability distribution, since speciation and extinction rates can take continuous values, we call those probability **densities**, and one can choose from any [density](https://en.wikipedia.org/wiki/Probability_density_function) where the parameter values are positive (no negative rates allow). There are plenty of options ([see here](https://en.wikipedia.org/wiki/List_of_probability_distributions#Continuous_distributions). In this example we will choose a [log-Normal distribution](https://en.wikipedia.org/wiki/Log-normal_distribution) for all four parameters of speciation and extinction, but you can and should explore other possibilities.
 
 
 ```
@@ -136,13 +138,53 @@ moves[++mvi] = mvSlide(log_extinction[i],delta=0.20,tune=true,weight=3)
 ```
 **Why going through so much trouble defining the log-normal as a prior distribution instead of the normal or something else?**
 
-Here is my reasoning to define this priors for speciation and extinction, yours might differ.
+Here is my reasoning to define these priors for speciation and extinction, yours might differ.
 From Nee et al. 1994 the expected number of lineages $$n$$ under a simple birth-death process at time $$t$$ is $$n=e^{(\lambda-\mu)t}$$. That means that an expected net diversification rate $$(\lambda-\mu)=\frac{ln(n)}{t}$$. Now,
 somewhat the expected speciation is "half" the net diversification $$m_x=\frac{ln(n)}{2t}$$ with some standard deviation $$s_x$$ we would like.
 
-We could move forward and simply define $$speciation~N(m_x, s_x^2)$$ but one caveat of doing that is that this normal could end up with negative values (what is a negative speciation rate?). So the better way to define it is via the log-speciation as a Normal distribution. One thing that comes handy here is that if we want speciation alone to have $$m_x$$ as expected value, the parameters of the logNormal $$(m_y, s_y^2)$$ can be defined as follows
+We could move forward and simply define $$speciation\sim N(m_x, s_x^2)$$ but one caveat of doing that is that this normal could end up with negative values(!!!). So the better way to define it is via the log-speciation as a Normal distribution. One thing that comes handy here is that if we want speciation alone to have $$m_x$$ as expected value, the parameters of the logNormal $$(m_y, s_y^2)$$ can be defined as follows
 $$m_y=e^{(m_x+1/2s_x^2)}$$ and $$s_y=e^{(2m_x+s_x^2)}e^{(s_x^2-1)}$$. Those two parameters is what you see defined in the code for all speciation and extinctions.
 
+
+**Transition rates**
+
+The two parameters that are missing in this discussion are the transition rates $$(q_{01},q_{10})$$ to connect the evolution between the states. Those parameters  also need prior distributions. In this case I decided to model them using a [Gamma distribution](https://en.wikipedia.org/wiki/Gamma_distribution) that has two parameters (a shape and a rate parameter). The way I define it is very loosely, I really don't know how many times outcrossers and selfers have evolved in this system so I'd rather leave it this way. However, if you know something about the number of times the states have evolved from other studies, it is wise to make the mean of the Gamma distributions something that represents that knowledge (see alternative definition if I know there have been 10 transitions).
+
+
+```
+#########################################################
+# Set up the transition rate matrix for observed states #
+#########################################################
+## I defined very loosely my gamma priors for transition rates
+shape_pr := 0.5
+rate_pr := 1
+############### Alternative definition or rate parameter
+# Each transition rate between observed states are drawn
+# from an exponential distribution with a mean of 10
+# character state transitions over the tree.
+# rate_pr := observed_phylogeny.treeLength() / 10
+
+rate_12 ~ dnGamma(shape=shape_pr, rate=rate_pr)
+rate_21 ~ dnGamma(shape=shape_pr, rate=rate_pr)
+
+moves[++mvi] = mvScale( rate_12, weight=2 )
+moves[++mvi] = mvScale( rate_21, weight=2 )
+
+######################################################################
+# Create the rate matrix for the combined observed and hidden states #
+######################################################################
+rate_matrix := fnFreeBinary( [rate_12, rate_21 ], rescaled=false)
+
+```
+**What are the moves?**
+By now you would have noticed that every time I define a prior distribution I add a line of code called ```moves```. Moves are the proposals for  the Markov chain Monte Carlo (MCMC) algorithm that we are going to use to explore the posterior distribution of the BiSSE model parameters.
+
+The ```moves``` are telling the MCMC how to explore the parametric space and are also known as proposals. For example ```mvSlide``` is a slide move, meaning that at each step of the MCMC is telling the log-speciation to slide to the left or to the right a little bit to find a new value. The ```mvScale``` tells the parameter to be rescaled. There are many many [moves](https://revbayes.github.io/documentation/) available in RevBayes, some specific for certain types of inferences and some others very general.
+
+I consider selecting moves one of the hardest parts of doing inference. The moves you select have a strong influence on how quickly the MCMC will converge (or not converge). Although, there are many scientists studying convergence of MCMC algorithms, practical implementations, especially in phylogenies are hard and require a lot of patience and testing.
+
+
+**Treatment of the root**
 
 
 1. SSE slides [here](/assets/docs/introSSE.pdf)
