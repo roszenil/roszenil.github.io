@@ -106,7 +106,7 @@ rho <- observed_phylogeny.ntips()/450
 ###################################################################
 
 ### Here is where I tie speciation, extinction, and Q using a Birth-Death with categories
-timetree ~ dnCDBDP( rootAge           = root,
+bissemodel ~ dnCDBDP( rootAge           = root,
 speciationRates   = speciation,
 extinctionRates   = extinction,
 Q                 = rate_matrix,
@@ -116,8 +116,8 @@ delta             = 1.0,
 condition         = "time" )
 
 ### clamp the model with the "observed" tree
-timetree.clamp( observed_phylogeny )
-timetree.clampCharData( data )
+bissemodel.clamp( observed_phylogeny )
+bissemodel.clampCharData( data )
 
 
 
