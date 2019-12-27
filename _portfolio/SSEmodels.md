@@ -65,7 +65,12 @@ Another way to think about SSE models that is not only the circle and arrow diag
 
 We will discuss some of the caveats as well at the end, but one very important key feature to clarify here is that the graphical model is not only a visual representation, but an alternative to writing the math from the **model and the inference (Bayesian)** simultaneously.
 
-#### Trait data utilized for the workshop
+**Rev Language**
+Just a brief reminder that we will be using Rev language and every assignation we use has a meaning in the graphical model world. For more details please refer to (Hoehna et al. 2013 )
+![](/assets/images/sse_files/Bisseequations.png)
+
+**Trait data utilized for the workshop**
+Polimoneaceae data from Landis, J. et al. 2018. This is a phylogenetic tree of Phlox with selfing and outcrossing data as breeding system binary trait.
 Trait data [.csv](/assets/docs/pole_datadis.csv), and phylogenetic [.tre](/assets/docs/poleult.tre)
 
 
