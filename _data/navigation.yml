@@ -14,17 +14,15 @@ main:
   #   url: /blog/
 
 # sidebar for portfolio
-#portfolio:
-#  - title: "Workshops"
-#    children:
-#      - title: "Machine Learning on AWS"
-#        url: /portfolio/coming/
- #     - title: "Continuous- Time Markov Chains"
-  #      url: /portfolio/ctmc/
-  #    - title: "Evidential Stats"
-   #     url: /portfolio/evidence/
-   #   - title: "SSE models"
-   #     url: /portfolio/SDD/
+teaching:
+  - title: "Workshops"
+    children:
+      - title: "Continuous- Time Markov Chains"
+       url: /teaching/ctmc/
+    - title: "Evidential Stats"
+        url: /teaching/evidence/
+      - title: "SSE models"
+        url: /teaching/SDD/
     
 
  # - title: "Research"
