@@ -6,3 +6,4 @@ collection: teaching
 entries_layout: grid
 classes: wide
 ---
+[CTMC](/teaching/ctmc/)
