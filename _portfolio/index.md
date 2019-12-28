@@ -19,13 +19,11 @@ feature_row:
     url: "/portfolio/evidence/"
     btn_label: "Read More"
     btn_class: "btn--primary"
-
-feature_row:
-   - image_path: /assets/images/likelihoodbirdalarms_files/likelihoodintervals-1.png
+- image_path: /assets/images/sse_files/bisse.png
     alt: "Teaching"
-    title: "Evidential Statistics Application"
-    excerpt: "Evidential statistics paradigm using an example of heterospecific bird alam calls"
-    url: "/portfolio/evidence/"
+    title: "SSE models"
+    excerpt: "Inference using SSE models"
+    url: "/portfolio/SDD/"
     btn_label: "Read More"
     btn_class: "btn--primary"
 ---
