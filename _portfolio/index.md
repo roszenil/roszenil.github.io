@@ -12,13 +12,13 @@ text: "Designer, Front-End Developer"
 - title: "Responsibilities"
 text: "Reuters try PR stupid commenters should isn't a business model"
 gallery:
-- url: /portfolio/ctmc
+- url: /assets/images/ctmc_files/qmatrix.png
 image_path: assets/images/ctmc_files/qmatrix.png
 alt: "placeholder image 1"
-- url: /portfolio/SDD
+- url: /assets/images/ctmc_files/qmatrix.png
 image_path: assets/images/ctmc_files/qmatrix.png
 alt: "placeholder image 2"
-- url: /portfolio/evidence
+- url: /assets/images/ctmc_files/qmatrix.png
 image_path: assets/images/ctmc_files/qmatrix.png
 alt: "placeholder image 3"
 ---
