@@ -10,7 +10,7 @@ image_path: /assets/images/ctmc_files/qmatrix.png
 alt: "Teaching"
 title: "Continuous-Time Markov Models"
 excerpt: "Models for discrete trait evolution. Midwest Phylogenetics Workshop Lecture 2019"
-url: "/ctmc/"
+url: "/teaching/ctmc/"
 btn_label: "Read More"
 btn_class: "btn--primary"
 ---
