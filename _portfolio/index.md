@@ -1,4 +1,5 @@
 ---
+layout: splash
 classes: wide
 header:
 overlay_image: /assets/images/beachsolanum2.jpg
