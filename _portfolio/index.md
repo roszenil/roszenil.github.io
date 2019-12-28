@@ -19,7 +19,7 @@ feature_row:
     url: "/portfolio/evidence/"
     btn_label: "Read More"
     btn_class: "btn--primary"
-- image_path: /assets/images/sse_files/bisse.png
+- image_path: /assets/images/sse_files/birthdeath.png
     alt: "Teaching"
     title: "SSE models"
     excerpt: "Inference using SSE models"
