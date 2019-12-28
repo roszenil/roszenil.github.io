@@ -19,13 +19,6 @@ feature_row:
     url: "/portfolio/evidence/"
     btn_label: "Read More"
     btn_class: "btn--primary"
- - image_path: /assets/images/sse_files/bisse.png
-    alt: "Teaching"
-    title: "SSE Models"
-    excerpt: "Diversification models using RevBayes"
-    url: "/portfolio/SDD/"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
 ---
 
 Here you'll find examples of some of of my lessons representative of my skills and interests. These lectures span from theoretical to applications
