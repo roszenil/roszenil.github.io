@@ -1,10 +1,9 @@
 ---
-classes: wide
-header:
-  overlay_image: /assets/images/beachsolanum2.jpg
-permalink: /portfolio/index.html
-date: 2019-09-16
---
+title: "Teaching"
+categories:
+- Post Formats
+tags:
+- teaching
 gallery:
 - url: /portfolio/ctmc
 image_path: /assets/images/uimages/ctmc_files/qmatrix.png
