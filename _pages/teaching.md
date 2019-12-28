@@ -1,4 +1,14 @@
 ---
+title: Teaching
+layout: collection
+permalink: /teaching/
+collection: teaching
+entries_layout: grid
+classes: wide
+---
+
+Sample document listing for the collection `_teaching`.
+---
 layout: archive
 permalink: /teaching/
 title: Teaching
@@ -10,10 +20,8 @@ image_path: /assets/images/ctmc_files/qmatrix.png
 alt: "Teaching"
 title: "Continuous-Time Markov Models"
 excerpt: "Models for discrete trait evolution. Midwest Phylogenetics Workshop Lecture 2019"
-url: "/ctmc/"
+url: "/teaching/ctmc/"
 btn_label: "Read More"
 btn_class: "btn--primary"
----
 
 
-{% include feature_row %}
