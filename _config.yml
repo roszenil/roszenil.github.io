@@ -15,6 +15,12 @@ plugins:
   - jekyll-feed
   - jekyll-remote-theme
   - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
 
 # Build settings
 markdown: kramdown
@@ -52,6 +58,9 @@ footer:
 #paginate_path: /page:num/
 
 # default YAML front matter
+collections:
+      - teaching
+      
 defaults:
   # all
   - scope:
@@ -85,3 +94,10 @@ defaults:
 collections:
   portfolio:
     output: true
+    
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
