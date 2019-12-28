@@ -8,7 +8,7 @@ classes: wide
 og_image: "/assets/images/beachsolanum2.jpg"
 ---
 
-[Continuous Time Markov Chain model for discrete traits](/teaching/ctmc/)
+[Continuous Time Markov Chain model for discrete traits](/teaching/teaching/SSEmodels.md)
 
 [Evidential statistics application](/teaching/evidence/)
 
