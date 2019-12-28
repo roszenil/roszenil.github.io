@@ -233,7 +233,7 @@ rho <- observed_phylogeny.ntips()/450
 ![](/assets/images/sse_files/gm4.png)
 *Figure 7. Graphical modeling of the sampling bias for BiSSE model. This is simply a fixed node measuring the percentage of lineages not sampled.*
 
-**Full graphical BiSSE model**
+#### Full graphical BiSSE model
 
 As of now you have a series of fixed, stochastic, and deterministic nodes free floating as small pieces of construction blocks.
 
