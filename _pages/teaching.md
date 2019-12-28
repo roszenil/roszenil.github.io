@@ -7,10 +7,10 @@ entries_layout: grid
 classes: wide
 ---
 
-Sample document listing for the collection `_teaching`.
-
-
-title: Teaching
-layout: collection
-overlay_image: /assets/images/beachsolanum2.jpg
-permalink: /teaching/
+<div class="grid__wrapper">
+{% assign collection = 'teaching' %}
+{% assign posts = site[collection] | reverse %}
+{% for post in posts %}
+{% include archive-single.html type="grid" %}
+{% endfor %}
+</div>
