@@ -2,7 +2,7 @@
 classes: wide
 header:
 overlay_image: /assets/images/beachsolanum2.jpg
-permalink: /portfolio/index.html
+permalink: /portfolio/
 date: 2019-09-16
 feature_row:
 - image_path: /assets/images/ctmc_files/qmatrix.png
