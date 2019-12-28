@@ -135,7 +135,7 @@ monitors[++mni] = mnModel(filename="ouput/BiSSE_pole.log", printgen=1)
 ##This monitor was the one giving me trouble type has to be the same that data, however I'm not hundred percent sure whether tree should be the stochastic tree assigned by the clamp or the observed_phylogeny. Will and Sebastian have different inputs
 
 monitors[++mni] = mnJointConditionalAncestralState(tree=timetree, cdbdp=timetree, type="NaturalNumbers", printgen=1, withTips=true, withStartStates=false, filename="output/anc_states_BiSSE_pole.log")
-monitors[++mni] = mnScreen(printgen=10, rate_12, rate_21, speciation, extinction)
+monitors[++mni] = mnScreen(printgen=10, q_01, q_10, speciation, extinction)
 
 
 ################
