@@ -1,15 +1,4 @@
 ---
-title: "Continuous Time Markov Chain models"
-author: Rosana Zenil-Ferguson
-date: 2019-05-06
-categories: teaching
-header:
-permalink: /teaching/ctmc/
-teaser: "/assets/images/ctmc_files/bichromqmat.png"
-excerpt: Models for discrete trait evolution. Midwest Phylogenetics Workshop Lecture 2019
-description: Models for discrete trait evolution. Midwest Phylogenetics Workshop Lecture 2019
-og_image: "/assets/images/ctmc_files/bichromqmat.png"
----
 header:
 overlay_image: /assets/images/ctmc_files/bichromqmat.png
 permalink: /teaching/ctmc/
@@ -18,6 +7,8 @@ category: teaching
 date: 2019-06-05
 toc: true
 toc_label: "Contents"
+---
+
 #  Continuous-Time Markov Chains (CTMC)
 
 Continuous-time Markov chains (CTMC) are stochastic processes that allow us to follow the evolution of a trait(s) of interest. For example,
