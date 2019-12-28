@@ -115,7 +115,7 @@ rho               = rho,
 delta             = 1.0,
 condition         = "time" )
 
-### clamp the model with the "observed" tree
+### clamp the model with the "observed" tree and states
 bissemodel.clamp( observed_phylogeny )
 bissemodel.clampCharData( data )
 
