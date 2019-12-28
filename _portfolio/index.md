@@ -8,6 +8,7 @@ date: 2019-09-16
 alt: "Teaching"
 date: 2019-12-04
 toc: false
+
 feature_row:
 - image_path: /assets/images/ctmc_files/qmatrix.png
 alt: "Teaching"
@@ -23,4 +24,5 @@ Here you'll find examples of some of of my lessons representative of my skills a
 
 
 <div style="margin-bottom:1cm" align="center"><font size="18">Workshop Lectures</font></div>
+
 {% include feature_row %}
