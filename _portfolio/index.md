@@ -1,30 +1,38 @@
 ---
 title: "Teaching"
-excerpt: "Foo Bar design system including logo mark, website design, and branding applications."
+layout: splash
+permalink: /portfolio/
+date: 2019-25-19
 header:
-image: /assets/images/beachsolanum2.jpg
-teaser: /assets/images/beachsolanum2.jpg
-sidebar:
-- title: "Role"
-image: http://placehold.it/350x250
-image_alt: "logo"
-text: "Designer, Front-End Developer"
-- title: "Responsibilities"
-text: "Reuters try PR stupid commenters should isn't a business model"
-gallery:
-- url: /assets/images/ctmc_files/qmatrix.png
-image_path: assets/images/ctmc_files/qmatrix.png
+overlay_image: /assets/images/beachsolanum2.jpg
+actions:
+excerpt: "Bacon ipsum dolor sit amet salami ham hock ham, hamburger corned beef short ribs kielbasa biltong t-bone drumstick tri-tip tail sirloin pork chop."
+intro:
+- excerpt: 'Nullam suscipit et nam, tellus velit pellentesque at malesuada, enim eaque. Quis nulla, netus tempor in diam gravida tincidunt, *proin faucibus* voluptate felis id sollicitudin. Centered with `type="center"`'
+feature_row:
+- image_path: assets/images/ctmc_files/qmatrix.png
 alt: "placeholder image 1"
-- url: /assets/images/ctmc_files/qmatrix.png
-image_path: assets/images/ctmc_files/qmatrix.png
+title: "Placeholder 1"
+excerpt: "This is some sample content that goes here with **Markdown** formatting."
+- image_path: /assets/images/likelihoodbirdalarms_files/likelihoodintervals-1.png
+image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
 alt: "placeholder image 2"
-- url: /assets/images/ctmc_files/qmatrix.png
-image_path: assets/images/ctmc_files/qmatrix.png
-alt: "placeholder image 3"
+title: "Placeholder 2"
+excerpt: "This is some sample content that goes here with **Markdown** formatting."
+url: "/portfolio/ctmc/"
+btn_label: "Read More"
+btn_class: "btn--primary"
+- image_path: /assets/images/unsplash-gallery-image-3-th.jpg
+title: "Placeholder 3"
+excerpt: "This is some sample content that goes here with **Markdown** formatting."
+feature_row2:
+- image_path: /assets/images/sse_files/birthdeath.png
+alt: "placeholder image 2"
+title: "Placeholder Image Left Aligned"
+excerpt: 'This is some sample content that goes here with **Markdown** formatting. Left aligned with `type="left"`'
+url: "/portfolio/SDD"
+btn_label: "Read More"
+btn_class: "btn--primary"
 ---
 
-Pictures of Goats section West Seattle Blog dingbat newspaper rubber cement Google+ newsroom cafe news.me rubber cement, Ushahidi Kindle Single syndicated Instagram HuffPo community mthomps, Mozilla iPhone app should isn't a business model curmudgeon Snarkmarket Tim Carmody production of innocence. Fuego tweets community DocumentCloud metered model Gardening & War section YouTube social media SEO information overload analytics Aron Pilhofer Journal Register data visualization WikiLeaks Groupon, collaboration Steve Jobs we need a Nate Silver AP What Would Google Do the power of the press belongs to the person who owns one Clay Shirky curmudgeon Voice of San Diego free as in beer dead trees the notion of the public Lucius Nieman.
-
-{% include gallery caption="This is a sample gallery to go along with this case study." %}
-
-hackgate copyright Lucius Nieman CNN leaves it there right-sizing a giant stack of newspapers that you'll never read net neutrality algorithms RT algorithms TechCrunch 5% corruption, horse-race coverage Gardening & War section CTR try PR CPC David Cohn shoot a photo algorithms content is king Android Snarkmarket crowdfunding, Fuego Twitter topples dictators YouTube abundance WordPress Reuters try PR stupid commenters should isn't a business model bringing a tote bag to a knife fight.
+{% include feature_row id="intro" type="center" %}
