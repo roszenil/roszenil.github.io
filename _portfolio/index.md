@@ -3,7 +3,7 @@ classes: wide
 header:
   overlay_image: /assets/images/beachsolanum2.jpg
 permalink: /portfolio/index.html
-date: 2019-12-28
+date: 2019-09-16
 feature_row:
   - image_path: /assets/images/ctmc_files/qmatrix.png
     alt: "Teaching"
@@ -12,11 +12,18 @@ feature_row:
     url: "/portfolio/ctmc/"
     btn_label: "Read More"
     btn_class: "btn--primary"	
-- image_path: /assets/images/sse_files/bisse.png
+  - image_path: /assets/images/likelihoodbirdalarms_files/likelihoodintervals-1.png
     alt: "Teaching"
-    title: "SSE Models"
-    excerpt: "Diversification models using RevBayes"
-    url: "/portfolio/SDD/"
+    title: "Evidential Statistics Application"
+    excerpt: "Evidential statistics paradigm using an example of heterospecific bird alam calls"
+    url: "/portfolio/evidence/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+- image_path: /assets/images/likelihoodbirdalarms_files/likelihoodintervals-1.png
+    alt: "Teaching"
+    title: "Evidential Statistics Application"
+    excerpt: "Evidential statistics paradigm using an example of heterospecific bird alam calls"
+    url: "/portfolio/evidence/"
     btn_label: "Read More"
     btn_class: "btn--primary"
 ---
