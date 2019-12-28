@@ -19,8 +19,7 @@ feature_row:
     url: "/portfolio/evidence/"
     btn_label: "Read More"
     btn_class: "btn--primary"
-    feature_row:
-    - image_path: /assets/images/sdd_files/kf1.png
+ - image_path: /assets/images/sse_files/bisse.png
     alt: "Teaching"
     title: "SSE Models"
     excerpt: "Diversification models using RevBayes"
