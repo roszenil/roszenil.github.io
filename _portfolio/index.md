@@ -1,11 +1,12 @@
 ---
-layout: splash
-classes: wide
 header:
 overlay_image: /assets/images/beachsolanum2.jpg
-permalink: /portfolio/
+permalink: /portfolio/index.html
 date: 2019-09-16
-
+alt: "Teaching"
+date: 2019-12-04
+toc: true
+toc_label: "Contents"
 feature_row:
 - image_path: /assets/images/ctmc_files/qmatrix.png
 alt: "Teaching"
