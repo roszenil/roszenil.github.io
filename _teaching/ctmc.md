@@ -2,6 +2,7 @@
 title: "Foo Bar Identity"
 excerpt: "Foo Bar design system including logo mark, website design, and branding applications."
 header:
+permalink: /teaching/ctmc/
 image: /assets/images/beachsolanum2.jpg
 teaser: /assets/images/beachsolanum2.jpg
 ---
