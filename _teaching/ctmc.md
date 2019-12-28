@@ -1,7 +1,7 @@
 ---
 header:
 overlay_image: /assets/images/ctmc_files/bichromqmat.png
-permalink: /teaching/ctmc/
+permalink: /ctmc/
 author_profile: true
 category: teaching
 date: 2019-06-05
