@@ -16,5 +16,5 @@ Here you'll find examples of some of of my lessons representative of my skills a
 
 <div style="margin-bottom:1cm" align="center"><font size="18">Workshop Lectures</font></div>
 
-{% include figure image_path="/assets/images//assets/images/ctmc_files/qmatrix.png" alt="Teaching" caption="" %}
+{% include figure image_path="/assets/images/ctmc_files/qmatrix.png/" alt="Teaching" caption="" %}
 [Continuous Time Markov chains for modeling discrete traits](/portfolio/ctmc/)
