@@ -73,6 +73,7 @@ defaults:
   # portfolio
   - scope:
       path: ""
+      layout: single
       type: portfolio
     values:
       author_profile: false
