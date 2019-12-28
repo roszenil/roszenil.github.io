@@ -61,7 +61,7 @@ These equations jointly with the equations of extinction (not shown here) are so
 
 Another key point here is that in the definition of these equations you can see the interplay between speciation and extinction. It is difficult to discuss the speciation resulting in a clade $$N$$ without talking about the extinction of a lineage. This is going to become really really important when we are estimating and interpreting diversification parameters.
 
-#### BiSSE using RevBayes
+### BiSSE using RevBayes
 Another way to think about SSE models that is not only the circle and arrow diagrams, or the stochastic differential equations themselves is the graphical model representation. The goal of this introductory workshop is to get you thinking about graphical representations because you can create custom and more complex models without having to build complex equations every time.
 
 We will discuss some of the caveats as well at the end, but one very important key feature to clarify here is that the graphical model is not only a visual representation, but an alternative to writing the math from the **model and the inference (Bayesian)** simultaneously.
@@ -233,7 +233,7 @@ rho <- observed_phylogeny.ntips()/450
 ![](/assets/images/sse_files/gm4.png)
 *Figure 7. Graphical modeling of the sampling bias for BiSSE model. This is simply a fixed node measuring the percentage of lineages not sampled.*
 
-#### Full graphical BiSSE model
+### Full graphical BiSSE model
 
 As of now you have a series of fixed, stochastic, and deterministic nodes free floating as small pieces of construction blocks.
 
@@ -263,6 +263,17 @@ In graphical representation the BiSSE model then looks like Figure 7.
 ![](/assets/images/sse_files/gm6.png)
 *Figure 9. BiSSE in graphical modeling. We connect all our modeling blocks using a phylogenetic probability distribution where diversification, transition rates, and root frequencies can be estimated.*
 
+**Performing statistical inference**
+You might have notice that until this point we have not done anything with data other than reading it. To actually perform Bayesian statistics we need to evaluate the phylogenetic distribution that we just build (a.k.a fit BiSSE model) to the data. This happens with the help of the functions ```clamp``` that actually evaluate the ```dnCDBDP``` to the observed phylogeny and discrete character data.
+
+```
+### clamp the model with the "observed" tree and states
+bissemodel.clamp( observed_phylogeny )
+bissemodel.clampCharData( data )
+```
+In graphical model then we have added two more fixed nodes
+![](/assets/images/sse_files/gm7.png)
+*Figure 10. Clamping observed data. In the graphical model world the deterministic node of the model gets some shading to indicate that data has been clamped.*
 
 1. SSE slides [here](/assets/docs/introSSE.pdf)
 2. RevBayes code  for BiSSE [bisse.Rev](/assets/docs/bisse.Rev)
