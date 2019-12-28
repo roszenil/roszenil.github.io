@@ -85,15 +85,8 @@ defaults:
       path: ""
       type: teaching
     values:
-      layout: single
+      layout: article
       author_profile: false
       share: true
       comments: false
-
-    
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
+ 

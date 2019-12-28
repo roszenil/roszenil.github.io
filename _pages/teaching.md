@@ -8,12 +8,6 @@ classes: wide
 og_image: "/assets/images/beachsolanum2.jpg"
 ---
 
-[Continuous Time Markov Chain model for discrete traits](/teaching/SSEmodels.md)
-
-[Evidential statistics application](/teaching/evidence/)
-
-[SSE models](/teaching/SDD/)
-
 
 <div class="grid__wrapper">
 {% assign collection = 'teaching' %}
