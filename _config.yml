@@ -79,7 +79,7 @@ defaults:
       toc: true
       toc_label: "Contents"
       read_time: false
-  # portfolio
+  # teaching
   - scope:
       path: ""
       layout: single
@@ -88,11 +88,11 @@ defaults:
       author_profile: false
       excerpt: ""
       sidebar:
-        nav: "portfolio"
+        nav: "teaching"
 
 # collections
 collections:
-  portfolio:
+  teaching:
     output: true
     
 category_archive:

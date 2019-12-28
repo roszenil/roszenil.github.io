@@ -5,7 +5,7 @@ main:
   - title: "Research"
     url: /research/
   - title: "Teaching"
-    url: /portfolio/
+    url: /teaching/
   - title: "Contact"
     url: /contact/
   
@@ -14,17 +14,17 @@ main:
   #   url: /blog/
 
 # sidebar for portfolio
-portfolio:
-  - title: "Workshops"
-    children:
+#portfolio:
+#  - title: "Workshops"
+#    children:
 #      - title: "Machine Learning on AWS"
 #        url: /portfolio/coming/
-      - title: "Continuous- Time Markov Chains"
-        url: /portfolio/ctmc/
-      - title: "Evidential Stats"
-        url: /portfolio/evidence/
-      - title: "SSE models"
-        url: /portfolio/SDD/
+ #     - title: "Continuous- Time Markov Chains"
+  #      url: /portfolio/ctmc/
+  #    - title: "Evidential Stats"
+   #     url: /portfolio/evidence/
+   #   - title: "SSE models"
+   #     url: /portfolio/SDD/
     
 
  # - title: "Research"
