@@ -7,8 +7,7 @@ category: teaching
 date: 2019-09-16
 alt: "Teaching"
 date: 2019-12-04
-toc: true
-toc_label: "Contents"
+toc: false
 ---
 
 
