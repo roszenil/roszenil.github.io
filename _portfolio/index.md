@@ -1,13 +1,10 @@
 ---
-title: "Teaching"
-layout: splash
-permalink: /portfolio/
-date: 2019-25-19
+classes: wide
 header:
 overlay_image: /assets/images/beachsolanum2.jpg
-actions:
-excerpt: "Bacon ipsum dolor sit amet salami ham hock ham, hamburger corned beef short ribs kielbasa biltong t-bone drumstick tri-tip tail sirloin pork chop."
-intro:
+permalink: /portfolio/index.html
+date: 2019-09-16
+--
 feature_row:
 - image_path: /assets/images/ctmc_files/qmatrix.png
 alt: "Teaching"
@@ -23,15 +20,11 @@ excerpt: "Evidential statistics paradigm using an example of heterospecific bird
 url: "/portfolio/evidence/"
 btn_label: "Read More"
 btn_class: "btn--primary"
-
-feature_row2:
-- image_path: /assets/images/sse_files/birthdeath.png
-alt: "placeholder image 2"
-title: "Placeholder Image Left Aligned"
-excerpt: 'This is some sample content that goes here with **Markdown** formatting. Left aligned with `type="left"`'
-url: "/portfolio/SDD/"
-btn_label: "Read More"
-btn_class: "btn--primary"
 ---
 
-{% include feature_row id="intro" type="center" %}
+Here you'll find examples of some of of my lessons representative of my skills and interests. These lectures span from theoretical to applications
+
+
+<div style="margin-bottom:1cm" align="center"><font size="18">Workshop Lectures</font></div>
+
+{% include feature_row %}
