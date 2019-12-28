@@ -59,7 +59,9 @@ footer:
 
 # default YAML front matter
 collections:
-      - teaching
+      teaching:
+      output: true
+      permalink: /teaching/
       
 defaults:
   # all
@@ -83,17 +85,13 @@ defaults:
   - scope:
       path: ""
       layout: single
-      type: portfolio
+      type: teaching
     values:
       author_profile: false
       excerpt: ""
       sidebar:
         nav: "teaching"
 
-# collections
-collections:
-  teaching:
-    output: true
     
 category_archive:
   type: liquid
