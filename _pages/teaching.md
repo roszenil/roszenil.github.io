@@ -1,12 +1,10 @@
 ---
-title: Teaching
 layout: archive
 permalink: /teaching/
-collection: teaching
-entries_layout: grid
+title: Teaching
+author_profile: false
 classes: wide
-header:
-overlay_image: /assets/images/beachsolanum2.jpg
+og_image: "/assets/images/ctmc_files/qmatrix.png"
 feature_row:
 image_path: /assets/images/ctmc_files/qmatrix.png
 alt: "Teaching"
