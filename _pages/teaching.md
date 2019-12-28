@@ -8,7 +8,8 @@ classes: wide
 ---
 
 Sample document listing for the collection `_teaching`.
----
+
+```
 layout: archive
 permalink: /teaching/
 title: Teaching
@@ -23,5 +24,5 @@ excerpt: "Models for discrete trait evolution. Midwest Phylogenetics Workshop Le
 url: "/teaching/ctmc/"
 btn_label: "Read More"
 btn_class: "btn--primary"
-
+```
 

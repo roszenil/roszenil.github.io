@@ -5,6 +5,8 @@ header:
 image: /assets/images/beachsolanum2.jpg
 teaser: /assets/images/beachsolanum2.jpg
 ---
+
+```
 header:
 overlay_image: /assets/images/ctmc_files/bichromqmat.png
 permalink: /ctmc/
@@ -13,6 +15,8 @@ category: teaching
 date: 2019-06-05
 toc: true
 toc_label: "Contents"
+```
+
 #  Continuous-Time Markov Chains (CTMC)
 
 Continuous-time Markov chains (CTMC) are stochastic processes that allow us to follow the evolution of a trait(s) of interest. For example,
