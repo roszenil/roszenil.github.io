@@ -1,26 +1,30 @@
 ---
 title: "Teaching"
-categories:
-- Post Formats
-tags:
-- teaching
+excerpt: "Foo Bar design system including logo mark, website design, and branding applications."
+header:
+image: /assets/images/beachsolanum2.jpg
+teaser: /assets/images/beachsolanum2.jpg
+sidebar:
+- title: "Role"
+image: http://placehold.it/350x250
+image_alt: "logo"
+text: "Designer, Front-End Developer"
+- title: "Responsibilities"
+text: "Reuters try PR stupid commenters should isn't a business model"
 gallery:
 - url: /portfolio/ctmc
-image_path: /assets/images/uimages/ctmc_files/qmatrix.png
+image_path: assets/images/ctmc_files/qmatrix.png
 alt: "placeholder image 1"
-title: "Continuous Time Markov Models"
-- url: /portfolio/evidence
-image_path: /assets/images/likelihoodbirdalarms_files/likelihoodintervals-1.png
-alt: "placeholder image 2"
-title: "Evidential Statistics Application"
 - url: /portfolio/SDD
-image_path: /assets/images/sse_files/birthdeath.png
+image_path: assets/images/ctmc_files/qmatrix.png
+alt: "placeholder image 2"
+- url: /portfolio/evidence
+image_path: assets/images/ctmc_files/qmatrix.png
 alt: "placeholder image 3"
-title: "SSE models"
 ---
 
-{% raw %}{% include gallery caption="This is a sample gallery with **Markdown support**." %}{% endraw %}
-{% include gallery caption="This is a sample gallery with Markdown support." %}
+Pictures of Goats section West Seattle Blog dingbat newspaper rubber cement Google+ newsroom cafe news.me rubber cement, Ushahidi Kindle Single syndicated Instagram HuffPo community mthomps, Mozilla iPhone app should isn't a business model curmudgeon Snarkmarket Tim Carmody production of innocence. Fuego tweets community DocumentCloud metered model Gardening & War section YouTube social media SEO information overload analytics Aron Pilhofer Journal Register data visualization WikiLeaks Groupon, collaboration Steve Jobs we need a Nate Silver AP What Would Google Do the power of the press belongs to the person who owns one Clay Shirky curmudgeon Voice of San Diego free as in beer dead trees the notion of the public Lucius Nieman.
 
-This is some text after the gallery just to make sure that everything aligns prope
+{% include gallery caption="This is a sample gallery to go along with this case study." %}
 
+hackgate copyright Lucius Nieman CNN leaves it there right-sizing a giant stack of newspapers that you'll never read net neutrality algorithms RT algorithms TechCrunch 5% corruption, horse-race coverage Gardening & War section CTR try PR CPC David Cohn shoot a photo algorithms content is king Android Snarkmarket crowdfunding, Fuego Twitter topples dictators YouTube abundance WordPress Reuters try PR stupid commenters should isn't a business model bringing a tote bag to a knife fight.
