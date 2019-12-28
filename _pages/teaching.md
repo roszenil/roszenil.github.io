@@ -5,14 +5,17 @@ permalink: /teaching/
 collection: teaching
 entries_layout: grid
 classes: wide
-og_image: "/assets/images/beachsolanum2.jpg"
+header:
+overlay_image: /assets/images/beachsolanum2.jpg
+feature_row:
+image_path: /assets/images/ctmc_files/qmatrix.png
+alt: "Teaching"
+title: "Continuous-Time Markov Models"
+excerpt: "Models for discrete trait evolution. Midwest Phylogenetics Workshop Lecture 2019"
+url: "/portfolio/ctmc/"
+btn_label: "Read More"
+btn_class: "btn--primary"
 ---
 
 
-<div class="grid__wrapper">
-{% assign collection = 'teaching' %}
-{% assign posts = site[collection] | reverse %}
-{% for post in posts %}
-{% include archive-single.html type="grid" %}
-{% endfor %}
-</div>
+{% include feature_row %}
