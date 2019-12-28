@@ -237,8 +237,9 @@ rho <- observed_phylogeny.ntips()/450
 As of now you have a series of fixed, stochastic, and deterministic nodes free floating as small pieces of construction blocks.
 
 [](/assets/images/sse_files/gm5.png)
+*Figure 7. Blocks defining the parameters that we will need for the BiSSE.
 
-The connector is a phylogenetic distribution function ```dnCDBDP``` **the character dependent birth and death process**. It is in this function that we connect diversification rates, transition rates, root frequencies, and sampling to create the full BiSSE or any SSE model as we will study.
+The connector is a phylogenetic distribution function ```dnCDBDP``` **the character dependent birth and death process**. It is in this function that we plug diversification rates, transition rates, root frequencies, and sampling to create the full BiSSE or any SSE model.
 
 ```
 ####################################################################
@@ -260,7 +261,7 @@ In graphical representation the BiSSE model then looks like Figure 7.
 
 [](/assets/images/sse_files/gm6.png)
 
-*Figure 7. BiSSE in graphical modeling. We connect all our modeling blocks using a phylogenetic probability distribution where diversification, transition rates, and root frequencies can be estimated.*
+*Figure 9. BiSSE in graphical modeling. We connect all our modeling blocks using a phylogenetic probability distribution where diversification, transition rates, and root frequencies can be estimated.*
 
 
 1. SSE slides [here](/assets/docs/introSSE.pdf)
