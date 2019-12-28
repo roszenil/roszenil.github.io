@@ -263,7 +263,8 @@ In graphical representation the BiSSE model then looks like Figure 7.
 ![](/assets/images/sse_files/gm6.png)
 *Figure 9. BiSSE in graphical modeling. We connect all our modeling blocks using a phylogenetic probability distribution where diversification, transition rates, and root frequencies can be estimated.*
 
-**Performing statistical inference**
+### Performing statistical inference in RevBayes
+**Clamping the data**
 You might have notice that until this point we have not done anything with data other than reading it. To actually perform Bayesian statistics we need to evaluate the phylogenetic distribution that we just build (a.k.a fit BiSSE model) to the data. This happens with the help of the functions ```clamp``` that actually evaluate the ```dnCDBDP``` to the observed phylogeny and discrete character data.
 
 ```
@@ -273,7 +274,50 @@ bissemodel.clampCharData( data )
 ```
 In graphical model then we have added two more fixed nodes
 ![](/assets/images/sse_files/gm7.png)
+
 *Figure 10. Clamping observed data. In the graphical model world the deterministic node of the model gets some shading to indicate that data has been clamped.*
+
+**Getting what you want from the MCMC and checking the performance**
+
+In order to explore the outcome of the MCMC and also obtain posterior distributions for the model parameters ```monitors```  need to be set up.  ```monitors``` as their name indicate follow the estimates throughout the MCMC generations and allow us to perform different types of inferences like ancestral state estimations and stochastic mapping.
+
+```
+#############
+# The Model #
+#############
+
+
+### workspace model wrapper ###
+mymodel = model(rate_matrix)
+
+### set up the monitors that will output parameter values to file and screen
+monitors[++mni] = mnFile(filename="ouput/BiSSE_pole.trees", printgen=1, timetree)
+monitors[++mni] = mnModel(filename="ouput/BiSSE_pole.log", printgen=1)
+##This monitor was the one giving me trouble type has to be the same that data, however I'm not hundred percent sure whether tree should be the stochastic tree assigned by the clamp or the observed_phylogeny. Will and Sebastian have different inputs
+
+monitors[++mni] = mnJointConditionalAncestralState(tree=timetree, cdbdp=timetree, type="NaturalNumbers", printgen=1, withTips=true, withStartStates=false, filename="output/anc_states_BiSSE_pole.log")
+monitors[++mni] = mnScreen(printgen=10, q_01, q_10, speciation, extinction)
+
+```
+**Running the MCMC**
+Finally we define a new variable ```mymcmc``` which contains all: the model you defined, the monitors, the moves of the parameters, the number of runs, and how the mcmc runs (random). We can set a number of burn-in generations (letting the MCMC find the posterior distribution) and then how many generations we actually want for the MCMC to run.
+
+```
+################
+# The Analysis #
+################
+
+### workspace mcmc
+mymcmc = mcmc(mymodel, monitors, moves, nruns=1, moveschedule="random")
+
+### pre-burnin to tune the proposals 20% of the sample
+mymcmc.burnin(generations=200,tuningInterval=50)
+
+### run the MCMC
+mymcmc.run(generations=10000)
+
+```
+
 
 1. SSE slides [here](/assets/docs/introSSE.pdf)
 2. RevBayes code  for BiSSE [bisse.Rev](/assets/docs/bisse.Rev)
