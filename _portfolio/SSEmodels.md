@@ -1,6 +1,6 @@
 ---
 header:
-overlay_image: /assets/images/ctmc_files/bichromqmat.png
+  overlay_image: /assets/images/ctmc_files/bichromqmat.png
 permalink: /portfolio/SDD/
 category: teaching
 author_profile: true
