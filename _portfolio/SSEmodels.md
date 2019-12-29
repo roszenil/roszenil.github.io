@@ -55,7 +55,7 @@ The reason why this model is often represented as "circles and arrows" is becaus
 
 **Why is it important to know about these equations?**
 
-Let's just dig deeper into the interpretation of the equations shown in Figure 2. For example, the first equation defines what needs to happen for a clade $$N$$ to be descendent from a lineage with state 0. The three possibilities are: 1) before time $$t$$ nothing happened, the lineage was 0 and there wasn't any speciation, nor extinction, nor a transition from 0 to 1. So the very first part of the equation $$(\lambda_0+\mu_0+q_01)D_{N_0}(t)$$ represents the instantaneous probability of nothing happening. (2) There was a transition from 1 to 1 with instantaneous probability $$q_01D_{N_1}(t)$$. (3)There wasn't a transition of state but a speciation event $$\lambda_0$$ with one lineage going extinct $$E_0(t)$$ whereas the other lineage gave rise to the clade $$N$$ with instantaneous probability $$D_{N_0}(t)$$. Notice tha only one thing can happen at a time, either a state change or a diversification but not both simultaneously. This is one of the requirements to correctly define the model mathematically,  since we are looking an infinitesimal small time interval $$(t, t+\Delta t)$$ the probability of two things happening exactly at the same time is zero.
+Let's just dig deeper into the interpretation of the equations shown in Figure 2. For example, the first equation defines what needs to happen for a clade $$N$$ to be descendent from a lineage with state 0. The three possibilities are: 1) before time $$t$$ nothing happened, the lineage was 0 and there wasn't any speciation, nor extinction, nor a transition from 0 to 1. So the very first part of the equation $$(\lambda_0+\mu_0+q_{01})D_{N_0}(t)$$ represents the instantaneous probability of nothing happening. (2) There was a transition from 1 to 1 with instantaneous probability $$q_{01}D_{N_1}(t)$$. (3)There wasn't a transition of state but a speciation event $$\lambda_0$$ with one lineage going extinct $$E_0(t)$$ whereas the other lineage gave rise to the clade $$N$$ with instantaneous probability $$D_{N_0}(t)$$. Notice tha only one thing can happen at a time, either a state change or a diversification but not both simultaneously. This is one of the requirements to correctly define the model mathematically,  since we are looking an infinitesimal small time interval $$(t, t+\Delta t)$$ the probability of two things happening exactly at the same time is zero.
 
 These equations jointly with the equations of extinction (not shown here) are solved numerically to obtain full probabilities (not the "instantaneous" part) in any computational software building SSE models (i.e. diversitree, hisse, Revbayes). As you can imagine with more states these equations get complex quickly (see ChromoSSE for example), so bigger models are harder and harder to fit.
 
@@ -98,7 +98,7 @@ headers=TRUE)
 # Get some useful variables from the data. For example taxa names in the phylogeny
 taxa <- observed_phylogeny.taxa()
 ### Create the fix parameter for the age of the root set to the observed age
-root <- observed_phylogeny.rootAge()
+root_age <- observed_phylogeny.rootAge()
 ```
 
 Indices that are going to be very useful for the proposals of the MCMC and for the monitors (statistics) that we are going to obtain from the inferential process (MCMC). This is not immediatly evident but it will be once we print the full model.
@@ -118,7 +118,7 @@ Now we are going to define our speciation and extinction rates. This is the part
 ## Create the constant prior parameters of the diversification rates
 ## Number of surviving lineages is 165
 
-mx=ln(165/(2*observed_phylogeny.rootAge()))
+mx=(ln(165/2)/observed_phylogeny.rootAge())
 sx= 0.01
 rate_mean <- exp(mx+sx^2)
 rate_sd <- exp(2*mx+sx^2)*exp(sx^2-1)
@@ -150,7 +150,7 @@ In graphical modeling what we are doing is connecting fixed with stochastic node
 
 Here is my reasoning to define these priors for speciation and extinction, yours might differ.
 From Nee et al. 1994 the expected number of lineages $$n$$ under a simple birth-death process at time $$t$$ is $$n=e^{(\lambda-\mu)t}$$. That means that an expected net diversification rate $$(\lambda-\mu)=\frac{ln(n)}{t}$$. Now,
-somewhat the expected speciation is "half" the net diversification $$m_x=\frac{ln(n)}{2t}$$ with some standard deviation $$s_x$$ we would like.
+somewhat the expected speciation is "half" the net diversification $$m_x=\frac{ln(n/2)}{t}$$ with some standard deviation $$s_x$$ we would like.
 
 We could move forward and simply define $$speciation\sim N(m_x, s_x^2)$$ but one caveat of doing that is that this normal could end up with negative values(!!!). So the better way to define it is via the log-speciation as a Normal distribution. One thing that comes handy here is that if we want speciation alone to have $$m_x$$ as expected value, the parameters of the logNormal $$(m_y, s_y^2)$$ can be defined as follows
 $$m_y=e^{(m_x+1/2s_x^2)}$$ and $$s_y=e^{(2m_x+s_x^2)}e^{(s_x^2-1)}$$. Those two parameters is what you see defined in the code for all speciation and extinctions.
@@ -228,7 +228,7 @@ Again, this is another detail of great difference in comparative methods softwar
 ```
 ### Rho is the probability of sampling species at the present
 ### fix this to 165/450
-rho <- observed_phylogeny.ntips()/450
+sampling <- observed_phylogeny.ntips()/450
 ```
 ![](/assets/images/sse_files/gm4.png)
 *Figure 7. Graphical modeling of the sampling bias for BiSSE model. This is simply a fixed node measuring the percentage of lineages not sampled.*
@@ -248,14 +248,12 @@ The connector is a phylogenetic distribution function ```dnCDBDP```   **the char
 ###################################################################
 
 ### Here is where I tie speciation, extinction, and Q using a Birth-Death with categories
-bissemodel ~ dnCDBDP( rootAge= root,
+bissemodel ~ dnCDBDP( rootAge= root_age,
 speciationRates   = speciation,
 extinctionRates   = extinction,
 Q                 = rate_matrix,
 pi                = rate_category_prior,
-rho               = rho,
-delta             = 1.0,
-condition         = "time" )
+rho               = sampling )
 ```
 
 In graphical representation the BiSSE model then looks like Figure 7.

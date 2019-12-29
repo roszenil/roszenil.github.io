@@ -3,7 +3,7 @@
 # BiSSE selfing Polimoneceae
 #
 # authors: Rosana Zenil-Ferguson modified from the BiSSE tutorial @RevBayes
-# last modified: 10/30/2018
+# last modified: 12/29/2018
 #########################################################################################################
 #######################
 # Reading in the Data #
@@ -23,7 +23,7 @@ headers=TRUE)
 taxa <- observed_phylogeny.taxa()
 
 ### Create the fix parameter for the age of the root set to the observed age
-root <- observed_phylogeny.rootAge()
+root_age <- observed_phylogeny.rootAge()
 
 # Setting up indices
 mvi = 0
@@ -33,13 +33,13 @@ mni = 0
 # Create the rates #
 ####################
 
-### Specify a prior on the diversification and turnover rate
+### Specify a prior on the diversification
 
 ### Create the constant prior parameters of the diversification rates
 ## Number of surviving lineages is 165
 
-mx=ln(165/(2*observed_phylogeny.rootAge()))
-sx= 0.01
+mx=(ln(165/2)/observed_phylogeny.rootAge())
+sx= 0.001
 rate_mean <- exp(mx+sx^2)
 rate_sd <- sqrt(exp(2*mx+sx^2)*exp(sx^2-1))
 
@@ -47,15 +47,17 @@ for (i in 1:NUM_STATES) {
 
 ### Create a lognormal distributed variable for the diversification rate
 log_speciation[i] ~ dnNormal(mean=rate_mean,sd=rate_sd)
-log_speciation[i].setValue( rate_mean )
+#log_speciation[i].setValue( rate_mean )
 speciation[i] := exp( log_speciation[i] )
 moves[++mvi] = mvSlide(log_speciation[i],delta=0.20,tune=true,weight=3.0)
 
 ### Create a lognormal distributed variable for the turnover rate
 log_extinction[i] ~ dnNormal(mean=rate_mean,sd=rate_sd)
-log_extinction[i].setValue( rate_mean )
+#log_extinction[i].setValue( rate_mean )
 extinction[i] := exp( log_extinction[i] )
 moves[++mvi] = mvSlide(log_extinction[i],delta=0.20,tune=true,weight=3)
+
+net_diversification[i] := speciation[i] - extinction[i]
 
 }
 
@@ -98,7 +100,7 @@ moves[++mvi] = mvDirichletSimplex(rate_category_prior,tune=true,weight=2)
 
 ### Rho is the probability of sampling species at the present
 ### fix this to 165/450
-rho <- observed_phylogeny.ntips()/450
+sampling <- observed_phylogeny.ntips()/450
 
 
 ####################################################################
@@ -106,14 +108,12 @@ rho <- observed_phylogeny.ntips()/450
 ###################################################################
 
 ### Here is where I tie speciation, extinction, and Q using a Birth-Death with categories
-bissemodel ~ dnCDBDP( rootAge           = root,
+bissemodel ~ dnCDBDP( rootAge = root_age,
 speciationRates   = speciation,
 extinctionRates   = extinction,
 Q                 = rate_matrix,
 pi                = rate_category_prior,
-rho               = rho,
-delta             = 1.0,
-condition         = "time" )
+rho               = sampling)
 
 ### clamp the model with the "observed" tree and states
 bissemodel.clamp( observed_phylogeny )
@@ -130,13 +130,10 @@ bissemodel.clampCharData( data )
 mymodel = model(rate_matrix)
 
 ### set up the monitors that will output parameter values to file and screen
-monitors[++mni] = mnFile(filename="ouput/BiSSE_pole.trees", printgen=1, timetree)
+monitors[++mni] = mnFile(filename="ouput/BiSSE_pole.trees", printgen=1, bissemodel)
 monitors[++mni] = mnModel(filename="ouput/BiSSE_pole.log", printgen=1)
-##This monitor was the one giving me trouble type has to be the same that data, however I'm not hundred percent sure whether tree should be the stochastic tree assigned by the clamp or the observed_phylogeny. Will and Sebastian have different inputs
-
-monitors[++mni] = mnJointConditionalAncestralState(tree=timetree, cdbdp=timetree, type="NaturalNumbers", printgen=1, withTips=true, withStartStates=false, filename="output/anc_states_BiSSE_pole.log")
-monitors[++mni] = mnScreen(printgen=10, q_01, q_10, speciation, extinction)
-
+monitors[++mni] = mnJointConditionalAncestralState(tree=observed_phylogeny, cdbdp=bissemodel, type="NaturalNumbers", printgen=1, withTips=true, withStartStates=false, filename="output/anc_states_BiSSE_pole.log")
+monitors[++mni] = mnScreen(printgen=10, q_01, q_10, net_diversification)
 
 ################
 # The Analysis #
@@ -146,10 +143,10 @@ monitors[++mni] = mnScreen(printgen=10, q_01, q_10, speciation, extinction)
 mymcmc = mcmc(mymodel, monitors, moves, nruns=1, moveschedule="random")
 
 ### pre-burnin to tune the proposals 20% of the sample
-mymcmc.burnin(generations=200,tuningInterval=50)
+# mymcmc.burnin(generations=500,tuningInterval=50)
 
 ### run the MCMC
-mymcmc.run(generations=10000)
+mymcmc.run(generations=100000)
 
 ##############################
 # Summarize ancestral states #
