@@ -19,7 +19,7 @@ feature_row:
     url: "/portfolio/SDD/"
     btn_label: "Read More"
     btn_class: "btn--primary"
----
+    ---
 Here you'll find examples of some of workshop and teaching lectures. These lectures span from theoretical to applications
 
 {% include feature_row %}
