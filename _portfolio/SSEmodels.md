@@ -1,10 +1,10 @@
 ---
 header:
-overlay_image: /assets/images/sse_files/bisse.png
+overlay_image: /assets/images/sse_files/gm5.png
 permalink: /portfolio/SDD/
 category: teaching
 author_profile: true
-date: 2019-12-04
+date: 2019-12-28
 toc: true
 toc_label: "Contents"
 ---
