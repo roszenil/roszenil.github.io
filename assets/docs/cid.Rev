@@ -1,8 +1,8 @@
 ################################################################################
 #
-# HiSSE selfing Polimoneceae
+# CID selfing Polimoneceae
 #
-# authors: Rosana Zenil-Ferguson 
+# authors: Rosana Zenil-Ferguson
 # last modified: 12/29/2019
 ################################################################################
 
@@ -55,38 +55,30 @@ sx= 0.05
 rate_mean <- exp(mx+sx^2)
 rate_sd <- sqrt(exp(2*mx+sx^2)*exp(sx^2-1))
 
-for (i in 1:NUM_STATES) {
+### Just create 2 speciation and 2 extinctions for states A and B
 ### Create a lognormal distributed variable for the diversification rate
-speciation_alpha[i] ~ dnNormal(mean=rate_mean,sd=rate_sd)
-moves[++mvi] = mvSlide(speciation_alpha[i],delta=0.20,tune=true,weight=3.0)
+speciation_alpha ~ dnNormal(mean=rate_mean,sd=rate_sd)
+moves[++mvi] = mvSlide(speciation_alpha,delta=0.20,tune=true,weight=3.0)
 
-### Create a lognormal distributed variable for the turnover rate
-extinction_alpha[i] ~ dnNormal(mean=rate_mean,sd=rate_sd)
-moves[++mvi] = mvSlide(extinction_alpha[i],delta=0.20,tune=true,weight=3.0)
-}
+extinction_alpha ~ dnNormal(mean=rate_mean,sd=rate_sd)
+moves[++mvi] = mvSlide(extinction_alpha,delta=0.20,tune=true,weight=3.0)
 
-
-for (i in 1:NUM_HIDDEN) {
-
-### Create an exponential distributed variable for the diversification rate
-speciation_beta[i] ~ dnExp(1.0)
-moves[++mvi] = mvScale(speciation_beta[i],lambda=0.20,tune=true,weight=2.0)
+speciation_beta ~ dnExp(1.0)
+moves[++mvi] = mvScale(speciation_beta,lambda=0.20,tune=true,weight=2.0)
 
 ### Create an normal distributed variable for the turnover rate
-extinction_beta[i] ~ dnNormal(0.0,1.0)
-moves[++mvi] = mvSlide(extinction_beta[i],delta=0.20,tune=true,weight=2.0)
-
-}
+extinction_beta ~ dnNormal(0.0,1.0)
+moves[++mvi] = mvSlide(extinction_beta,delta=0.20,tune=true,weight=2.0)
 
 for (j in 1:NUM_HIDDEN) {
 for (i in 1:NUM_STATES) {
 if ( j == 1) {
-speciation[i] := exp( speciation_alpha[i] )
-extinction[i] := exp( extinction_alpha[i] )
+speciation[i] := exp( speciation_alpha )
+extinction[i] := exp( extinction_alpha )
 } else {
 index = i+(j*NUM_STATES)-NUM_STATES
-speciation[index] := speciation[index-NUM_STATES] * exp( speciation_beta[j-1] )
-extinction[index] := exp( extinction_alpha[i] + extinction_beta[j-1] )
+speciation[index] := speciation[index-NUM_STATES] * exp( speciation_beta )
+extinction[index] := exp( extinction_alpha + extinction_beta )
 }
 }
 }
@@ -168,7 +160,7 @@ moves[++mvi] = mvDirichletSimplex(rate_category_prior,tune=true,weight=2)
 sampling <- observed_phylogeny.ntips()/450
 
 #### construct a variable for the tree drawn from a birth death process
-hissemodel ~ dnCDBDP( rootAge = root_age,
+cidmodel ~ dnCDBDP( rootAge = root_age,
 speciationRates   = speciation,
 extinctionRates   = extinction,
 Q                 = rate_matrix,
@@ -176,8 +168,8 @@ pi                = rate_category_prior,
 rho               = sampling)
 
 ### clamp the model with the "observed" tree
-hissemodel.clamp( observed_phylogeny )
-hissemodel.clampCharData( data_exp ) #note the clamping on the expanded dataset
+cidmodel.clamp( observed_phylogeny )
+cidmodel.clampCharData( data_exp ) #note the clamping on the expanded dataset
 
 #############
 # The Model #
@@ -188,9 +180,9 @@ hissemodel.clampCharData( data_exp ) #note the clamping on the expanded dataset
 mymodel = model(rate_matrix)
 
 ### set up the monitors that will output parameter values to file and screen
-monitors[++mni] = mnFile(filename="output/HiSSE_pole.trees", printgen=1, hissemodel)
-monitors[++mni] = mnModel(filename="output/HiSSE_pole.log", printgen=1)
-monitors[++mni] = mnJointConditionalAncestralState(tree=observed_phylogeny, cdbdp=hissemodel, type="NaturalNumbers", printgen=1, withTips=true, withStartStates=false, filename="output/anc_states_HiSSE_pole.log")
+monitors[++mni] = mnFile(filename="output/CID_pole.trees", printgen=1, cidmodel)
+monitors[++mni] = mnModel(filename="output/CID_pole.log", printgen=1)
+monitors[++mni] = mnJointConditionalAncestralState(tree=observed_phylogeny, cdbdp=cidmodel, type="NaturalNumbers", printgen=1, withTips=true, withStartStates=false, filename="output/anc_states_CID_pole.log")
 monitors[++mni] = mnScreen(printgen=10,q,speciation,extinction)
 
 
@@ -202,19 +194,17 @@ monitors[++mni] = mnScreen(printgen=10,q,speciation,extinction)
 mymcmc = mcmc(mymodel, monitors, moves, nruns=1, moveschedule="random")
 
 ### pre-burnin to tune the proposals
-mymcmc.burnin(generations=200,tuningInterval=50)
+#mymcmc.burnin(generations=200,tuningInterval=50)
 
 ### run the MCMC
-mymcmc.run(generations=10000)
+mymcmc.run(generations=1000)
 
 ##############################
 # Summarize ancestral states #
 ##############################
 
 
-#anc_states = readAncestralStateTrace("output/anc_states_HiSSE_pole.log")
-#anc_tree = ancestralStateTree(tree=observed_phylogeny, ancestral_state_trace_vector=anc_states, include_start_states=false, file="/home/eeg/shared/twostatesse/hisse/output/anc_states_summaryHiSSEpole.tree", burnin=0, summary_statistic="MAP", site=0)
+#anc_states = readAncestralStateTrace("output/anc_states_CID_pole.log")
+#anc_tree = ancestralStateTree(tree=observed_phylogeny, ancestral_state_trace_vector=anc_states, include_start_states=false, file="/home/eeg/shared/twostatesse/hisse/output/anc_states_summaryCIDpole.tree", burnin=0, summary_statistic="MAP", site=0)
 
 q()
-
-
