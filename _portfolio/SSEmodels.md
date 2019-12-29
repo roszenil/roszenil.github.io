@@ -1,6 +1,6 @@
 ---
 header:
-overlay_image: /assets/images/sse_files/gm5.png
+overlay_image: /assets/images/sse_files/muhisse.png
 permalink: /portfolio/SDD/
 category: teaching
 author_profile: true
