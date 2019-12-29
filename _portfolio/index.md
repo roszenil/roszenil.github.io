@@ -12,11 +12,11 @@ feature_row:
     url: "/portfolio/ctmc/"
     btn_label: "Read More"
     btn_class: "btn--primary"
-- image_path: /assets/images/ctmc_files/qmatrix.png
+- image_path: /assets/images/likelihoodbirdalarms_files/likelihoodintervals-1.png
     alt: "Teaching"
-    title: "Continuous-Time Markov Models"
-    excerpt: "Models for discrete trait evolution. Midwest Phylogenetics Workshop Lecture 2019"
-    url: "/portfolio/ctmc/"
+    title: "Evidential Statistics Application"
+    excerpt: "Evidential statistics paradigm using an example of heterospecific bird alam calls"
+    url: "/portfolio/evidence/"
     btn_label: "Read More"
     btn_class: "btn--primary"
 ---
