@@ -12,7 +12,7 @@ feature_row:
     url: "/portfolio/ctmc/"
     btn_label: "Read More"
     btn_class: "btn--primary"	
-    - image_path: /assets/images/sse_files/muhisse.png
+    - image_path: /assets/images/ctmc_files/qmatrix.png
     alt: "Teaching"
     title: "SSE models"
     excerpt: "Fitting state dependent speciaitona and extinction models"
