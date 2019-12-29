@@ -1,7 +1,7 @@
 ---
 header:
     overlay_image: /assets/images/likelihoodbirdalarms_files/likelihoodintervals-1.png
-permalink: /teaching/evidence/
+permalink: /portfolio/evidence/
 category: teaching
 author_profile: true
 date: 2019-06-02

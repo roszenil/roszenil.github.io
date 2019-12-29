@@ -15,12 +15,6 @@ plugins:
   - jekyll-feed
   - jekyll-remote-theme
   - jekyll-include-cache
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
 
 # Build settings
 markdown: kramdown
@@ -58,10 +52,6 @@ footer:
 #paginate_path: /page:num/
 
 # default YAML front matter
-teaching:
-    output: true
-    permalink: /:collection/:path/
-      
 defaults:
   # all
   - scope:
@@ -80,13 +70,17 @@ defaults:
       toc: true
       toc_label: "Contents"
       read_time: false
-  #_teaching
+  # portfolio
   - scope:
       path: ""
-      type: teaching
+      type: portfolio
     values:
-      layout: article
       author_profile: false
-      share: true
-      comments: false
- 
+      excerpt: ""
+      sidebar:
+        nav: "portfolio"
+
+# collections
+collections:
+  portfolio:
+    output: true

@@ -1,5 +1,7 @@
 ---
-permalink: /teaching/SDD/
+header:
+overlay_image: /assets/images/sse_files/gm5.png
+permalink: /portfolio/SDD/
 category: teaching
 author_profile: true
 date: 2019-12-28
