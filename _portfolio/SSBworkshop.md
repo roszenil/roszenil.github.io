@@ -296,12 +296,22 @@ mymcmc.run(generations=1000)
 Full RevBayes code  for BiSSE [bisse.Rev](/assets/docs/bisse.Rev)
 
 ### Results visualization
-Opening log-file in tracer.
+Opening log-file in tracer
+
+
+## Hidden state speciation and extinction model (HiSSE)
+Now we are going to fit the HiSSE model
+![](/assets/images/sse_files/hisse.png)
+*Figure 10. HiSSE graphical representation in most published papers. Trait is assumed be be binary but it is expanded to four states to accomodote hidden trait affecting diverisication.  Parameters $$(\lambda_0_A, \lambda_1_A,\lambda_0_B, \lambda_1_B)$$ are speciation rates link to each of the states, and parameters $$(\mu_0_A,\mu_1_A,\mu_0_B,\mu_1_B)$$ are extinction rates. The transition rates $$(q_{01},q_{10})$$ indicate how often the value of the trait changes, and they could differ within states A and B.*
 
 
 
 
+**Excercise**
+Find a teammate!
+Just like we did with the BiSSE model, please try to parse out the code to figure out the graphical model that RevBayes is constructing.
 
-
-3. RevBayes code for HiSSE [hisse.Rev](/assets/docs/hisse.Rev)
+ RevBayes code for HiSSE [hisse.Rev](/assets/docs/hisse.Rev)
+ 
+ 
 4. Rcode for nice diversification plots
