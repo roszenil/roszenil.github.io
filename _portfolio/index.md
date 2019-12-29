@@ -19,19 +19,9 @@ feature_row:
     url: "/portfolio/evidence/"
     btn_label: "Read More"
     btn_class: "btn--primary"
-- image_path: /assets/images/sse_files/birthdeath.png
-    alt: "Teaching"
-    title: "SSE models"
-    excerpt: "Inference using SSE models"
-    url: "/portfolio/SDD/"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
 ---
 
-Here you'll find examples of some of of my lessons representative of my skills and interests. These lectures span from theoretical to applications
-
-
-<div style="margin-bottom:1cm" align="center"><font size="18">Workshop Lectures</font></div>
+Here you'll find examples of some of workshop and teaching lectures. These lectures span from theoretical to applications
 
 {% include feature_row %}
 
