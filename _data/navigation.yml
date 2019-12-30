@@ -17,16 +17,17 @@ main:
 portfolio:
   - title: "Workshops"
     children:
+      - title: "SSE models"
+        url: /portfolio/SDD/
+      - title: "SSE in RevBayes. SSB workshop 2020"
+        url: /portfolio/SSBworkshop/
 #      - title: "Machine Learning on AWS"
 #        url: /portfolio/coming/
       - title: "Continuous- Time Markov Chains"
         url: /portfolio/ctmc/
       - title: "Evidential Stats"
         url: /portfolio/evidence/
-      - title: "SSE models"
-        url: /portfolio/SDD/
-      - title: "SSE in RevBayes. SSB workshop 2020"
-        url: /portfolio/SSBworkshop/
+
     
 
  # - title: "Research"

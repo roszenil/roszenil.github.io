@@ -12,19 +12,16 @@ toc_label: "Contents"
 # State dependent diversification models
 ## Instructors
 1. [Carrie Tribble](https://carrietribble.weebly.com/)
+PhD Candidate.
+University of California Berkeley.
 
-PhD Candidate
-University of California Berkeley
-
-2. [Daniel Caetano](https://caetanods.weebly.com/)
-
-Postdoctoral researcher
-Universidade de São Paulo, São Paulo, Brazil
+2. [Daniel Caetano](https://caetanods.weebly.com/).
+Postdoctoral researcher.
+Universidade de São Paulo, Brazil.
 
 3. [Rosana Zenil-Ferguson](/contact/)
-
-Assistant Professor
-University of Hawai'i
+Assistant Professor.
+University of Hawai'i Mānoa.
 
 ## Background
 The goal of this workshop is to get you familiarized with state dependent diversification models. In the literature they are called state dependent speciation and extinction, because the models link the value of the states to the rates of speciation and extinction. This idea will be clearer as we work through the workshop excercises.
@@ -54,13 +51,13 @@ In order to make it as efficient as possible the workshop  please follow these s
 1. Make sure you have access to a command line. For mac users the terminal works fine, for windows users see [this option](https://devblogs.microsoft.com/commandline/introducing-windows-terminal/)
 If you are not too familiar with the command line check this very [short tutorial](https://tutorial.djangogirls.org/en/intro_to_command_line/)
 
-2. Install RevBayes try to do it in a folder where you could find easily from the command line [http://revbayes.github.io/old-site/software.html](http://revbayes.github.io/old-site/software.html)
+2. Install RevBayes try to do it in a folder where you could find easily from the command line [https://revbayes.github.io/download](https://revbayes.github.io/download)
 
 3. Check that revbayes is well installed in your computer by going through this super [short tutorial](https://revbayes.github.io/tutorials/intro/rev)
 
 4. Install [Tracer software](http://tree.bio.ed.ac.uk/software/tracer/) to check our MCMC output
 
-5. Have R with ggplot  and ggtree installed for visualizations
+5. Have R with ggplot and ggtree installed for visualizations
 
 
 ## Binary state speciation and extinction model (BiSSE)
@@ -81,9 +78,10 @@ Another way to think about SSE models that is not only the circle and arrow diag
 We will discuss some of the caveats as well at the end, but one very important key feature to clarify here is that the graphical model is not only a visual representation, but an alternative to writing the math from the **model and the inference (Bayesian)** simultaneously.
 
 **Rev Language**
+
 Just a brief reminder that we will be using Rev language and every assignation we use has a meaning in the graphical model world. For more details please refer to (Hoehna et al. 2013 )
 ![](/assets/images/sse_files/revlanguage.png)
-*Figure 2. From Hoehna et al. 2013. Rev language and its graphical model representation*
+*Figure 2. From Hoehna et al. 2016. Rev language and its graphical model representation*
 
 **Trait data utilized for the workshop**
 Polimoneaceae data from Landis, J. et al. 2018. This is a phylogenetic tree of Phlox with selfing and outcrossing data as breeding system binary trait. We will use this dataset as an example of binary trait that could be interesting for diversification.
@@ -91,7 +89,6 @@ Polimoneaceae data from Landis, J. et al. 2018. This is a phylogenetic tree of P
 Trait data [.csv](/assets/docs/pole_datadis.csv), and phylogenetic [.tre](/assets/docs/poleult.tre)
 
 **RevBayes code**
-
 
 ```
 setOption("useScaling","true")
@@ -294,12 +291,15 @@ mymcmc.run(generations=1000)
 
 ```
 Full RevBayes code  for BiSSE [bisse.Rev](/assets/docs/bisse.Rev)
+- BiSSE run after [24 hours](/assets/docs/BiSSE_pole24.log)
 
 ### Results visualization
 Opening log-file in tracer
 
 
 ## Hidden state speciation and extinction model (HiSSE) and the character independent model
+Daniel Caetano's [lecture](/assets/docs/SSB_workshop_Caetanolecture2019.pdf)
+
 Now we are going to fit the HiSSE model
 
 ![](/assets/images/sse_files/hisse.png)
@@ -315,9 +315,31 @@ and the character independent model (CID)
 *Figure 11. CID model representation in most published papers. Trait is assumed be be binary but it is expanded to four states to accomodate hidden trait affecting diversification.  We assume here that the trait does not have an effect on diversification and it is only the hidden state that can change speciation and extinction. Parameters $$(\lambda_{A},\lambda_{B})$$ are speciation rates link to each of the states, and parameters $$(\mu_{A},\mu_{B})$$ are extinction rates. The transition rates $$(q_{01},q_{10})$$ indicate how often the value of the trait changes, and they could differ within states A and B. The transition rates between hidden states are $$(\alpha,\beta)$$.*
 
  - RevBayes code for CID [cid.Rev](/assets/docs/cid.Rev)
+ 
 
 **Practice**
 Find a teammate!
 Just like we did with the BiSSE model, please try to parse out the code to figure out the graphical model that RevBayes is constructing for HiSSE and CID.
 We will come back together as a group to discuss similarities and differences and discuss the results of each.
+- Exercise materials [HiSSE](/assets/docs/hisse_exercise.pdf) and CID
 
+
+**Results**
+- HiSSE run after [24hours](/assets/docs/HiSSE_pole24.log)
+- CID run after [24 hours](/assets/docs/CID_pole24.log)
+
+
+
+### Key References
+- **HiSSE and CID**: Beaulieu, J.M. and O’Meara, B.C., 2016. Detecting hidden diversification shifts in models of trait-dependent speciation and extinction. Systematic biology, 65(4), pp.583-601.
+
+- **GeoHiSSE**: Caetano, D.S., O'Meara, B.C. and Beaulieu, J.M., 2018. Hidden state models improve state‐dependent diversification approaches, including biogeographical models. Evolution, 72(11), pp.2308-2324.
+
+
+- **RevBayes**: Höhna, S., Landis, M.J., Heath, T.A., Boussau, B., Lartillot, N., Moore, B.R., Huelsenbeck, J.P. and Ronquist, F., 2016. RevBayes: Bayesian phylogenetic inference using graphical models and an interactive model-specification language. Systematic biology, 65(4), pp.726-736.
+
+- **BiSSE**: Maddison WP, Midford PE, Otto SP. Estimating a binary character's effect on speciation and extinction. Systematic biology. 2007 Oct 1;56(5):701-10.
+
+- **BiSSE lack of heterogeneity**: Rabosky, D.L. and Goldberg, E.E., 2015. Model inadequacy and mistaken inferences of trait-dependent speciation. Systematic biology, 64(2), pp.340-355.
+
+- **MuHisse and model selection**: Zenil‐Ferguson, R., Burleigh, J.G., Freyman, W.A., Igić, B., Mayrose, I. and Goldberg, E.E., 2019. Interaction among ploidy, breeding system and lineage diversification. New Phytologist.
