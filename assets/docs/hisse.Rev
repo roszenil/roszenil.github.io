@@ -56,11 +56,11 @@ rate_mean <- exp(mx+sx^2)
 rate_sd <- sqrt(exp(2*mx+sx^2)*exp(sx^2-1))
 
 for (i in 1:NUM_STATES) {
-### Create a lognormal distributed variable for the diversification rate
+### Create a lognormal distributed variable for the speciation rate
 speciation_alpha[i] ~ dnNormal(mean=rate_mean,sd=rate_sd)
 moves[++mvi] = mvSlide(speciation_alpha[i],delta=0.20,tune=true,weight=3.0)
 
-### Create a lognormal distributed variable for the turnover rate
+### Create a lognormal distributed variable for the extinction rate
 extinction_alpha[i] ~ dnNormal(mean=rate_mean,sd=rate_sd)
 moves[++mvi] = mvSlide(extinction_alpha[i],delta=0.20,tune=true,weight=3.0)
 }
@@ -68,11 +68,11 @@ moves[++mvi] = mvSlide(extinction_alpha[i],delta=0.20,tune=true,weight=3.0)
 
 for (i in 1:NUM_HIDDEN) {
 
-### Create an exponential distributed variable for the diversification rate
+### Create an exponential distributed variable for the speciation rate
 speciation_beta[i] ~ dnExp(1.0)
 moves[++mvi] = mvScale(speciation_beta[i],lambda=0.20,tune=true,weight=2.0)
 
-### Create an normal distributed variable for the turnover rate
+### Create an normal distributed variable for the extinction
 extinction_beta[i] ~ dnNormal(0.0,1.0)
 moves[++mvi] = mvSlide(extinction_beta[i],delta=0.20,tune=true,weight=2.0)
 
