@@ -5,6 +5,20 @@ header:
 permalink: /portfolio/index.html
 date: 2019-09-16
 feature_row:
+  - image_path: /assets/images/sse_files/hisse.png
+    alt: "Teaching"
+    title: "SSB workshop on diversification models"
+    excerpt: "Fitting diversification models with Revbayes"
+    url: "/portfolio/SSBworkshop/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - image_path: /assets/images/sse_files/muhisse.png
+    alt: "Teaching"
+    title: "SSE models"
+    excerpt: "Fitting diversification models. A long explanation of graphical models for  SSE with RevBayes code"
+    url: "/portfolio/SDD/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
   - image_path: /assets/images/ctmc_files/qmatrix.png
     alt: "Teaching"
     title: "Continuous-Time Markov Models"
@@ -17,20 +31,6 @@ feature_row:
     title: "Evidential Statistics Application"
     excerpt: "Evidential statistics paradigm using an example of heterospecific bird alam calls"
     url: "/portfolio/evidence/"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-  - image_path: /assets/images/sse_files/muhisse.png
-    alt: "Teaching"
-    title: "SSE models"
-    excerpt: "Fitting diversification models. A long explanation of graphical models for  SSE with RevBayes code"
-    url: "/portfolio/SDD/"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-  - image_path: /assets/images/sse_files/hisse.png
-    alt: "Teaching"
-    title: "SSB workshop on diversification models"
-    excerpt: "Fitting diversification models with Revbayes"
-    url: "/portfolio/SSBworkshop/"
     btn_label: "Read More"
     btn_class: "btn--primary"
 ---
