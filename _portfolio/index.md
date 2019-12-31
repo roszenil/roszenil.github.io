@@ -3,11 +3,7 @@ classes: wide
 header:
   overlay_image: /assets/images/beachsolanum2.jpg
 permalink: /portfolio/index.html
-<<<<<<< HEAD
 date: 2019-29-19
-=======
-date: 2019-09-16
->>>>>>> 6520ff494267a943c291976daf4140b96971df23
 feature_row:
   - image_path: /assets/images/sse_files/hisse.png
     alt: "Teaching"
