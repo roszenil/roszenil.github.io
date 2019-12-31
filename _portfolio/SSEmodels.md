@@ -14,6 +14,11 @@ toc_label: "Contents"
 The goal of this post is to get the reader familiarized with state dependent diversification models. In the literature they are called state dependent speciation and extinction, because the models link the value of the states to the rates of speciation and extinction. This idea will be clearer as we work through the workshop excercises.
 
 Note: This post is slowly evolving so materials will be changing over time.
+=======
+The goal of this workshop is to get you familiarized with state dependent diversification models. In the literature they are called state dependent speciation and extinction, because the models link the value of the states to the rates of speciation and extinction. This idea will be clearer as we work through the workshop excercises.
+
+Note: This workshop is slowly evolving so materials will be changing over time.
+
 
 ### Introduction to Bayesian Statistics and inference
 For background infromation about some basic Bayesian statistics  and MCMC algorithm to obtain posterior distribution samples plese reafer to the the slides below. This slides are from a short intro workshop I taught in Botany 2018 (Rochester, MN).
@@ -29,17 +34,28 @@ Continuous time Markov chains are our power tools when we are trying to model an
 The slides below are from the Botany workshop in 2018
 1. Continuous Time Markov Chains slides [here](/assets/docs/introCTMC.pdf)
 
+
 but more complete information can be found in this long lecture that I taught in the Midwest Phylogenetic comparative methods workshop in 2019
+=======
+but more background information can be found in this long lecture that I taught in the Midwest Phylogenetic comparative methods workshop in 2019
+
 2. [CTMC lecture](https://roszenil.github.io/portfolio/ctmc/).
 3. RevBayes code [mk2.Rev](/assets/docs/mk2.Rev)
 
 
 ### State Speciation and Extinction Models
+
 Here you will find all the materials about state speciation and extinction models (SSE). Most of the post is mine but there is work from of Dr. Daniel Caetano and Carrie Tribble who helped me teach the SSE models workshop at the Stand-alone SSB meeting 2020, at Gainesville, FL.
 
 #### Binary state speciation and extinction model (BiSSE). A brief introduction
 
 You will find some slides [here](/assets/docs/introSSE.pdf) from the Botany workshop in 2018. However, I more detailed explanation of BiSSE using RevBayes is found below.
+
+=======
+Here you will find all the materials that we are using to discuss state speciation and extinction models (SSE). All the materials here are the joint work of Dr. Daniel Caetano and Carrie Tribble.
+
+#### Binary state speciation and extinction model (BiSSE). A brief introduction
+
 
 BiSSE is a stochastic process that is the composition of two different birth-death stochastic processes connected by a transition rate.  The key assumption of a BiSSE model is that the trait can be categorize in two states, each state with its own birth rate $$\lambda$$ and death rate $$\mu$$ representing the splitting of a lineage or the extinction of a lineage respectively. This is a big assumption because the implication is that the accumulation (or the lack of) of lineages is link to the value of the state (0 or 1) but nothing else.
 
@@ -152,7 +168,11 @@ In graphical modeling what we are doing is connecting fixed with stochastic node
 
 Here is my reasoning to define these priors for speciation and extinction, yours might differ.
 From Nee et al. 1994 the expected number of lineages $$n$$ under a simple birth-death process at time $$t$$ is $$n=e^{(\lambda-\mu)t}$$. That means that an expected net diversification rate $$(\lambda-\mu)=\frac{ln(n)}{t}$$. Now,
+
 somewhat the expected speciation is "half" the net diversification $$m_x=\frac{ln(n)}{2t}$$ with some standard deviation $$s_x$$ we would like.
+=======
+somewhat the expected speciation is "half" the net diversification $$m_x=\frac{ln(n/2)}{t}$$ with some standard deviation $$s_x$$ we would like.
+
 
 We could move forward and simply define $$speciation\sim N(m_x, s_x^2)$$ but one caveat of doing that is that this normal could end up with negative values(!!!). So the better way to define it is via the log-speciation as a Normal distribution. One thing that comes handy here is that if we want speciation alone to have $$m_x$$ as expected value, the parameters of the logNormal $$(m_y, s_y^2)$$ can be defined as follows
 $$m_y=e^{(m_x+1/2s_x^2)}$$ and $$s_y=e^{(2m_x+s_x^2)}e^{(s_x^2-1)}$$. Those two parameters is what you see defined in the code for all speciation and extinctions.
@@ -318,6 +338,12 @@ mymcmc.run(generations=10000)
 
 ```
 Full RevBayes code  for BiSSE [bisse.Rev](/assets/docs/bisse.Rev)
+
+=======
+
+
+
+
 
 3. RevBayes code for HiSSE [hisse.Rev](/assets/docs/hisse.Rev)
 4. Rcode for nice diversification plots
