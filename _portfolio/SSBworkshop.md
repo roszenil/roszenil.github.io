@@ -321,7 +321,7 @@ and the character independent model (CID)
 Find a teammate!
 Just like we did with the BiSSE model, please try to parse out the code to figure out the graphical model that RevBayes is constructing for HiSSE and CID.
 We will come back together as a group to discuss similarities and differences and discuss the results of each.
-- Exercise materials [HiSSE](/assets/docs/hisse_exercise.pdf) and CID
+- Exercise materials [HiSSE](/assets/docs/hisse_exercise.pdf) and [CID](/assets/docs/cid_exercise.pdf)
 
 
 **Results**

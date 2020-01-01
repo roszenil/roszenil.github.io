@@ -87,7 +87,7 @@ extinction[index] := exp( extinction_alpha + extinction_beta )
 #########################################################
 # Set up the transition rate matrix for all states #
 #########################################################
-###### This is the most flexible set-up by RZF. The RevBayes tutorials do a less parameterized HiSSE
+###### This is the most flexible set-up by RZF. The RevBayes tutorials do a less parameterized CID
 
 ## I defined very loosely my gamma priors for rates in the Q-mat
 shape_pr := 0.5
