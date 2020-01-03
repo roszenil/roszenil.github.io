@@ -8,8 +8,15 @@ feature_row:
   - image_path: /assets/images/sse_files/hisse.png
     alt: "Teaching"
     title: "SSB workshop on diversification models"
-    excerpt: "Fitting diversification models with Revbayes. January, 2020."
+    excerpt: "Fitting diversification models with Revbayes"
     url: "/portfolio/SSBworkshop/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - image_path: /assets/images/sse_files/muhisse.png
+    alt: "Teaching"
+    title: "SSE models"
+    excerpt: "Fitting diversification models. A long explanation of graphical models for  SSE with RevBayes code"
+    url: "/portfolio/SDD/"
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: /assets/images/ctmc_files/qmatrix.png
