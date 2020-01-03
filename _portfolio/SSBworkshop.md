@@ -61,6 +61,7 @@ If you are not too familiar with the command line check this very [short tutoria
 
 
 ## Binary state speciation and extinction model (BiSSE)
+Carrie Tribble's lecture slides [pdf](/assets/docs/bisse_CarrieTribble.pdf)
 
 BiSSE is a stochastic process that is the composition of two different birth-death stochastic processes connected by a transition rate.  The key assumption of a BiSSE model is that the trait can be categorize in two states, each state with its own birth rate $$\lambda$$ and death rate $$\mu$$ representing the splitting of a lineage or the extinction of a lineage respectively. This is a big assumption because the implication is that the accumulation (or the lack of) of lineages is link to the value of the state (0 or 1) but nothing else.
 
@@ -328,7 +329,7 @@ We will come back together as a group to discuss similarities and differences an
 **Results**
 - HiSSE run after [24hours](/assets/docs/HiSSE_pole24.log)
 - CID run after [24 hours](/assets/docs/CID_pole24.log)
-- All the [results](https://www.dropbox.com/sh/ofgr5h1klffp2c3/AAByUJojpMRf9yPt12Prwaa6a?dl=0) (after 4 days)
+- All the [results](https://www.dropbox.com/sh/r4vkcrobjdv6s0l/AABcCiSK6YGyDKs6_Gpx7rWCa?dl=0) (after 4 days)
 - Visualizations in [Rcode](/assets/plotdivrates.R)
 - Visalizations for [solanaceae](/assets/plotdivrates_solanaceae.R)
 
