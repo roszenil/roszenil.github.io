@@ -152,7 +152,7 @@ In graphical modeling what we are doing is connecting fixed with stochastic node
 
 Here is my reasoning to define these priors for speciation and extinction, yours might differ.
 From Nee et al. 1994 the expected number of lineages $$n$$ under a simple birth-death process at time $$t$$ is $$n=e^{(\lambda-\mu)t}$$. That means that an expected net diversification rate $$(\lambda-\mu)=\frac{ln(n)}{t}$$. Now,
-somewhat the expected speciation is "half" the net diversification $$m_x=\frac{ln(n)}{2t}$$ with some standard deviation $$s_x$$ we would like.
+because we condition to start with two lineages then the  net diversification ends up being $$m_x=\frac{(ln(n)/2)}{t}$$ with some standard deviation $$s_x$$ we would like.
 
 We could move forward and simply define $$speciation\sim N(m_x, s_x^2)$$ but one caveat of doing that is that this normal could end up with negative values(!!!). So the better way to define it is via the log-speciation as a Normal distribution. One thing that comes handy here is that if we want speciation alone to have $$m_x$$ as expected value, the parameters of the logNormal $$(m_y, s_y^2)$$ can be defined as follows
 $$m_y=e^{(m_x+1/2s_x^2)}$$ and $$s_y=e^{(2m_x+s_x^2)}e^{(s_x^2-1)}$$. Those two parameters is what you see defined in the code for all speciation and extinctions.
@@ -291,8 +291,8 @@ In order to explore the outcome of the MCMC and also obtain posterior distributi
 mymodel = model(rate_matrix)
 
 ### set up the monitors that will output parameter values to file and screen
-monitors[++mni] = mnFile(filename="ouput/BiSSE_pole.trees", printgen=1, timetree)
-monitors[++mni] = mnModel(filename="ouput/BiSSE_pole.log", printgen=1)
+monitors[++mni] = mnFile(filename="output/BiSSE_pole.trees", printgen=1, timetree)
+monitors[++mni] = mnModel(filename="output/BiSSE_pole.log", printgen=1)
 ##This monitor was the one giving me trouble type has to be the same that data, however I'm not hundred percent sure whether tree should be the stochastic tree assigned by the clamp or the observed_phylogeny. Will and Sebastian have different inputs
 
 monitors[++mni] = mnJointConditionalAncestralState(tree=timetree, cdbdp=timetree, type="NaturalNumbers", printgen=1, withTips=true, withStartStates=false, filename="output/anc_states_BiSSE_pole.log")

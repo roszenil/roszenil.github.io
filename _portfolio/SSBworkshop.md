@@ -265,8 +265,8 @@ In graphical model then we have added two more fixed nodes
 mymodel = model(rate_matrix)
 
 ### set up the monitors that will output parameter values to file and screen
-monitors[++mni] = mnFile(filename="ouput/BiSSE_pole.trees", printgen=1, bissemodel)
-monitors[++mni] = mnModel(filename="ouput/BiSSE_pole.log", printgen=1)
+monitors[++mni] = mnFile(filename="output/BiSSE_pole.trees", printgen=1, bissemodel)
+monitors[++mni] = mnModel(filename="output/BiSSE_pole.log", printgen=1)
 ##This monitor was the one giving me trouble type has to be the same that data, however I'm not hundred percent sure whether tree should be the stochastic tree assigned by the clamp or the observed_phylogeny. Will and Sebastian have different inputs
 
 monitors[++mni] = mnJointConditionalAncestralState(tree=observed_phylogeny, cdbdp=bissemodel, type="NaturalNumbers", printgen=1, withTips=true, withStartStates=false, filename="output/anc_states_BiSSE_pole.log")
@@ -294,6 +294,7 @@ Full RevBayes code  for BiSSE [bisse.Rev](/assets/docs/bisse.Rev)
 - BiSSE run after [24 hours](/assets/docs/BiSSE_pole24.log)
 
 ### Results visualization
+All the [results](https://www.dropbox.com/sh/ofgr5h1klffp2c3/AAByUJojpMRf9yPt12Prwaa6a?dl=0) (after 4 days)
 Opening log-file in tracer
 
 
@@ -327,19 +328,21 @@ We will come back together as a group to discuss similarities and differences an
 **Results**
 - HiSSE run after [24hours](/assets/docs/HiSSE_pole24.log)
 - CID run after [24 hours](/assets/docs/CID_pole24.log)
-
+- All the [results](https://www.dropbox.com/sh/ofgr5h1klffp2c3/AAByUJojpMRf9yPt12Prwaa6a?dl=0) (after 4 days)
+- Visualizations in [Rcode](/assets/plotdivrates.R)
+- Visalizations for [solanaceae](/assets/plotdivrates_solanaceae.R)
 
 
 ### Key References
-- **HiSSE and CID**: Beaulieu, J.M. and O’Meara, B.C., 2016. Detecting hidden diversification shifts in models of trait-dependent speciation and extinction. Systematic biology, 65(4), pp.583-601.
+- **HiSSE and CID**: Beaulieu, J.M. and O’Meara, B.C., 2016. Detecting hidden diversification shifts in models of trait-dependent speciation and extinction. Systematic biology, 65(4), pp.583-601.[link](https://academic.oup.com/sysbio/article/65/4/583/1753616)
 
-- **GeoHiSSE**: Caetano, D.S., O'Meara, B.C. and Beaulieu, J.M., 2018. Hidden state models improve state‐dependent diversification approaches, including biogeographical models. Evolution, 72(11), pp.2308-2324.
+- **GeoHiSSE**: Caetano, D.S., O'Meara, B.C. and Beaulieu, J.M., 2018. Hidden state models improve state‐dependent diversification approaches, including biogeographical models. Evolution, 72(11), pp.2308-2324.[link](https://onlinelibrary.wiley.com/doi/abs/10.1111/evo.13602)
 
 
-- **RevBayes**: Höhna, S., Landis, M.J., Heath, T.A., Boussau, B., Lartillot, N., Moore, B.R., Huelsenbeck, J.P. and Ronquist, F., 2016. RevBayes: Bayesian phylogenetic inference using graphical models and an interactive model-specification language. Systematic biology, 65(4), pp.726-736.
+- **RevBayes**: Höhna, S., Landis, M.J., Heath, T.A., Boussau, B., Lartillot, N., Moore, B.R., Huelsenbeck, J.P. and Ronquist, F., 2016. RevBayes: Bayesian phylogenetic inference using graphical models and an interactive model-specification language. Systematic biology, 65(4), pp.726-736.[link](https://academic.oup.com/sysbio/article/65/4/726/1753608)
 
-- **BiSSE**: Maddison WP, Midford PE, Otto SP. Estimating a binary character's effect on speciation and extinction. Systematic biology. 2007 Oct 1;56(5):701-10.
+- **BiSSE**: Maddison WP, Midford PE, Otto SP. Estimating a binary character's effect on speciation and extinction. Systematic biology. 2007 Oct 1;56(5):701-10.[link](https://academic.oup.com/sysbio/article/56/5/701/1694265)
 
-- **BiSSE lack of heterogeneity**: Rabosky, D.L. and Goldberg, E.E., 2015. Model inadequacy and mistaken inferences of trait-dependent speciation. Systematic biology, 64(2), pp.340-355.
+- **BiSSE lack of heterogeneity**: Rabosky, D.L. and Goldberg, E.E., 2015. Model inadequacy and mistaken inferences of trait-dependent speciation. Systematic biology, 64(2), pp.340-355.[link](https://academic.oup.com/sysbio/article/64/2/340/1633695)
 
-- **MuHisse and model selection**: Zenil‐Ferguson, R., Burleigh, J.G., Freyman, W.A., Igić, B., Mayrose, I. and Goldberg, E.E., 2019. Interaction among ploidy, breeding system and lineage diversification. New Phytologist.
+- **MuHisse and model selection**: Zenil‐Ferguson, R., Burleigh, J.G., Freyman, W.A., Igić, B., Mayrose, I. and Goldberg, E.E., 2019. Interaction among ploidy, breeding system and lineage diversification. New Phytologist. [pdf](/assets/docs/Zenil-Ferguson_et_al-2019-New_Phytologist.pdf) [supp1](/assets/docs/Zenil-Ferguson_et_al-2019-New_Phytologist.sup-2.pdf) [supp 2](assets/docs/Zenil-Ferguson_et_al-2019-New_Phytologist.sup-1.pdf) [repository](https://github.com/roszenil/solploidy)

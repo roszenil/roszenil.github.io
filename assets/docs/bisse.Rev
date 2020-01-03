@@ -130,8 +130,8 @@ bissemodel.clampCharData( data )
 mymodel = model(rate_matrix)
 
 ### set up the monitors that will output parameter values to file and screen
-monitors[++mni] = mnFile(filename="ouput/BiSSE_pole.trees", printgen=1, bissemodel)
-monitors[++mni] = mnModel(filename="ouput/BiSSE_pole.log", printgen=1)
+monitors[++mni] = mnFile(filename="output/BiSSE_pole.trees", printgen=1, bissemodel)
+monitors[++mni] = mnModel(filename="output/BiSSE_pole.log", printgen=1)
 monitors[++mni] = mnJointConditionalAncestralState(tree=observed_phylogeny, cdbdp=bissemodel, type="NaturalNumbers", printgen=1, withTips=true, withStartStates=false, filename="output/anc_states_BiSSE_pole.log")
 monitors[++mni] = mnScreen(printgen=10, q_01, q_10, net_diversification)
 
