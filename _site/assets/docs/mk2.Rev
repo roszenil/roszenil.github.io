@@ -1,0 +1,94 @@
+#########################################################################################################
+#
+## Mkn: Model for binary trait evolution
+## Example: Selfing in Polimoneceae
+#
+## Autor: Rosana Zenil-Ferguson
+## Last update: RZF 10/30/2018
+# Data modified from Landis, J.B., Bell, C.D., Hernandez, M., Zenil-Ferguson, R., McCarthy, E.W., Soltis, D.E. and Soltis, P.S., 2018. Evolution of floral traits and impact of reproductive mode on diversification in the phlox family (Polemoniaceae). Molecular phylogenetics and evolution, 127, pp.878-890.
+#########################################################################################################
+
+# Some necessary defaults
+setOption("useScaling", "true")
+
+### Reading data
+selfing_data = readCharacterDataDelimited("basicdata/pole_datadis.csv",
+stateLabels=2,
+type="NaturalNumbers",
+delimiter=",",
+headers=TRUE)
+
+## Reading phylogeny
+phylogeny <- readTrees("basicdata/poleult.tre")[1]
+
+
+#### Rates for the Q-matrix
+rate_pr1 = phylogeny.treeLength()/5
+rate_pr2 = phylogeny.treeLength()/10
+
+# Transition rates of the matrix via the hyperpriors
+rate_12~ dnExponential(rate_pr1)
+moves[1 ]= mvScale( rate_12, weight=2 )
+
+
+rate_21~dnExponential(rate_pr2)
+moves[2] = mvScale( rate_21, weight=2 )
+
+
+### Mk2 model start with a matrix full of zeros
+for (i in 1:2){
+for (j in 1:2){
+        q[i][j]:= 0.0
+    }
+}
+####
+q[1][2] := rate_12
+q[2][1] := rate_21
+
+# Define Q-matrix infinitesimal probability
+rate_matrix := fnFreeK(q, rescaled=false, matrixExponentialMethod="scalingAndSquaring")
+
+# Root here is assumed to be another parameter (random)
+root_frequencies ~ dnDirichlet(rep(1,2))
+moves[3] = mvBetaSimplex(root_frequencies, alpha=0.5, weight=3)
+moves[4] = mvElementSwapSimplex(root_frequencies, weight=3)
+
+# Define the continuous time markov model
+ctmc ~ dnPhyloCTMC(Q= rate_matrix, tree=phylogeny, nSites=1, rootFreq=root_frequencies, type="NaturalNumbers")
+#Fix our observations of selfing to the tips
+ctmc.clamp(selfing_data)
+
+
+#########################
+# MCMC
+#########################
+# Grab all the nodes in amodel
+mymodel = model(rate_matrix)
+
+
+# Output what we are going to see
+monitors[1] = mnScreen(printgen=10, rate_12, rate_21)
+monitors[2] = mnJointConditionalAncestralState(filename="output/anc_statespoledis.log",printgen=10,tree=phylogeny,ctmc=ctmc,type="NaturalNumbers")
+monitors[3] = mnStochasticCharacterMap(ctmc=ctmc,printgen=10,filename="output/stoch_mapspoledis.log", include_simmap=true)
+monitors[4] = mnModel(filename="output/modelpoledis.log", printgen=10)
+
+
+
+mymcmc = mcmc(mymodel, monitors, moves)
+mymcmc.run(20000)
+
+
+#########################
+# Ancestral reconstructions
+#########################
+
+
+# now let's summarize the sampled ancestral states
+anc_state_trace = readAncestralStateTrace("output/anc_statespoledis.log")
+ancestralStateTree(phylogeny, anc_state_trace, "output/finalpoledis.tree", burnin=0.25, reconstruction="marginal")
+
+anc_state_trace = readAncestralStateTrace("output/stoch_mapspoledis.log")
+characterMapTree(phylogeny, anc_state_trace, character_file="output/character_pole.tree", posterior_file="output/posteriorpole.tree", burnin=5, reconstruction="marginal")
+
+
+q()

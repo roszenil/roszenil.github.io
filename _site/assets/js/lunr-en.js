@@ -29,10 +29,28 @@ var idx = lunr(function () {
     
       this.add({
           title: " ",
-          excerpt: "Here you’ll find examples of some of of my lessons representative of my skills and interests. These lectures span from...",
-          categories: [],
+          excerpt: "State dependent diversification models Background The goal of this post is to get the reader familiarized with state dependent diversification...",
+          categories: ["teaching"],
           tags: [],
           id: 2
+      })
+      
+    
+      this.add({
+          title: " ",
+          excerpt: "State dependent diversification models Instructors Carrie Tribble PhD Candidate. University of California Berkeley. Daniel Caetano. Postdoctoral researcher. Universidade de São...",
+          categories: ["teaching"],
+          tags: [],
+          id: 3
+      })
+      
+    
+      this.add({
+          title: " ",
+          excerpt: "Here you’ll find examples of some of workshop and teaching lectures. These lectures span from theoretical to applications SSB workshop...",
+          categories: [],
+          tags: [],
+          id: 4
       })
       
     
@@ -44,7 +62,7 @@ var idx = lunr(function () {
           excerpt: "As I worked on my research on network data analysis, it became clear that there was a need for a...",
           categories: ["posts"],
           tags: [],
-          id: 3
+          id: 5
       })
       
     
@@ -53,7 +71,7 @@ var idx = lunr(function () {
           excerpt: "“Data analysis” is a hugely popular thing these days, for obvious reasons. When most people think of “data,” they think...",
           categories: ["posts"],
           tags: [],
-          id: 4
+          id: 6
       })
       
     
@@ -62,7 +80,7 @@ var idx = lunr(function () {
           excerpt: "I learned a lot while building this website; I hope to share it so that it might be helpful for...",
           categories: ["posts"],
           tags: [],
-          id: 5
+          id: 7
       })
       
     
@@ -71,7 +89,7 @@ var idx = lunr(function () {
           excerpt: "Entropy is a word that we see a lot in various forms. It’s classical use comes from thermodynamics: e.g. “the...",
           categories: ["posts"],
           tags: [],
-          id: 6
+          id: 8
       })
       
     
@@ -80,7 +98,7 @@ var idx = lunr(function () {
           excerpt: "In this project, I construct a data pipeline which intakes raw .wav files, and then uses machine learning to predict...",
           categories: ["posts"],
           tags: [],
-          id: 7
+          id: 9
       })
       
     
@@ -89,7 +107,7 @@ var idx = lunr(function () {
           excerpt: "When doing data work, we often need to sample random variables. This is easy to do if one wishes to...",
           categories: ["posts"],
           tags: [],
-          id: 8
+          id: 10
       })
       
     
@@ -98,7 +116,7 @@ var idx = lunr(function () {
           excerpt: "Some of the most meaningful mathematical realizations that I’ve had have been unexpected connections between two topics; that is, realizing...",
           categories: ["posts"],
           tags: [],
-          id: 9
+          id: 11
       })
       
     
@@ -107,7 +125,7 @@ var idx = lunr(function () {
           excerpt: "I just put a new paper up on the arXiv, and so I thought I would share it here. This...",
           categories: ["posts"],
           tags: [],
-          id: 10
+          id: 12
       })
       
     
@@ -124,7 +142,7 @@ var store = [
       
       {
         "title": " ",
-        "url": "http://localhost:4000/portfolio/evidence/",
+        "url": "roszenil.github.io/portfolio/evidence/",
         "excerpt": "Evidential Statistics Background Ari Martinez spent multiple summers doing field work in the Peruvian Amazonian. In 2011, Ari observed an...",
         "teaser":
           
@@ -135,7 +153,7 @@ var store = [
       
       {
         "title": " ",
-        "url": "http://localhost:4000/portfolio/ctmc/",
+        "url": "roszenil.github.io/portfolio/ctmc/",
         "excerpt": "Continuous-Time Markov Chains (CTMC) Continuous-time Markov chains (CTMC) are stochastic processes that allow us to follow the evolution of a...",
         "teaser":
           
@@ -146,8 +164,30 @@ var store = [
       
       {
         "title": " ",
-        "url": "http://localhost:4000/portfolio/index.html",
-        "excerpt": "Here you’ll find examples of some of of my lessons representative of my skills and interests. These lectures span from...",
+        "url": "roszenil.github.io/portfolio/SDD/",
+        "excerpt": "State dependent diversification models Background The goal of this post is to get the reader familiarized with state dependent diversification...",
+        "teaser":
+          
+            null
+          
+      },
+    
+      
+      {
+        "title": " ",
+        "url": "roszenil.github.io/portfolio/SSBworkshop/",
+        "excerpt": "State dependent diversification models Instructors Carrie Tribble PhD Candidate. University of California Berkeley. Daniel Caetano. Postdoctoral researcher. Universidade de São...",
+        "teaser":
+          
+            null
+          
+      },
+    
+      
+      {
+        "title": " ",
+        "url": "roszenil.github.io/portfolio/index.html",
+        "excerpt": "Here you’ll find examples of some of workshop and teaching lectures. These lectures span from theoretical to applications SSB workshop...",
         "teaser":
           
             null
@@ -161,7 +201,7 @@ var store = [
       
       {
         "title": "NetComp: Network Comparison in Python",
-        "url": "http://localhost:4000/posts/2017/06/06/netcomp.html",
+        "url": "roszenil.github.io/posts/2017/06/06/netcomp.html",
         "excerpt": "As I worked on my research on network data analysis, it became clear that there was a need for a...",
         "teaser":
           
@@ -172,7 +212,7 @@ var store = [
       
       {
         "title": "Anomaly Detection in Dynamic Networks",
-        "url": "http://localhost:4000/posts/2017/09/09/dynamic.html",
+        "url": "roszenil.github.io/posts/2017/09/09/dynamic.html",
         "excerpt": "“Data analysis” is a hugely popular thing these days, for obvious reasons. When most people think of “data,” they think...",
         "teaser":
           
@@ -183,7 +223,7 @@ var store = [
       
       {
         "title": "Building a Personal Site with Jekyll & Minimal Mistakes",
-        "url": "http://localhost:4000/posts/2017/12/20/website.html",
+        "url": "roszenil.github.io/posts/2017/12/20/website.html",
         "excerpt": "I learned a lot while building this website; I hope to share it so that it might be helpful for...",
         "teaser":
           
@@ -194,7 +234,7 @@ var store = [
       
       {
         "title": "The Meaning of Entropy",
-        "url": "http://localhost:4000/posts/2018/02/06/entropy.html",
+        "url": "roszenil.github.io/posts/2018/02/06/entropy.html",
         "excerpt": "Entropy is a word that we see a lot in various forms. It’s classical use comes from thermodynamics: e.g. “the...",
         "teaser":
           
@@ -205,7 +245,7 @@ var store = [
       
       {
         "title": "Algorithmic Musical Genre Classification",
-        "url": "http://localhost:4000/posts/2018/06/06/genre.html",
+        "url": "roszenil.github.io/posts/2018/06/06/genre.html",
         "excerpt": "In this project, I construct a data pipeline which intakes raw .wav files, and then uses machine learning to predict...",
         "teaser":
           
@@ -216,7 +256,7 @@ var store = [
       
       {
         "title": "Inverse Transform Sampling in Python",
-        "url": "http://localhost:4000/posts/2018/06/24/sampling.html",
+        "url": "roszenil.github.io/posts/2018/06/24/sampling.html",
         "excerpt": "When doing data work, we often need to sample random variables. This is easy to do if one wishes to...",
         "teaser":
           
@@ -227,7 +267,7 @@ var store = [
       
       {
         "title": "Types as Propositions",
-        "url": "http://localhost:4000/posts/2018/11/30/types.html",
+        "url": "roszenil.github.io/posts/2018/11/30/types.html",
         "excerpt": "Some of the most meaningful mathematical realizations that I’ve had have been unexpected connections between two topics; that is, realizing...",
         "teaser":
           
@@ -238,7 +278,7 @@ var store = [
       
       {
         "title": "New Paper on the arXiv!",
-        "url": "http://localhost:4000/posts/2019/07/05/metrics-paper.html",
+        "url": "roszenil.github.io/posts/2019/07/05/metrics-paper.html",
         "excerpt": "I just put a new paper up on the arXiv, and so I thought I would share it here. This...",
         "teaser":
           

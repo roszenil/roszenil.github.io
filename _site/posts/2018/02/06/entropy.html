@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.16.5 by Michael Rose
+  Minimal Mistakes Jekyll Theme 4.18.1 by Michael Rose
   Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>The Meaning of Entropy - Phylogenetic Comparative Methods at UH</title>
-<meta name="description" content="Entropy is a word that we see a lot in various forms. It’s classical use  comes from thermodynamics: e.g. “the entropy in the universe is always  increasing.” With the recent boom in statistics and machine learning, the word  has also seen a surge in use in information-theoretic contexts: e.g. “minimize  the cross-entropy of the validation set.”It’s been an ongoing investigation for me, trying to figure out just what the  hell this information-theoretic entropy is all about, and how it connects to  the notion I’m familiar with from statistical mechanics. Reading through the  wonderful book Data Analysis: a Bayesian Tutorial by D. S. Sivia, I  found the first connection between these two notions that really clicked for  me. I’m going to run through the basic argument here, in the hope that  reframing it in my own words will help me understand it more thoroughly.Entropy in Thermodynamics">
+<meta name="description" content="Entropy is a word that we see a lot in various forms. It’s classical use   comes from thermodynamics: e.g. “the entropy in the universe is always   increasing.” With the recent boom in statistics and machine learning, the word   has also seen a surge in use in information-theoretic contexts: e.g. “minimize   the cross-entropy of the validation set.”  It’s been an ongoing investigation for me, trying to figure out just what the   hell this information-theoretic entropy is all about, and how it connects to   the notion I’m familiar with from statistical mechanics. Reading through the   wonderful book Data Analysis: a Bayesian Tutorial by D. S. Sivia, I   found the first connection between these two notions that really clicked for   me. I’m going to run through the basic argument here, in the hope that   reframing it in my own words will help me understand it more thoroughly.  Entropy in Thermodynamics  ">
 
 
   <meta name="author" content="Rosana Zenil-Ferguson">
@@ -20,10 +20,10 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Phylogenetic Comparative Methods at UH">
 <meta property="og:title" content="The Meaning of Entropy">
-<meta property="og:url" content="http://localhost:4000/posts/2018/02/06/entropy.html">
+<meta property="og:url" content="roszenil.github.io/posts/2018/02/06/entropy.html">
 
 
-  <meta property="og:description" content="Entropy is a word that we see a lot in various forms. It’s classical use  comes from thermodynamics: e.g. “the entropy in the universe is always  increasing.” With the recent boom in statistics and machine learning, the word  has also seen a surge in use in information-theoretic contexts: e.g. “minimize  the cross-entropy of the validation set.”It’s been an ongoing investigation for me, trying to figure out just what the  hell this information-theoretic entropy is all about, and how it connects to  the notion I’m familiar with from statistical mechanics. Reading through the  wonderful book Data Analysis: a Bayesian Tutorial by D. S. Sivia, I  found the first connection between these two notions that really clicked for  me. I’m going to run through the basic argument here, in the hope that  reframing it in my own words will help me understand it more thoroughly.Entropy in Thermodynamics">
+  <meta property="og:description" content="Entropy is a word that we see a lot in various forms. It’s classical use   comes from thermodynamics: e.g. “the entropy in the universe is always   increasing.” With the recent boom in statistics and machine learning, the word   has also seen a surge in use in information-theoretic contexts: e.g. “minimize   the cross-entropy of the validation set.”  It’s been an ongoing investigation for me, trying to figure out just what the   hell this information-theoretic entropy is all about, and how it connects to   the notion I’m familiar with from statistical mechanics. Reading through the   wonderful book Data Analysis: a Bayesian Tutorial by D. S. Sivia, I   found the first connection between these two notions that really clicked for   me. I’m going to run through the basic argument here, in the hope that   reframing it in my own words will help me understand it more thoroughly.  Entropy in Thermodynamics  ">
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/posts/2018/02/06/entropy.html">
+<link rel="canonical" href="roszenil.github.io/posts/2018/02/06/entropy.html">
 
 
 
@@ -49,7 +49,7 @@
     
       "@type": "Person",
       "name": "Rosana Zenil-Ferguson",
-      "url": "http://localhost:4000/"
+      "url": "roszenil.github.io/"
     
   }
 </script>
@@ -74,7 +74,7 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<!--[if IE ]>
+<!--[if IE]>
   <style>
     /* old IE unsupported flexbox fixes */
     .greedy-nav .site-title {
@@ -156,7 +156,7 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="The Meaning of Entropy">
     <meta itemprop="description" content="Entropy is a word that we see a lot in various forms. It’s classical use  comes from thermodynamics: e.g. “the entropy in the universe is always  increasing.” With the recent boom in statistics and machine learning, the word  has also seen a surge in use in information-theoretic contexts: e.g. “minimize  the cross-entropy of the validation set.”It’s been an ongoing investigation for me, trying to figure out just what the  hell this information-theoretic entropy is all about, and how it connects to  the notion I’m familiar with from statistical mechanics. Reading through the  wonderful book Data Analysis: a Bayesian Tutorial by D. S. Sivia, I  found the first connection between these two notions that really clicked for  me. I’m going to run through the basic argument here, in the hope that  reframing it in my own words will help me understand it more thoroughly.Entropy in Thermodynamics">
-    <meta itemprop="datePublished" content="February 06, 2018">
+    <meta itemprop="datePublished" content="2018-02-06T00:00:00-10:00">
     
 
     <div class="page__inner-wrap">
@@ -188,6 +188,7 @@
   </li>
   <li><a href="#who-cares">Who Cares?</a></li>
 </ul>
+
             </nav>
           </aside>
         
@@ -421,7 +422,7 @@ precise \(\log(n!)\approx n\log(n)-n\), but we use a coarser form here. <a href
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-02-06T00:00:00-10:00">February 06, 2018</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-02-06T00:00:00-10:00">February 6, 2018</time></p>
         
       </footer>
 
@@ -477,7 +478,7 @@ precise \(\log(n!)\approx n\log(n)-n\), but we use a coarser form here. <a href
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2019 Rosana Zenil-Ferguson. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2020 Rosana Zenil-Ferguson. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
