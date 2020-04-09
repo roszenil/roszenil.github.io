@@ -33,13 +33,6 @@ feature_row:
     url: "/portfolio/evidence/"
     btn_label: "Read More"
     btn_class: "btn--primary"
-    - image_path: /assets/images/likelihoodbirdalarms_files/likelihoodintervals-1.png
-    alt: "Teaching"
-    title: "BIOL171: Introduction to Biology I"
-    excerpt: "Online lectures for Spring 2020"
-    url: "/portfolio/introbio/"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
 ---
 
 Here you'll find examples of some of workshop and teaching lectures. These lectures span from theoretical to applications
