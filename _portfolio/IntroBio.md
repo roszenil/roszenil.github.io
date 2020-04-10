@@ -19,10 +19,12 @@ The reality of moving online and having to record videos [link](https://youtu.be
 
 ## 03/24/2020 Mendelian Genetics
 **Created by Tom Iwanicki and Rosana Zenil-Ferguson**
+
 *“Merely memorizing Mendel’s crosses and ratios is missing the beauty of his work”* - Dr. Shirley
 Tilghman.
 
 **Our expectation for this week:**
+
 1. You should invest a total of 70 minutes reading, watching videos, and answering some
 key questions about what you are reading and seeing. This is equivalent to in-class
 lecture and processing of information.
@@ -31,6 +33,7 @@ above. Additional help is available at office hours during regularly scheduled l
 (12-1:10PM, Tuesday and Thursdays).
 
 **Activities**
+
 A. Read The Laws of Inheritance: A Journey from Mendel’s Abbey to Iceland by Shirley
 Tilghman (25 minutes) [link](https://explorebiology.org/collections/genetics/the-laws-of-inheritance:-a-journey-from-mendel%E2%80%99s-abbey-to-iceland)
 
@@ -75,6 +78,7 @@ Bioman Website quizzes instructions are to understand the very basic concepts
 
 ## 03/31/2020. Review: Central Dogma of Genetics
 **Quiz on DNA duplication due on April 1st, 1:10 pm HST**
+
 **PackBack homework due on March 31st, 12:00 pm HST**
 
 1. Meselson-Stahl experiment [link](https://www.youtube.com/watch?v=4gdWOWjioBE&list=PLRrnyfY3QlfFEJLT_5ZUviN85KuxqPL_B&index=6&t=0s)
@@ -90,11 +94,13 @@ Bioman Website quizzes instructions are to understand the very basic concepts
 
 ## 04/07/2020. Introduction to Evolution
 **Quiz on Meiosis, Mitosis, and Mendelian Genetics due on April 8th, 1:10 pm HST**
+
 **PackBack homework due on April 7th, 12 pm HST**
 
 **Created by Ed McAssey**
 
 **Our expectation for this week:**
+
 1. You should invest a total of 70 minutes reading, watching videos, and answering some
 key questions about what you are reading and seeing. This is equivalent to in-class
 lecture and processing of information.
@@ -103,6 +109,7 @@ above. Additional help is available at office hours during regularly scheduled l
 (12-1:10PM, Tuesday and Thursdays).
 
 **Activities**
+
 A.  Watch - Intro to Evolution video. [Link](https://www.ibiology.org/sessions/session-1-theory-behindevolution/) 19 mins
 
 B. Read from your [OpenStax book](https://biology.oer.hawaii.edu/biology171) - Chapter 19, Section 1
@@ -149,6 +156,7 @@ in response to a challenge? (Medium)
 
 ## 04/09/2020. Evolution of Populations
 **Our expectation for this week:**
+
 1. You should invest a total of 70 minutes reading, watching videos, and answering some
 key questions about what you are reading and seeing. This is equivalent to in-class
 lecture and processing of information.
@@ -180,6 +188,7 @@ H. Watch - Bacterial evolution in real time.[Link](https://www.youtube.com/watch
 I. Watch – Dr. McAssey’s short video on different types of selection. [Link](https://www.youtube.com/watch?v=fqRQxB_8hlY)
 
 **Self study**
+
 List of review Q’s (25 min - approx). Join in office hours and we can help you with these questions!
 
 1. There are three alleles in a population. If allele A has a frequency of 0.4 and
@@ -211,6 +220,8 @@ Why are sexually selected traits not always advantageous for individuals?
 (medium)
 
 ## 04/14/2020. Upcoming
-**Quiz on Intro to Evolution and Evolution of Populations- Opens at 1:10 pm  and available for 24hrs**
-**PackBack on evolution due**
+
+**Quiz on Intro to Evolution and Evolution of Populations- Due at 1:10 pm HST on April 15th.  Once started you will have 45 minutes to finish**
+
+**PackBack on evolution due on March 14th at 12:00 pm HST**
 
