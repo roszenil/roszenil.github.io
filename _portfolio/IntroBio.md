@@ -209,3 +209,8 @@ occurring: stabilizing, directional, or disruptive? (easy)
 13. Sexual selection is selection to obtain a mate (like a peacock’s feather display).
 Why are sexually selected traits not always advantageous for individuals?
 (medium)
+
+## 04/14/2020. Upcoming
+**Quiz on Intro to Evolution and Evolution of Populations- Opens at 1:10 pm  and available for 24hrs**
+**PackBack on evolution due**
+
