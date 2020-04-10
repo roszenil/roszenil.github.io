@@ -219,6 +219,10 @@ occurring: stabilizing, directional, or disruptive? (easy)
 Why are sexually selected traits not always advantageous for individuals?
 (medium)
 
+## 04/09/2020. Review for Evolution
+A video reviewing some of the key questions posted for the first week of Evolution topics.
+Dr. Ed McAssey discusses key points of the self-study guide in this [link](https://youtu.be/BWbYj5bsg_8)
+
 ## 04/14/2020. Upcoming
 
 **Quiz on Intro to Evolution and Evolution of Populations- Due at 1:10 pm HST on April 15th.  Once started you will have 45 minutes to finish**
