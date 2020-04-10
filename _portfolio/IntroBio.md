@@ -160,7 +160,7 @@ above. Additional help is available at office hours during regularly scheduled l
 
 A.  Watch - Hardy- Weinberg equilibrium. [Link](https://www.ibiology.org/evolution/hardy-weinberg-equilibrium/) 10 mins
 
-B.  Read - Assigned reading: Chapter 20, Sections 1-3
+B.  Read from your [OpenStax book](https://biology.oer.hawaii.edu/biology171): Chapter 20, Sections 1-3
 
 C. Watch – Dr. McAssey’s additional practice problems regarding allele and genotype
 frequency calculations. [Link](https://www.youtube.com/watch?v=kji1Z3rmPLI)
