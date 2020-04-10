@@ -1,6 +1,6 @@
 ---
 header:
-  overlay_image: /assets/images/introbio_files/hawaii.jpg
+  overlay_image: /assets/images/introbio_files/hawaii.png
 permalink: /portfolio/introbio/
 category: teaching
 author_profile: true

@@ -33,7 +33,7 @@ feature_row:
     url: "/portfolio/evidence/"
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - image_path: /assets/images/introbio_files/fish.jpg
+  - image_path: /assets/images/introbio_files/fish.png
     alt: "Teaching"
     title: "BIOL171: Introduction to Biology I"
     excerpt: "Online lectures for Intro Bio"
