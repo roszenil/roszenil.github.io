@@ -25,9 +25,9 @@ portfolio:
         url: /portfolio/ctmc/
       - title: "Evidential Stats"
         url: /portfolio/evidence/
-    - title: "Courses"
-        children:
-        - title:"BIOL171. Introduction to Biology I"
+  - title: "Courses"
+    children:
+      - title: "BIOL171. Introduction to Biology I"
         url: /portfolio/introbio/
 
  # - title: "Research"

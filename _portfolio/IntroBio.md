@@ -165,7 +165,7 @@ B.  Read from your [OpenStax book](https://biology.oer.hawaii.edu/biology171): C
 C. Watch – Dr. McAssey’s additional practice problems regarding allele and genotype
 frequency calculations. [Link](https://www.youtube.com/watch?v=kji1Z3rmPLI)
 
-D. Complete - Hardy-Weinberg problems (10 minutes): Powerpoint posted on Laulima. Navigate to the Section 3 material folder within ‘Resources’
+D. Complete - Hardy-Weinberg problems (10 minutes): Powerpoint posted on Laulima and available [here](/assets/docs/HWEproblems.ppt)
 
 E. Watch - Genetic drift, founder effect, bottlenecks in lego people. [Link](https://www.youtube.com/watch?v=Q6JEA2olNts) 3 mins
 
