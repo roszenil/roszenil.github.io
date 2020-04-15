@@ -223,9 +223,73 @@ Why are sexually selected traits not always advantageous for individuals?
 A video reviewing some of the key questions posted for the first week of Evolution topics.
 Dr. Ed McAssey discusses key points of the self-study guide in this [link](https://youtu.be/BWbYj5bsg_8)
 
-## 04/14/2020. Upcoming
+## 04/14/2020. Formation of Species (Speciation)
 
 **Quiz on Intro to Evolution and Evolution of Populations- Due at 1:10 pm HST on April 15th.  Once started you will have 45 minutes to finish**
 
 **PackBack on evolution due on March 14th at 12:00 pm HST**
+
+**Our expectation for this week:**
+
+1. You should invest a total of 70 minutes reading, watching videos, and answering some
+key questions about what you are reading and seeing. This is equivalent to in-class
+lecture and processing of information.
+2. Independent study (approximately 1 hour) clarifying what you could not answer from
+above. Additional help is available at office hours during regularly scheduled lecture time
+(12-1:10PM, Tuesday and Thursdays).
+
+**Activities- Dr. Ed McAssey**
+
+A. Watch - HHMI Peter and Rosemary Grant Finches in the Galapagos. [Link](https://www.biointeractive.org/classroom-resources/origin-species-beak-finch) (16 minutes)
+
+B. Watch - Speciation video from Cornell Lab of Ornithology. [Link](https://www.youtube.com/watch?v=8yvEDqrc3XE) (8 minutes)
+
+C.  Read - UC Berkeley website on speciation. [Link](https://evolution.berkeley.edu/evolibrary/article/evo_40) (10 mins).
+Look over the following sections
+
+        i.     Defining a species
+
+        ii.    Defining speciation
+
+        iii.   Causes of speciation
+
+        iv.    Reproductive isolation
+
+        v.     Evidence for speciation
+
+D.     Watch – Dr. McAssey’s video on reproductive isolation. [Link](https://youtu.be/A4gpeDHaGnE)
+
+Read - Assigned reading: Chapter 19, Sections 2 and 3
+
+E.     Watch – Dr. McAssey’s video on speciation. [Link](https://youtu.be/p9qUepm97OI)
+
+F.  Apply - Series of interactive pages on Speciation (Do the Fuschia example (topic 2) [Link] (https://ats.doit.wisc.edu/biology/ev/sp/sp.htm).  This website allows you to apply the concepts that you have learned in the other resources
+
+G. Read - Nature News and Views piece on Darwin’s finches. [Link](https://www.nature.com/articles/d41586-018-07494-8)
+
+**Self study**
+
+1. Species A flowers from August to October and Species B flowers from March to June. What sort of isolating barrier exists? Is it pre- or post- zygotic? (easy)
+
+2. A population of lizards is colored blue and lives near a wetland. A different population of lizards is colored yellow and lives in a drier scrub area. When the two species are found in the same area they mate with one another. Can you say conclusively that these two populations represent the same species? Why or why not? (medium)
+
+3. What is the difference between dispersal and vicariance-based allopatric speciation? Which of these terms applies to species that arrived in Hawai’i? (medium)
+
+4. What key feature of a location would allow for an adaptive radiation to take place? What were some examples of adaptive radiations from today’s resources? (easy)
+
+5. Populations A and B have been isolated from each other for 200 generations. Populations A and C have been isolated from each other for 1000 generations. Based on time alone, which two populations are more likely to have become separate species? (medium)
+
+6. Define sympatric speciation. Why might it be difficult to develop reproductive isolation in sympatry? (medium)
+
+7. How did dry and wet seasons in the Galapagos in the 1970’s and 80’s allow researchers to understand evolutionary change in finch species? (medium)
+
+8. In the April 9th material we looked at different types of selection. What type of selection did Peter and Rosemary Grant observe in the Galapagos during the drought? (easy)
+
+9. The first graph depicts the variation in beak depth before the drought on the Galapagos. Draw the distribution after the drought. Then draw the distribution after the subsequent wet season (see graphs in the attachment)
+
+10. Describe an example of behavioral reproductive isolation not mentioned in today’s materials. (easy)
+
+11. Two populations of ant have been isolated for 500 generations on opposite sides of a river. Your lab partner has already concluded that the two populations have no pre-zygotic isolation. Devise an experiment to test whether there is any post-zygotic isolation. (hard)
+
+12. Describe how polyploidy could result in speciation. Would this form of speciation be considered allopatric or sympatric? (medium)
 
