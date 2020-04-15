@@ -247,15 +247,15 @@ B. Watch - Speciation video from Cornell Lab of Ornithology. [Link](https://www.
 C.  Read - UC Berkeley website on speciation. [Link](https://evolution.berkeley.edu/evolibrary/article/evo_40) (10 mins).
 Look over the following sections
 
-        i.     Defining a species
+i. Defining a species
 
-        ii.    Defining speciation
+ii. Defining speciation
 
-        iii.   Causes of speciation
+iii. Causes of speciation
 
-        iv.    Reproductive isolation
+iv. Reproductive isolation
 
-        v.     Evidence for speciation
+v. Evidence for speciation
 
 D.     Watch – Dr. McAssey’s video on reproductive isolation. [Link](https://youtu.be/A4gpeDHaGnE)
 
