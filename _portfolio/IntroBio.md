@@ -227,7 +227,7 @@ Dr. Ed McAssey discusses key points of the self-study guide in this [link](https
 
 **Quiz on Intro to Evolution and Evolution of Populations- Due at 1:10 pm HST on April 15th.  Once started you will have 45 minutes to finish**
 
-**PackBack on evolution due on March 14th at 12:00 pm HST**
+**PackBack on evolution due on April 14th at 12:00 pm HST**
 
 **Our expectation for this week:**
 
@@ -293,3 +293,42 @@ G. Read - Nature News and Views piece on Darwin’s finches. [Link](https://www.
 
 12. Describe how polyploidy could result in speciation. Would this form of speciation be considered allopatric or sympatric? (medium)
 
+## 04/16/2020. Phylogenetic Trees
+
+**PackBack on speciation due on April 21st at 12:00 pm HST**
+
+**Our expectation for this week:**
+
+1. You should invest a total of 70 minutes reading, watching videos, and answering some
+key questions about what you are reading and seeing. This is equivalent to in-class
+lecture and processing of information.
+2. Independent study (approximately 1 hour) clarifying what you could not answer from
+above. Additional help is available at office hours during regularly scheduled lecture time
+(12-1:10PM, Tuesday and Thursdays).
+
+**Activities- Dr. Ed McAssey**
+A.  Read – The tree thinking challenge. [Link](https://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1104&context=bioscifacpub) (10 mins)
+
+B. Watch – Dr. McAssey’s introduction to phylogenetics video.[Link](https://youtu.be/G_HBw8_D5vo)
+
+C. Watch – Dr. McAssey’s video on phylogeny building and analysis. [Link](https://youtu.be/-O7Kg6lznMI)
+
+D. Complete – the practice quiz associated with ‘The tree thinking challenge’ (20 mins)
+- I encourage you to review your readings and resources before taking the quiz
+-  I suggest working on only the first 10 questions. The remainder of the questions are more challenging, but feel free to test yourself! [Link](https://science.sciencemag.org/content/sci/suppl/2005/11/07/310.5750.979.DC1/Baum.SOM.pdf)
+E. Assigned reading: Chapter 21, Sections 1 and 2
+
+F. Read – Two perspectives on HIV and phylogenetics (5 mins each)
+ - Phylogenetics as evidence to suggest innocence. [Link](https://evolution.berkeley.edu/evolibrary/news/070101_libya)
+ - Phylogenetics as evidence to suggest guilt. [Link](https://www.sciencemag.org/news/1998/10/dna-strain-analysis-debuts-murder-trial)
+
+G. Watch - TED-Talk on tree building (9 mins). [Link](https://www.youtube.com/watch?v=5qXz9X-rltE)
+
+**Self study**
+See the self activities for this week in this document. Make sure you have done the readings to be able to understand phylogenetic trees. [PDF](/assets/docs/April16.pdf)
+
+
+## 04/21/2020. UPCOMING QUIZ- Formation of Species and Intro to Phylogenetics.
+
+**Quiz opens at 1:10 pm HST. 45 minutes and will remain open for 24 hrs**
+**Review of some of the self-study questions** [Video](https://www.youtube.com/watch?v=ufwqc1AQqx8&feature=emb_logo)
