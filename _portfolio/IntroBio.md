@@ -17,6 +17,9 @@ General questions addressed with the switch online due to Covid-19 [link](https:
 
 The reality of moving online and having to record videos [link](https://youtu.be/OZRMAHTQhBM)
 
+## Updated Syllabus
+Can be found [here](/assets/docs/UpdatedSyllabusSpring2020.pdf)
+
 ## 03/24/2020 Mendelian Genetics
 **Created by Tom Iwanicki and Rosana Zenil-Ferguson**
 
