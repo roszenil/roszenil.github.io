@@ -331,7 +331,106 @@ G. Watch - TED-Talk on tree building (9 mins). [Link](https://www.youtube.com/wa
 See the self activities for this week in this document. Make sure you have done the readings to be able to understand phylogenetic trees. [PDF](/assets/docs/April16.pdf)
 
 
-## 04/21/2020. UPCOMING QUIZ- Formation of Species and Intro to Phylogenetics.
+## 04/21/2020. Phylogenetics and the history of Life
+**PackBack on speciation due on April 21st at 12:00 pm HST**
 
 **Quiz opens at 1:10 pm HST. 45 minutes and will remain open for 24 hrs**
-**Review of some of the self-study questions** [Video](https://www.youtube.com/watch?v=ufwqc1AQqx8&feature=emb_logo)
+- Review [Video](https://www.youtube.com/watch?v=ufwqc1AQqx8&feature=emb_logo)
+
+**Our expectation for this week:**
+
+1. You should invest a total of 70 minutes reading, watching videos, and answering some
+key questions about what you are reading and seeing. This is equivalent to in-class
+lecture and processing of information.
+2. Independent study (approximately 1 hour) clarifying what you could not answer from
+above. Additional help is available at office hours during regularly scheduled lecture time
+(12-1:10PM, Tuesday and Thursdays).
+
+**Activities- Dr. Ed McAssey**
+A. Science Friday, the story of Archaea [Link](https://www.sciencefriday.com/segments/how-a-humble-microbe-shook-the-%20evolutionary-tree) (25 min)
+B. New York Times article about the discoveries of Woese. [Link](https://www.nytimes.com/2018/08/13/magazine/evolution-gene-microbiology.html) 
+-Consider:
+* What was the importance of the discovery of Archaea?
+* What is horizontal gene transfer?
+* How does horizontal gene transfer (HGT) affect our understanding of a
+phylogenetic tree?
+
+C. iBiology video on microbial phylogenetics. [Link](https://youtu.be/jsr00dkjgIo) (3 min)
+D. Dr. Zenil-Ferguson’s coronavirus phylogeny video. [Link](https://www.youtube.com/watch?v=SAKGMc7h8cA)
+E. Dr. McAssey’s video on Ancestral State Reconstruction
+* Using phylogenetic trees to infer what ancestors looked like. [Link](https://youtu.be/jvlc4h8ouzk)
+* Co-speciation example
+* Quick example describing gopher and lice co-speciation. [Link](https://evolution.berkeley.edu/evolibrary/article/evo_46)
+* Follow up video from Dr. McAssey. [Link](https://youtu.be/C2HqAbCSe1k)
+
+**Self study**
+See the self activities for this week in this document. Make sure you have done the readings and watch the videos
+[PDF](/assets/docs/April21.pdf)
+
+
+## 04/23/2020. Eukaryotes
+
+**Our expectation for this week:**
+
+1. You should invest a total of 70 minutes reading, watching videos, and answering some
+key questions about what you are reading and seeing. This is equivalent to in-class
+lecture and processing of information.
+2. Independent study (approximately 1 hour) clarifying what you could not answer from
+above. Additional help is available at office hours during regularly scheduled lecture time
+(12-1:10PM, Tuesday and Thursdays).
+
+**Activities- Dr. Ed McAssey**
+A. Explore [OneZoom.org](OneZoom.org)
+* Do all clades in the phylogenetic tree have the same amount of species?
+* Think of the time required to generate this diversity
+* Look at the internal nodes and the types of information located there
+
+B. Watch - The origin of tetrapods.[Link](https://www.youtube.com/watch?v=zK8XGEDcTfo) (16 minutes, Neil Shubin).
+ * Importance of transitional fossil specimens.
+ * Watch the amazing story behind the discovery of Tiktaalik.
+ * Be looking out for the important traits that Tiktaalik had that made it such an important discovery.
+ * Read further importance of Tiktaalik. [Link](https://evolution.berkeley.edu/evolibrary/news/060501_tiktaalik)
+
+C. Read- Assigned reading: Chapter 21, Section 3 from your OpenStax book
+* Focus on the HGT portion of the reading
+* Read – short NPR article about an example of HGT between eukaryotic organisms. [Link](https://www.npr.org/templates/story/story.php?storyId=126312333)
+* Watch – Dr. McAssey’s video that covers transitional fossils and HGT in eukaryotes. [Link](https://youtu.be/-16wZhG8iOQ)
+
+D. Read - The origin of plants. [Link](http://www.bbc.com/earth/story/20141017-how-flowers-conquered-the-world)
+* This reading helps address the speed of evolutionary change
+* Shows how the fossil record and DNA evidence were ultimately required to obtain a full understanding of the evolution of angiosperms
+
+E. Watch - Dr. McAssey addresses some common questions. [Link](https://youtu.be/FIT9ux0o2MM)
+* Watch - Contemporary evolution: Natural selection of the lactase gene. [Link](https://www.ibiology.org/evolution/african-genomics/#part-3).  Start at 4 mins 35 seconds. Watch up until minute 19. Minutes 10-17 are quite complicated, OK to skim. Final portion (mins 17-19) of the video suggests the timing of when these mutations arose and started spreading
+* Read this lactose article. [Link](https://evolution.berkeley.edu/evolibrary/news/070401_lactose)
+* A follow up reading that summarizes key points from the lactase video
+
+F. Read - Hardy-Weinberg violations in humans • There are many examples [here](https://www.nature.com/news/scientists-track-last-2-000-years-of-british-%20evolution-1.19917)
+
+**Self study**
+1. Why are transitional fossils important? (easy)
+2. What were the key features of Tiktaalik that resulted in it being considered
+‘transitional’? (easy)
+3. What are some requirements for finding a fossil that you are hunting for?
+(youtube video on origin of tetrapods; medium)
+4. Why did angiosperms represent a challenge to Darwin's thought on Evolution?
+(medium)
+5. Does evolution always occur at the same speed? Why or why not? (easy)
+6. Are humans still evolving? (medium)
+7. What are types of evidence to document human evolution? (easy)
+8. Describe, in evolutionary terms, how humans are related to monkeys,
+chimpanzees, gorillas, and orangutans. Use onezoom.org to help you derive the
+relationship. (medium)
+9. Are humans more evolved than a palm tree? Why or why not? (hard)
+10. Describe in evolutionary terms how angiosperms are related to humans. (hard)
+11. Come up with an example of how humans can violate Hardy-Weinberg
+equilibrium. What would a violation of Hardy-Weinberg equilibrium mean in terms
+of evolution? Does it mean natural selection has occurred? (hard)
+12. Explain how the variation in the lactase gene was under natural selection.
+(medium)
+
+## 04/28/2020. UPCOMING
+**PackBack on the history of life and Eukaryotes due on April 28th at 12:00 pm HST**
+
+**Quiz opens at 1:10 pm HST. 45 minutes and will remain open for 24 hrs**
+- Review of some of the questions from Dr. McAssey [Video](https://www.youtube.com/watch?v=waWiH5g0o7A)
