@@ -429,8 +429,130 @@ of evolution? Does it mean natural selection has occurred? (hard)
 12. Explain how the variation in the lactase gene was under natural selection.
 (medium)
 
-## 04/28/2020. UPCOMING
+## 04/28/2020. Prokaryotes
 **PackBack on the history of life and Eukaryotes due on April 28th at 12:00 pm HST**
 
 **Quiz opens at 1:10 pm HST. 45 minutes and will remain open for 24 hrs**
 - Review of some of the questions from Dr. McAssey [Video](https://www.youtube.com/watch?v=waWiH5g0o7A)
+
+
+**Our expectation for this week:**
+
+1. You should invest a total of 70 minutes reading, watching videos, and answering some
+key questions about what you are reading and seeing. This is equivalent to in-class
+lecture and processing of information.
+2. Independent study (approximately 1 hour) clarifying what you could not answer from
+above. Additional help is available at office hours during regularly scheduled lecture time
+(12-1:10PM, Tuesday and Thursdays).
+
+**Activities- Dr. Ed McAssey**
+A. The tree of life: Prokaryotes, Bacterial evolution, and the evolution of multicellularity
+- Watch video on Choanoflagellates and evolution of multicellularity. [Link](https://youtu.be/1v6cgSkiHik), watch up until 16 mins 50 seconds
+- Note the number of times multicellularity evolved 
+- Watch - Experimental bacterial evolution. [Link](https://www.youtube.com/watch?v=PQr8ldEeO04), watch up until minute 7 
+- Think about why bacteria are excellent organisms to study evolution in the lab 
+
+B. Read - Livestock antibiotic usage. [Link](https://evolution.berkeley.edu/evolibrary/news/050915_baytril) 
+-  Why should we be careful about administering antibiotics to farm animals? 
+
+C. Watch - Are we more microbial than we are human? [Link](https://www.ibiology.org/microbiology/human-microbiome/)
+- Note the relative number of prokaryotic cells found on and in our bodies. What might they be doing? 
+- Watch up until 7 mins 18 seconds 
+- Read - Gut microbes and cancer.[Link](https://www.nature.com/articles/d41586-018-05208-8)
+- Watch Dr. McAssey’s follow up video on the microbiome. [Link](https://youtu.be/tia7NHb_I7I)
+
+D. Read - Stromatolites. [Link](https://evolution.berkeley.edu/evolibrary/article/side_0_0/origsoflife_02)
+- Read - Cyanobacteria evolution. [Link](https://evolution.berkeley.edu/evolibrary/news/170503_cyanobacteria)
+
+E. Watch - Dr. McAssey’s video on experimental evolution of bacteria and how cyanobacteria paved the way for evolution on land. [Link](https://youtu.be/Hxbm-x_XzsQ)
+
+F. Read - Assigned reading, Chapter 23, Sections 1 and 2 
+
+
+**Self study** 
+1. Place the fungi, plants, and animals on a phylogenetic tree. How many times did multicellularity evolve on this phylogenetic tree? (easy) 
+2. Are choanoflagellates single-celled or multicellular? Explain why they played an important role in understanding the evolution of multicellularity. (medium) 
+3.  Why are bacteria an ideal system to learn about natural selection? (easy) 
+4. In the video on experimental evolution, bacteria evolved the ability to use citrate as an energy source. What assumptions of Hardy-Weinberg were violated for that to occur? (medium) 
+5. Explain why antibiotic usage in livestock could affect human health. (medium) 
+6.  How many bacterial cells are in our body compared to human cells? Why are there bacterial cells associated with the human body? Where are many of them found? (easy) 
+7. There are pros and cons to using an antibiotic. Name one of each. Make sure to mention the microbiome in your answer. (medium) 
+8. Stromatolites represent early evidence for life on earth. What are they? (easy) 
+9. What is a biofilm? Does it suggest that all bacteria are solitary? (medium) 
+10. Where did the first molecular oxygen on earth come from? (hard) 
+11. How did the ozone layer form and what is its significance for evolution on land? (hard) 
+12. Review: on a cellular level, how are prokaryotes different from eukaryotes? (easy) 
+13. On a cellular level, how are prokaryotes different from each other? (hard) 
+
+
+## 04/30/2020. Viral Evolution
+**Our expectation for this week:**
+
+1. You should invest a total of 70 minutes reading, watching videos, and answering some
+key questions about what you are reading and seeing. This is equivalent to in-class
+lecture and processing of information.
+2. Independent study (approximately 1 hour) clarifying what you could not answer from
+above. Additional help is available at office hours during regularly scheduled lecture time
+(12-1:10PM, Tuesday and Thursdays).
+
+**Activities- Dr. Ed McAssey**
+A. Watch - Lytic and Lysogenic cycles. [Link](https://www.youtube.com/watch?v=8FqlTslU22s)
+- Compare and contrast these two cycles 
+
+B. Read - Discovery of the first coronavirus. [Link](https://www.bbc.com/news/uk-scotland-52278716) 
+
+C. Watch - Viruses and viral evolution. [Link](https://youtu.be/WIEqm4TrHPA).
+- Watch the first 20 minutes 30 seconds 
+- Keep track of the Viral diversity (size, shape, genome), Growth, and Adaptability
+
+D. Evolution of drug resistance in HIV. Watch Dr. McAssey’s follow up video on Viral evolution. [Link](https://youtu.be/I1VW5vH97Rg)
+
+E. Watch – a video describing the use of phylogenetics during an outbreak. [Link](https://abetterscientist.wordpress.com/2020/03/03/using-phylogenies-to-understand-the-novel-coronavirus-outbreak/)
+- Explore - the Coronavirus phylogeny yourself  at [Nextstrain](https://nextstrain.org/ncov/global)
+
+F. Read – Coronavirus evolution. [Link](https://evolution.berkeley.edu/evolibrary/news/200305_coronavirus) 
+
+G. Watch – Dr. McAssey’s video on Coronavirus testing and vaccines. [Link](https://youtu.be/vdROOeEP3qg)
+- Understand how testing works and the different types of testing that are available 
+
+H. Watch – Dr. Zenil-Ferguson’s video on a Covid-19 treatment. [Link](https://youtu.be/pNu6yyulC20) 
+
+I. Watch - President of ASM talks answers Q’s about the coronavirus. [Link](https://www.youtube.com/watch?v=MV55IHziLNI&feature=emb_logo) 
+- Lots of useful information here 
+- Including a discussion on testing 
+
+J. Read - Vaccine strategy summary. [Link](https://www.nature.com/articles/d41586-020-01221-y)
+- Lots of infographics on the types of vaccines that are in development 
+- Also give a description of how an immune response is created 
+
+K. Assigned reading: Chapter 22, Sections 1 and 2 
+- Lots of details in this reading – only focus on the below points o Check out the comparison between the lytic and lysogenic cycle 
+- This complements one of the videos from today’s activities
+- Also, check out the discussion on the morphology (shape) of viruses and the 
+different types of genomes that they have 
+
+
+**Self Study**
+1. Give a step by step description of the lytic cycle. How does the lysogenic cycle 
+differ from the lytic cycle? (medium) 
+2. How would you classify a virus? Prokaryotic, Eukaryotic, other? Living or non- 
+living? (hard) 
+3. Viral genomes can be made of what kind of nucleic acids? (easy) 
+4. Can viruses evolve? What is a real-world example of viral evolution? (medium) 
+5. What is a reason why new viruses are hard to classify? To answer: check out the 
+short reading on the discovery of the coronavirus. (easy) 
+6. What are the two types of testing being done for Coronavirus? Describe how 
+these tests reveal different information. (hard) o What is the goal of a vaccine?
+7. Describe how an inactivated or weakened virus can be used in a vaccine. 
+(medium) 
+8. Are viruses all the same shape and size? Where can viruses generally be found? 
+(easy) 
+9. Why are social distancing and wearing a facemask important tools in limiting the 
+spread of the coronavirus? (easy)
+10. How does the anti-viral Remdesivir work? What process does it impair? (hard) 
+
+## 05/02/2020. UPCOMING
+**LAST PackBack on Prokaryotes and Viral Evolution at 12:00 pm HST**
+
+**Quiz opens at 1:10 pm HST. 45 minutes and will remain open for 24 hrs**
+- Review of some of the questions from Dr. McAssey [Video](https://youtu.be/Si1GG7b0SOw)
