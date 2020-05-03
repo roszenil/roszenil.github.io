@@ -250,15 +250,11 @@ B. Watch - Speciation video from Cornell Lab of Ornithology. [Link](https://www.
 C.  Read - UC Berkeley website on speciation. [Link](https://evolution.berkeley.edu/evolibrary/article/evo_40) (10 mins).
 Look over the following sections
 
-i. Defining a species
-
-ii. Defining speciation
-
-iii. Causes of speciation
-
-iv. Reproductive isolation
-
-v. Evidence for speciation
+- Defining a species
+- Defining speciation
+- Causes of speciation
+- Reproductive isolation
+- Evidence for speciation
 
 D.     Watch – Dr. McAssey’s video on reproductive isolation. [Link](https://youtu.be/A4gpeDHaGnE)
 
@@ -310,6 +306,7 @@ above. Additional help is available at office hours during regularly scheduled l
 (12-1:10PM, Tuesday and Thursdays).
 
 **Activities- Dr. Ed McAssey**
+
 A.  Read – The tree thinking challenge. [Link](https://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1104&context=bioscifacpub) (10 mins)
 
 B. Watch – Dr. McAssey’s introduction to phylogenetics video.[Link](https://youtu.be/G_HBw8_D5vo)
@@ -347,6 +344,7 @@ above. Additional help is available at office hours during regularly scheduled l
 (12-1:10PM, Tuesday and Thursdays).
 
 **Activities- Dr. Ed McAssey**
+
 A. Science Friday, the story of Archaea [Link](https://www.sciencefriday.com/segments/how-a-humble-microbe-shook-the-%20evolutionary-tree) (25 min)
 B. New York Times article about the discoveries of Woese. [Link](https://www.nytimes.com/2018/08/13/magazine/evolution-gene-microbiology.html) 
 -Consider:
@@ -380,6 +378,7 @@ above. Additional help is available at office hours during regularly scheduled l
 (12-1:10PM, Tuesday and Thursdays).
 
 **Activities- Dr. Ed McAssey**
+
 A. Explore [OneZoom.org](OneZoom.org)
 * Do all clades in the phylogenetic tree have the same amount of species?
 * Think of the time required to generate this diversity
@@ -446,6 +445,7 @@ above. Additional help is available at office hours during regularly scheduled l
 (12-1:10PM, Tuesday and Thursdays).
 
 **Activities- Dr. Ed McAssey**
+
 A. The tree of life: Prokaryotes, Bacterial evolution, and the evolution of multicellularity
 - Watch video on Choanoflagellates and evolution of multicellularity. [Link](https://youtu.be/1v6cgSkiHik), watch up until 16 mins 50 seconds
 - Note the number of times multicellularity evolved 
@@ -496,6 +496,7 @@ above. Additional help is available at office hours during regularly scheduled l
 (12-1:10PM, Tuesday and Thursdays).
 
 **Activities- Dr. Ed McAssey**
+
 A. Watch - Lytic and Lysogenic cycles. [Link](https://www.youtube.com/watch?v=8FqlTslU22s)
 - Compare and contrast these two cycles 
 
