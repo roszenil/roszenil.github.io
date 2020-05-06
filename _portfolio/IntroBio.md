@@ -552,8 +552,59 @@ these tests reveal different information. (hard) o What is the goal of a vaccine
 spread of the coronavirus? (easy)
 10. How does the anti-viral Remdesivir work? What process does it impair? (hard) 
 
-## 05/02/2020. UPCOMING
+## 05/05/2020. What is Life?
 **LAST PackBack on Prokaryotes and Viral Evolution at 12:00 pm HST**
 
 **Quiz opens at 1:10 pm HST. 45 minutes and will remain open for 24 hrs**
 - Review of some of the questions from Dr. McAssey [Video](https://youtu.be/Si1GG7b0SOw)
+
+**Our expectation for this week:**
+
+1. You should invest a total of 70 minutes reading, watching videos, and answering some
+key questions about what you are reading and seeing. This is equivalent to in-class
+lecture and processing of information.
+2. Independent study (approximately 1 hour) clarifying what you could not answer from
+above. Additional help is available at office hours during regularly scheduled lecture time. Thursday May 7th is our last office hours for the semester.
+
+
+**Activities- Dr. Ed McAssey**
+
+A. Watch - David Baum (7 minutes). What is life? [Link](https://www.youtube.com/watch?v=F-T3j8PVrfI)
+
+B. Watch – Dr. McAssey’s follow up video on the requirements of life. [Link](https://youtu.be/0qU6_d4wYjM)
+
+C. Watch - And is life hard to find? [Link](https://www.youtube.com/watch?v=DvDWeJed1Yw)
+
+D. Listen - Podcast (47 minutes)- Exploration of Life. [Link](https://www.npr.org/transcripts/102715278)
+
+E. Discussions on the field of astrobiology – looking for and theorizing about life outside of earth. Read - Smithsonian magazine. [Link](https://www.smithsonianmag.com/science-nature/the-origins-of-life-60437133/).
+This article talks about some of the ways scientists perform experiments to understand the origins of life
+
+F. Read – BBC article. [Link](http://www.bbc.com/earth/story/20161026-the-secret-of-how-life-on-earth-began)
+Very long read but I would like you to focus on the early sections (Chapter 1) of the reading that focus on the historical thought and early experiments on the origin of life.
+The later sections describe recent hypotheses and experiments on the origin of life.
+They are very technical, but if you are interested, there is a lot of great info
+
+G. Read – Science article – HCN. [Link](https://www.sciencemag.org/news/2015/03/researchers-may-have-solved-origin-life-conundrum#).
+Relatively short read that highlights recent research on the origins of life
+ 
+
+**Self Study**
+
+1. Would you modify /add / remove any of the items discussed as the ‘requirements of life’ in today’s materials? Why or why not? (medium)
+2.  Why was the Miller-Urey experiment important? How does it relate to the study of the origin of life? (medium)
+
+3. What are some of the insights that astrobiologists seek to uncover? (hard)
+
+4. Why do chemists play such a big role in the study of the origin of life? (medium)
+
+## 05/07/2020. Review
+
+Your professors will upload a short review discussing some of the questions that were hard in the previous quizzes. The topics that you should focus on for your last quiz on May 14th are:
+
+- The properties of macromolecules
+- Respiration (aerobic and anaerobic)
+- Transcription/Translation
+- Mendelian genetics
+- Hardy-Weinberg equilibrium
+- Phylogenetics
