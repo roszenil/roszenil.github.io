@@ -25,8 +25,33 @@ I recently gave a [TEDx](https://www.ted.com/about/programs-initiatives/tedx-pro
 
 Postdoctoral Researcher
 
+Email: cmt2(at)hawaii(dot)edu
+
 Dr. Tribble is working on developing state-dependent diversification models for Andean flora. She is also helping in the development of new models for chromosome number and genome size evolution.
-Click on her [website](https://carrietribble.weebly.com/). Carrie on the right  of the pictrue with her beloved dog Kula.
+Click on her [website](https://carrietribble.weebly.com/). Carrie on the left of the picture with her beloved dog Kula.
+
+
+**McLean Worsham**
+
+Graduate Student
+
+Email: mcleanw(at)hawaii(dot)edu
+
+McLean started in 2020 in my lab. He is a fish person and totally in love with everything outdoors. For his dissertation, McLean is working on evolution of polyploidy in fishes. He is on the right of the picture with his gentle giant Kaid. 
+
+![Johnathan](/assets/images/johnathan.png) 
+**Johnathan Kim**
+
+Undergraduate Researcher
+
+Jonhathan joined the lab in 2019. He is determined to become a Doctor (and he already looks the part). Johnathan is learning Python and dataset management skills helping McLean with his data collection. 
+
+![Garrett](/assets/images/garrett.png) 
+**Garrett Cho**
+
+Undergraduate Researcher
+
+Garrett joined the lab in 2020. He is specializing in everything STEM (double or triple major now). Garrett has also been learning Python and acquiring dataset management skills while helping McLean.
 
 ## Join the lab!
 I am looking for grad students in the Fall 2020. Consider applying to our [Masters or PhD program](https://manoa.hawaii.edu/biology/graduate).
