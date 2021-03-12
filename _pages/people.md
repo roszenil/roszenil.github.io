@@ -5,6 +5,8 @@ header:
 permalink: /people/
 ---
 
+
+## People
 | ![me](/assets/images/mypicsmall.png) | **Dr. Rosana Zenil-Ferguson**
 
 I joined the Department of Biology as an assistant professor on January 2019. I earned my PhD in evolutionary biology from University of Florida after completing a MSc in probability and statistics at CIMAT Mexico. My research aims to understand how often species traits evolve and how these traits change the speciation and extinction process across the tree of life. Using a combination of mathematics, statistics, and botany, I am currently studying the evolution of polyploidy and breeding systems, and whether these traits create opportunities for innovation and speciation in flowering plants. |
@@ -17,6 +19,12 @@ I joined the Department of Biology as an assistant professor on January 2019. I 
 I recently gave a [TEDx](https://www.ted.com/about/programs-initiatives/tedx-program) talk in my hometown. It's in Spanish and you can watch it [here](https://www.ted.com/talks/rosana_zenil_como_las_especies_determinan_nuestra_identidad?utm_source=facebook.com&utm_medium=social&utm_campaign=tedspread&fbclid=IwAR1qeDEH8sBQHdDnZxTqfDzWAk0abMPXevJcNZCMnzQrAEokVHT9LetpqJc)
 
 
+![People](/assets/images/carriemclean.png) 
+
+**Carrie Tribble**
+Postdoctoral Researcher
+Dr. Tribble is working on developing state-dependent diversification models for Andean flora. She is also helping in the development of new models for chromosome number and genome size evolution.
+Click on her [website](https://carrietribble.weebly.com/)- Carrie is on the right with her beloved dog Kula.
 
 ## Join the lab!
 I am looking for grad students in the Fall 2020. Consider applying to our [Masters or PhD program](https://manoa.hawaii.edu/biology/graduate).
