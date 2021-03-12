@@ -58,7 +58,7 @@ Undergraduate Researcher
 Garrett joined the lab in 2020. He is specializing in everything STEM (double or triple major now). Garrett has also been learning Python and acquiring dataset management skills while helping McLean.
 
 ## Join the lab!
-I am looking for grad students in the Fall 2020. Consider applying to our [Masters or PhD program](https://manoa.hawaii.edu/biology/graduate).
+I am looking for grad students in the Fall 2021. Consider applying to our [Masters or PhD program](https://manoa.hawaii.edu/biology/graduate).
 
 Also consider the possibility of writing a NSF GFRP. Some great resources [here](http://cdmuir.netlify.com/post/2019-07-11-grfp/) and [here](https://www.alexhunterlang.com/nsf-fellowship).
 [Contact](/contact/) me and we can discuss ideas for research.
