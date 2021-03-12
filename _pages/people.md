@@ -46,7 +46,7 @@ Undergraduate Researcher
 
 Jonhathan joined the lab in 2019. He is determined to become a Doctor (and he already looks the part). Johnathan is learning Python and dataset management skills helping McLean with his data collection. 
 
-![Garrett](/assets/images/garrett.png) 
+![Garrett](/assets/images/garrettsmall.png) 
 **Garrett Cho**
 
 Undergraduate Researcher
