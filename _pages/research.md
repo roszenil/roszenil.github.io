@@ -11,9 +11,9 @@ tags:
 
 ### Recent Preprints and Publications
 
-1. Helmstetter, A.J, Glemin, S.,  Käfer, J., Zenil-Ferguson, R., Sauquet, H., de Boer, H., Dagallier, L.M.J., Mazet, N., Reboud, E.L., Couvreur, T.L.P, Condamine, F.L. Pulled Diversification Rates, Lineages-Through-Time Plots and Modern Macroevolutionary Modelling. [bioRxiv](https://www.biorxiv.org/content/10.1101/2021.01.04.424672v2) 2021.01.04.424672
+1. Helmstetter, A.J, Glemin, S.,  Käfer, J., **Zenil-Ferguson, R.**, Sauquet, H., de Boer, H., Dagallier, L.M.J., Mazet, N., Reboud, E.L., Couvreur, T.L.P, Condamine, F.L. Pulled Diversification Rates, Lineages-Through-Time Plots and Modern Macroevolutionary Modelling. [bioRxiv](https://www.biorxiv.org/content/10.1101/2021.01.04.424672v2) 2021.01.04.424672
 
-2. Fumia, N., Rubinoff, D., Zenil-Ferguson, R., Khoury, C.K.,  Pironon, S., Gore, M.A., Kantar, M.B. Interactions between specific breeding system and ploidy play a critical role in increasing niche adaptability in a global food crop. [bioRxiv](https://www.biorxiv.org/content/10.1101/2020.09.09.290429v2) 2020.09.09.290429
+2. Fumia, N., Rubinoff, D.,** Zenil-Ferguson, R.**, Khoury, C.K.,  Pironon, S., Gore, M.A., Kantar, M.B. Interactions between specific breeding system and ploidy play a critical role in increasing niche adaptability in a global food crop. [bioRxiv](https://www.biorxiv.org/content/10.1101/2020.09.09.290429v2) 2020.09.09.290429
 
 3.  **Zenil-Ferguson, R**., Burleigh, G., Igic, B., Freyman, W.A., Mayrose, I. and Goldberg, E.E. 2019. Interaction between Ploidy, Breeding System, and Lineage Diversification. New Phytologist. [pdf](/assets/docs/Zenil-Ferguson_et_al-2019-New_Phytologist.pdf) [supp1](/assets/docs/Zenil-Ferguson_et_al-2019-New_Phytologist.sup-2.pdf) [supp 2](assets/docs/Zenil-Ferguson_et_al-2019-New_Phytologist.sup-1.pdf)
 
