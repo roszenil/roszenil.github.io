@@ -39,7 +39,8 @@ Email: mcleanw(at)hawaii(dot)edu
 
 McLean started in 2020 in my lab. He is a fish person and totally in love with everything outdoors. For his dissertation, McLean is working on evolution of polyploidy in fishes. He is on the right of the picture with his gentle giant Kaid. 
 
-![Johnathan](/assets/images/johnathan.png) 
+![Johnathan](/assets/images/johnathamallns.png=centerme) 
+
 **Johnathan Kim**
 
 Undergraduate Researcher
@@ -47,6 +48,7 @@ Undergraduate Researcher
 Jonhathan joined the lab in 2019. He is determined to become a Doctor (and he already looks the part). Johnathan is learning Python and dataset management skills helping McLean with his data collection. 
 
 ![Garrett](/assets/images/garrettsmall.png) 
+
 **Garrett Cho**
 
 Undergraduate Researcher
