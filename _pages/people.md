@@ -11,7 +11,7 @@ permalink: /people/
 
 **Dr. Rosana Zenil-Ferguson**
 
-I joined the Department of Biology as an assistant professor on January 2019. I earned my PhD in evolutionary biology from University of Florida after completing a MSc in probability and statistics at CIMAT Mexico. My research aims to understand how often species traits evolve and how these traits change the speciation and extinction process across the tree of life. Using a combination of mathematics, statistics, and botany, I am currently studying the evolution of polyploidy and breeding systems, and whether these traits create opportunities for innovation and speciation in flowering plants. |
+I joined the Department of Biology as an assistant professor on January 2019. I earned my PhD in evolutionary biology from University of Florida after completing a MSc in probability and statistics at CIMAT Mexico. My research aims to understand how often species traits evolve and how these traits change the speciation and extinction process across the tree of life. Using a combination of mathematics, statistics, and botany, I am currently studying the evolution of polyploidy and breeding systems, and whether these traits create opportunities for innovation and speciation in flowering plants. 
 
 **Some publications about me:**
 * [New faculty profile](http://manoa.hawaii.edu/biology/faculty_spotlight/2019/08/09/prof-rosana-zenil-ferguson)
