@@ -6,13 +6,12 @@ permalink: /contact/
 tags:
 - people
 ---
-**Email**  roszenil@hawaii.edu
+**Email**  roszenil@uky.edu
 
-**Phone** (808) 956-8241
+**Phone** (859)-257-4711
 
 **Department of Biology**
 
-Edmonson Hall 309
-2538 McCarthy Mall
-
-Honolulu, HI 96822
+101 T.H. Morgan Building
+xs
+Lexington KY 40506-0225
