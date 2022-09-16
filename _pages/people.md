@@ -81,10 +81,10 @@ Undergraduate Researcher
 Garrett joined the lab in 2020. He is specializing in everything STEM (double or triple major now). Garrett has also been learning Python and acquiring dataset management skills while helping McLean.
 
 ## Join the lab!
-I am looking for grad students in the Fall 2021. Consider applying to our [Masters or PhD program](https://manoa.hawaii.edu/biology/graduate).
+I am looking for one or two PhD Student in the the Fall 2022. Consider applying to our [Masters or PhD program](https://bio.as.uky.edu/grad-program). The biology graduate program has a a stipend of $28,520 with a possibility of extra $4,500 in the summer (summer for US citizens, for international students talk to me about potential sources of extra funding). Lexington has a cost of living for a single individual around $31K so it is possible to live comfortably with a TAship. In addition, our students DO NOT pay school fees.
 
 Also consider the possibility of writing a NSF GFRP. Some great resources [here](http://cdmuir.netlify.com/post/2019-07-11-grfp/) and [here](https://www.alexhunterlang.com/nsf-fellowship).
-[Contact](/contact/) me and we can discuss ideas for research.
+[Contact](/contact/) me and we can discuss ideas for research. I have experience guiding students through writing the proposal, but it really helps doing it with enough time so don't hesitate about contacting me early.
 
 
 ### Commitment to Diversity and Inclusion
