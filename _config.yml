@@ -1,6 +1,6 @@
 # Configs for pwills.com
 
-title: Phylogenetic Comparative Methods at UH
+title: Phylogenetic Comparative Methods at UKY
 name: Rosana Zenil-Ferguson
 email: roszenil@hawaii.edu
 url: "roszenil.github.io"
@@ -25,7 +25,7 @@ minimal_mistakes_skin: "contrast"
 author:
   name   : "Rosana Zenil-Ferguson"
   avatar : "/assets/images/ls2.jpg"
-  bio    : "Assistant Professor. University of Hawai'i"
+  bio    : "Assistant Professor. University of Kentucky"
   email  : roszenil@hawaii.edu
   links:
     - label: roszenil.github.io
