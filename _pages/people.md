@@ -11,7 +11,9 @@ permalink: /people/
 
 **Dr. Rosana Zenil-Ferguson**
 
-I joined the Department of Biology as an assistant professor on January 2019. I earned my PhD in evolutionary biology from University of Florida after completing a MSc in probability and statistics at CIMAT Mexico. My research aims to understand how often species traits evolve and how these traits change the speciation and extinction process across the tree of life. Using a combination of mathematics, statistics, and botany, I am currently studying the evolution of polyploidy and breeding systems, and whether these traits create opportunities for innovation and speciation in flowering plants. 
+I joined the Department of Biology at the University of Kentucky as an assistant professor on August 2022. Previously, I was an assistant professor at the University of Hawaii manoa from 2019-2022.
+
+I earned my PhD in evolutionary biology from University of Florida after completing a MSc in probability and statistics at CIMAT Mexico. My research aims to understand how often species traits evolve and how these traits change the speciation and extinction process across the tree of life. Using a combination of mathematics, statistics, and botany, I am currently studying the evolution of polyploidy and breeding systems, and whether these traits create opportunities for innovation and speciation in flowering plants. 
 
 **Some publications about me:**
 * [New faculty profile](http://manoa.hawaii.edu/biology/faculty_spotlight/2019/08/09/prof-rosana-zenil-ferguson)
@@ -23,23 +25,44 @@ I recently gave a [TEDx](https://www.ted.com/about/programs-initiatives/tedx-pro
 
 ![People](/assets/images/carriemclean.png) 
 
-**Carrie Tribble**
+**Carrie Tribble, PhD**
 
-Postdoctoral Researcher
+NSF Postdoctoral Research Fellowship in Biology 2022-20225 (Plant Genome Track)
 
 Email: cmt2(at)hawaii(dot)edu
 
-Dr. Tribble is working on developing state-dependent diversification models for Andean flora. She is also helping in the development of new models for chromosome number and genome size evolution.
+Dr. Tribble is working on developing phenotype to genotype models for Andean flora (*Bomarea*) . She is also helping in the development of new models for chromosome number and genome size evolution in Carex.
 Click on her [website](https://carrietribble.weebly.com/). Carrie on the left of the picture with her beloved dog Kula.
 
 
 **McLean Worsham**
 
-Graduate Student
+Graduate Student (UH Manoa)
 
 Email: mcleanw(at)hawaii(dot)edu
 
-McLean started in 2020 in my lab. He is a fish person and totally in love with everything outdoors. For his dissertation, McLean is working on evolution of polyploidy in fishes. He is on the right of the picture with his gentle giant Kaid. 
+McLean started in 2020 in my lab. He is a fish person and totally in love with everything outdoors. For his dissertation, McLean is working on evolution of polyploidy in fishes. He is on the right of the picture with his gentle giant Cade. 
+
+![People](/assets/images/campillo.png) 
+
+**Luke Campillo, PhD**
+
+Postdoctoral Researcher (University of Kentucky)
+
+Email: campillo(at)hawaii(dot)edu
+
+Dr. Campillo is working on developing state-dependent diversification models for Andean flora. Luke's primary research interest is modeling and understanding extinction of Hawaiian honeycreepers at both population and macro levels. 
+
+Luke carrying one of the best dogs in the Hawaiian Islands: Hapa.
+
+![Krystalyn](/assets/images/krystalyn.png) 
+
+**Krystalyn Edwards-Calma**
+
+NSF REU Summer 2022- Undergraduate researcher
+
+We were lucky to get Krystalyn in our lab as an undergraduate researcher funded through the [DNA Discoveries of Biodiversity REU Grant](https://biodiversity-reu.manoa.hawaii.edu/). Krystalyn plans to go to medical school and incorporate Native Hawaiian botanical knowledge for healing. When she came to the lab, she wanted to learn more about Hawaiian flora, so she focused on learning about Doryopteris a genus of understudied Hawaiian ferns. Krystalyn learned about the herbarium, iNaturalist, GBIF and implemented a model to estimate the fundamental niche of two species that might be dissapearing due to urbanization. She has been funded to attend SACNAS National conference in 2023. Look for her poster!
+
 
 ![Johnathan](/assets/images/johnathansmall.png) 
 
