@@ -17,6 +17,8 @@ main:
 portfolio:
   - title: "Workshops"
     children:
+      - title: "Taller sureste"
+        url: /portfolio/suresteworkshop/
       - title: "SSE models"
         url: /portfolio/SDD/
       - title: "SSE in RevBayes. SSB workshop 2020"

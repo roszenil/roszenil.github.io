@@ -7,6 +7,13 @@ date: 2019-12-31
 feature_row:
   - image_path: /assets/images/sse_files/hisse.png
     alt: "Teaching"
+    title: "Taller Matematicas del Sureste"
+    excerpt: "Estimando la especiación y la estimación dependiente de estados"
+    url: "/portfolio/suresteworkshop/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - image_path: /assets/images/sse_files/hisse.png
+    alt: "Teaching"
     title: "SSB workshop on diversification models"
     excerpt: "Fitting diversification models with Revbayes"
     url: "/portfolio/SSBworkshop/"
