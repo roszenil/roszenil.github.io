@@ -8,7 +8,7 @@ feature_row:
   - image_path: /assets/images/thalictrum.png
     alt: "Teaching"
     title: "Taller Matematicas del Sureste"
-    excerpt: "Estimando la especiación y la estimación dependiente de estados"
+    excerpt: "Estimando la especiación y la extinción dependiente de estados"
     url: "/portfolio/suresteworkshop/"
     btn_label: "Read More"
     btn_class: "btn--primary"

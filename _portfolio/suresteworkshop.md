@@ -12,14 +12,14 @@ toc_label: "Contents"
 # Estimando la especiación y la estimación dependiente de estados
 ## Instructora
 [Rosana Zenil-Ferguson](/contact/)
-Profesor Asistente
-Departamento de Biologia
+Profesora Asistente
+Departamento de Biología
 Universidad de Kentucky 
 
 
 ## Objetivo del taller
 
-El objetivo del taller es introducir las cadenas de Markov en tiempo continueo como una herramienta esencial para el estudio de la evolucion sobre las filogenias
+El objetivo del taller es introducir las cadenas de Markov en tiempo continuo como una herramienta esencial para el estudio de la evolucion sobre las filogenias
 
 ### Archivos 
 
