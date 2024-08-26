@@ -5,7 +5,7 @@ header:
 permalink: /portfolio/index.html
 date: 2019-12-31
 feature_row:
-  - image_path: /assets/images/sse_files/hisse.png
+  - image_path: /assets/images/thalictrum.png
     alt: "Teaching"
     title: "Taller Matematicas del Sureste"
     excerpt: "Estimando la especiación y la estimación dependiente de estados"
