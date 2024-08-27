@@ -29,5 +29,7 @@ Los archivos que van a necesitar en el taller estan en las siguientes ligas
 2. Archivo [Dia 1 Rmd](/assets/docs/primerospasos.Rmd)
 3. Filogenia [Thalictrum tree](/assets/docs/poliniza_arbol.tre)
 4. Datos [Thalictrum data](/assets/docs/poliniza_datos.csv)
+5. Presentacion [Dia 2](/assets/docs/dia2_diapositivas.pdf)
+6. Archivo [Dia 2 Rmd](/assets/docs/dia2-mkmodels.Rmd)
 
 
