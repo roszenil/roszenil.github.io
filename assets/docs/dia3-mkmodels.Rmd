@@ -1,0 +1,206 @@
+---
+title: "Dia 3- Modelos de Markov para datos discretos"
+output: html_document
+author: "Rosana Zenil-Ferguson"
+date: "2024-08-27"
+editor_options:
+  chunk_output_type: console
+---
+## Instala R y Rstudio (Posit Cloud)
+
+Por favor instala en tu computadora
+![R](https://cran.r-project.org/)
+
+![Rstudio](https://posit.co/download/rstudio-desktop/)- Version gratuita para estudiantes
+
+o si quieres trabajar online solo abre una cuenta de (tambien gratuita para estudiantes)
+
+![Posit Cloud](https://posit.cloud/)
+
+
+## Correr codigo en Rmarkdown
+
+En cada seccion vas a encontrar texto y codigo. El codigo esta agregado entre entre tres acentos al reves  y empieza con las llaves {r echo=TRUE}. Junto a esa linea vas a ver una flecha verde. Esa flecha ejecuta el codigo. Los archivos .Rmd son una herramienta muy util para reproducir el codigo. Son una combinacion de texto con codigo ejecutable y nos permiten crear un documento de manera eficiente donde todos los datos se pueden manejar. 
+
+```{r}
+# Si no lo hiciste anteriormente installa markdown
+# install.packages("rmarkdown")
+```
+
+## Lee el arbol y la filogenia
+
+Los datos que vas a leer son datos de la polinizacion de Thalictrum con una filogenia de 103 especies. Vamos a generar el modelo de Markov y su estimacion utilizando los paquetes mas populares de R . 
+
+
+Por favor installa los siguientes paquetes (ejecuta con la flecha verde)
+```{r echo=TRUE} 
+#include=FALSE
+install.packages("ape")
+install.packages("corHMM")
+install.packages("phytools")
+```
+
+Y cargalos para poder empezar a analizar datos
+```{r echo=TRUE}
+#Libraries required
+library(ape) 
+library(phytools)
+library(corHMM)
+```
+
+
+## Lectura de los datos
+
+Lo primero es saber donde tenemos guardamos nuestros archivos. Yo por ejemplo los tengo en este folder `~Dropbox/Teaching/Workshops/sureste2024`. La funcion `setwd()` nos ayuda a marcar el folder donde estaremos trabajando.
+
+```{r}
+## Leer los datos
+setwd("~/Dropbox/Teaching/Workshops/sureste2024")
+pollination_tree<-read.tree("poliniza_arbol.tre")
+pollination_data<-read.csv("poliniza_datos.csv", header=TRUE)
+head(pollination_data)
+
+## Graficar un arbol
+plotTree(pollination_tree,fsize=0.4,ftype="i")
+
+## Graficar un arbol circular
+plotTree()
+
+```
+
+El paquete `phytools` requiere que los datos sean leidos como lista
+
+```{r}
+fmode<-setNames(pollination_data$pollination,pollination_data$name)
+fmode
+
+```
+
+Ahora grafiquemos los datos con el arbol filogenetico
+```{r}
+plotTree(pollination_tree,fsize=0.4,ftype="i",type="fan")
+cols<-setNames(c("blue","red"),sort(unique(fmode)))
+tiplabels(pie=to.matrix(fmode,sort(unique(fmode))),piecol=cols,cex=0.5)
+add.simmap.legend(colors=cols,prompt=FALSE,x=0.9*par()$usr[1],
+    y=-max(nodeHeights(pollination_tree)),fsize=0.8)
+```
+
+## Utilizando los modelos de Markov
+
+El modelo mas sencillo asume que las tasas de transicion entre 0 y 1 son iguales. Vamos a ajustarlo en estos datos
+
+```{r}
+# la variable fitER se refiere a "fit equal rates model" ajustar el model con tasas iguales para dos estados 
+fitER<-ace(fmode,pollination_tree,model="ER",type="discrete",C=TRUE)
+fitER
+fitER$rates
+```
+
+### Reconstruccion ancestral en los nodos
+Ya que tenemos un modelo ajustado con estimadores de maxima verosimilitud, podemos reconstruir el pasado utilizando verosimilitudes marginales en cada nodo.  A este grafico se le llama arbol con reconstruccion ancestral
+
+```{r}
+plotTree(pollination_tree,type="fan",fsize=0.2,ftype="i")
+nodelabels(node=1:pollination_tree$Nnode+Ntip(pollination_tree),
+    pie=fitER$lik.anc,piecol=cols,cex=0.5)
+tiplabels(pie=to.matrix(fmode,sort(unique(fmode))),piecol=cols,cex=0.3)
+add.simmap.legend(colors=cols,prompt=FALSE,x=0.9*par()$usr[1],
+    y=-max(nodeHeights(pollination_tree)),fsize=0.5)
+```
+
+Tambien podemos hacer simulaciones condicionales para saber lo que sucedio en las ramas. A este grafico se le llama mapa estocastico de reconstruccion ancestral 
+
+```{r}
+mtree<-make.simmap(pollination_tree,fmode,model="ER")
+
+plotSimmap(mtree,cols,type="fan",fsize=0.3,ftype="i")
+add.simmap.legend(colors=cols,prompt=FALSE,x=0.9*par()$usr[1],
+    y=-max(nodeHeights(pollination_tree)),fsize=0.8)
+```
+
+## Modelos de Markov con mas variabilidad
+
+En macroevolucion no siempre podemos asumir que las transiciones entre dos estados (tasas evolutivas) ocurren al mismo paso. Ajustar un modelo mucho mas libre es en general una mejor opcion
+
+```{r}
+mk2<-corHMM(pollination_tree, pollination_data, rate.cat=1)
+plotMKmodel(mk2)
+```
+
+Como se ve el mapa estocastico?
+```{r}
+phy= mk2$phy
+data=mk2$data
+model= mk2$solution
+model[is.na(model)]=0
+diag(model)= -rowSums(model)
+simmap<-makeSimmap (tree=phy, data=data, model=model, rate.cat=1, nSim=1, nCores=1)
+plotSimmap(simmap[[1]], fsize=0.2, type="fan")
+```
+
+### Modelos con estados escondidos 
+
+En evolucion, a traves de millones de años debemos pensar en la posibilidad de que las tasas de transicion ocurren a differentes pasos. Para esto utilizamos modelos de Markov de estados escondidos.
+
+```{r}
+mk2_hidden<-corHMM(pollination_tree, pollination_data, rate.cat=2,model="ARD")
+plotMKmodel(mk2_hidden)
+
+```
+Como se ve el mapa estocastico?
+```{r}
+phy= mk2_hidden$phy
+data=mk2_hidden$data
+model= mk2_hidden$solution
+model[is.na(model)]=0
+diag(model)= -rowSums(model)
+simmap<-makeSimmap (tree=phy, data=data, model=model, rate.cat=2, nSim=1, nCores=1)
+plotSimmap(simmap[[1]], fsize=0.2, type="fan")
+```
+
+## Ajustar un modelo BiSSE
+### Objetivo
+
+Familiarizarse con el modelo mas sencillo de diversificación llamado BiSSE (Binary state dependent speciation and extinction model). Este modelo liga los estados de un rasgo con tasas de especiación y extinción. 
+
+### Qué es el modelo BiSSE?
+
+Es una cadena de Markov en tiempo continuo, pero en este caso la cadena esta representada por dos procesos de nacimiento y muerte que transicionan entre los dos tasas de ida y vuelta. El supuesto de este modelo es que un caracter o rasgo esta categorizado en dos estados, cada uno con su tasa de nacimiento (lambda) y su tasa de muerte (mu). 
+
+```{r}
+## Instala la libreria HiSSE
+install.packages("diversitree")
+## Carga la libreria
+library(diversitree)
+
+#Declare the model
+bisse_model = make.bisse(tree=pollination_tree,states=fmode)
+
+# Choose some initial parameters to start the optimization
+initial_pars<-starting.point.bisse(pollination_tree)
+
+# Calculate the likelihood
+fit_model<-find.mle(bisse_model,initial_pars)
+# Print the results
+fit_model$par
+fit_model$lnLik
+```
+
+## Inferencia Bayesiana de BiSSE
+
+Podemos ir un paso extra y hacer una inferencia bayesiana del modelo BiSSE para obtener la distribución posterior de nuestros parametros de interés.
+
+```{r}
+# Declara una a priori para todos los parametros (puede ser la misma para todos)
+prior <- make.prior.exponential(1/(2 * 0.4))
+
+# Corramos nuestro mcmc
+mcmcRun <- mcmc(bisse_model, fit_model$par, nsteps = 1000, prior = prior, w = 0.1, print.every = 100)
+
+# Grafiquemos las tasas de nacimiento a posteriori
+col <- c("blue", "red")
+profiles.plot(mcmcRun[, c("lambda0", "lambda1")], col.line = col, las = 1, legend = "topright")
+
+#Grafiquemos las tasas de muerte a posteriori
+profiles.plot(mcmcRun[, c("mu0", "mu1")], col.line = col, las = 1, legend = "topright")
+```

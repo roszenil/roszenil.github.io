@@ -30,9 +30,9 @@ Los datos que vas a leer son datos de la polinizacion de Thalictrum con una filo
 Por favor installa los siguientes paquetes (ejecuta con la flecha verde)
 ```{r echo=TRUE} 
 #include=FALSE
-install.packages("ape")
-install.packages("geiger")
-install.packages("corHMM")
+#install.packages("ape")
+#install.packages("geiger")
+#install.packages("corHMM")
 ```
 
 Y cargalos para poder empezar a analizar datos
@@ -40,6 +40,7 @@ Y cargalos para poder empezar a analizar datos
 #Libraries required
 library(ape) 
 library(geiger)
+library(phytools)
 library(corHMM)
 ```
 
@@ -59,7 +60,7 @@ head(pollination_data)
 plotTree(pollination_tree,fsize=0.4,ftype="i")
 
 ## Graficar un arbol circular
-plotTree()
+#plotTree()
 
 ```
 

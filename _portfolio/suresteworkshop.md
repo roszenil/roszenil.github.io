@@ -31,5 +31,6 @@ Los archivos que van a necesitar en el taller estan en las siguientes ligas
 4. Datos [Thalictrum data](/assets/docs/poliniza_datos.csv)
 5. Presentacion [Dia 2](/assets/docs/dia2_diapositivas.pdf)
 6. Archivo [Dia 2 Rmd](/assets/docs/dia2-mkmodels.Rmd)
-
+7. Presentacion [Dia 3](/assets/docs/dia3_diapositivas.pdf)
+8. Archivo [Dia 3 Rmd](/assets/docs/dia3-mkmodels.Rmd)
 
