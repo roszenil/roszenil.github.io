@@ -18,13 +18,16 @@ permalink: /people/
 ### Graduate Students
 
 **Edison Rea Sancho**
-![People](/assets/images/edison.png) 
+
+![People](/assets/images/edison2.png) 
 
 - Edison joined the lab in 2023 after earning a MSc in Biology at Columbus State University
 - Edison works in Magnolia systematics and macroevolution.
 
 **Nicolás Castillo Rodríguez**
-![People](/assets/images/nico.png) 
+
+![People](/assets/images/nico2.png) 
+
 - Nicolás joined the lab in 2024 after graduating with a MSc in Biology at the Universidad Nacional de Colombia
 - Nicolás works on macroevolution of Puya in the Páramos and development of phylogenetic comparative methods. 
 
